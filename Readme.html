@@ -1,0 +1,43 @@
+<h1>Implementation of the IBEA-epsilon algorithm [1]</h1>
+
+<h2>How to run</h2>
+
+<p>There are two ways to run the optimizer:</p>
+
+<p><code>shell
+python2 ibea.py
+</code>
+<br/>
+<code>shell
+python2 experiment.py
+</code></p>
+
+<p>Note that it is easier to change the experiment parameters in the <code>IBEA.py</code> file, by parameterizing the call to <code>experiment.main</code>.</p>
+
+<h2>Convention: Separate parameters</h2>
+
+<p>The idea is to keep the parameters we are testing local.
+The best way is to keep the solver definition in <code>experiment.py</code> as: <br/></p>
+
+<p><code>python
+SOLVER = IBEA().ibea # line 254
+</code> </p>
+
+<p>You may change the parameters when initializing the object, however when you commit some changes, please do:</p>
+
+<p><code>shell
+git add -p experiment.py
+</code></p>
+
+<p>so as not to write your params on git (and risk overwriting our own when we merge).</p>
+
+<h2>Convention: Shared experimental results</h2>
+
+<p>The idea is that the local sub-directory in which results are saved, namely <code>exdata</code>, is git ignored so that everyone can local experiments.</p>
+
+<p>If you have nice results to share, you may copy the raw or preprocessed results in the toplevel <code>shared_exdata</code> directory and push!</p>
+
+<h1>References</h1>
+
+<p>[1] Eckart Zitzler and Simon Künzli, “Indicator-Based Selection in Multiobjective Search”. In Parallel Problem Solving from Nature (PPSN 2004), pp. 832-842, 2004.
+<a href="http://numbbo.github.io/coco-doc/bbob-biobj/perf-assessment/">Biobjective Performance Assessment with the COCO Platform</a></p>

@@ -1,0 +1,6 @@
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+__pycache__/
+*.py[cod]
+exdata/
