@@ -19,12 +19,12 @@ class IBEA(object):
         self.kappa = kappa             # fitness scaling ratio
         self.alpha = alpha             # population size
         self.mu = mu                   # number of individuals selected as parents
-        self.noise_var = var
+        self.noise_variance = var
         self.n_offspring = n_offspring # number of offspring individuals
         self._min = None 
         self._max = None
         # --- Data structure containing: population vectors, fitness and objective values
-        self.env = dict() 
+        self.environment = dict() 
         # --- Random state
         np.random.seed(seed)
 
@@ -36,49 +36,49 @@ class IBEA(object):
         dim, f_min = len(lbounds), None
         # 1. Initial population of size alpha
         # Sampled from the uniform distribution [lbounds, ubounds]
-        X = np.random.rand(self.alpha, dim) \
+        particles = np.random.rand(self.alpha, dim) \
                  * (ubounds - lbounds) + lbounds
         # Rescaling objective values to [0,1]
-        F = np.array([fun(x) for x in X])
-        F = self.rescale(F)
+        objective_values = np.array([fun(x) for x in particles])
+        objective_values = self.rescale(objective_values)
         # Datastructure containing all the population info
-        self.env = {
+        self.environment = {
             p : {
-                'x': X[p],
-                'obj': F[p],
+                'x': particles[p],
+                'obj': objective_values[p],
                 'fitness': 0.0,
             } for p in range(self.alpha)
         }
-        self.n_pop = self.alpha
+        self.population_size = self.alpha
         done = False
         generation = 0 
         while not done:
             # 2. Fitness assignment
-            for i in self.env.keys():
+            for i in self.environment.keys():
                 self.compute_fitness(i)
             # 3 Environmental selection
             env_selection_ok = False
             while not env_selection_ok:
                 # 3.1 Environmental selection
                 fit_min = 10
-                unfit_individual = None
-                for (k, v) in self.env.items():
+                worst_fit = None
+                for (k, v) in self.environment.items():
                     if v['fitness'] <= fit_min:
                         fit_min = v['fitness'] 
-                        unfit_individual = k
+                        worst_fit = k
 
                 # 3.2 Remove individual (1)
-                self.n_pop -= 1
+                self.population_size -= 1
                 # 3.3 Update fitness values
-                for i in self.env.keys():
+                for i in self.environment.keys():
                     try:
-                        self.env[i]['fitness'] += np.exp(
-                            - self.indicator_e(unfit_individual, i) / self.kappa)
+                        self.environment[i]['fitness'] += np.exp(
+                            - self.eps_indic_fun(worst_fit, i) / self.kappa)
                     except TypeError:
-                        pprint(self.env)
+                        pprint(self.environment)
                 # 3.2 Remove individual (2)
-                self.env.pop(unfit_individual)
-                env_selection_ok = len(self.env) <= self.alpha
+                self.environment.pop(worst_fit)
+                env_selection_ok = len(self.environment) <= self.alpha
 
             # 4. Check convergence condition
             done = generation >= budget
@@ -86,26 +86,26 @@ class IBEA(object):
             # 5. Mating selection
             # Perform binary tournament selection with replacement on P in order
             # to fill the temporary mating pool P'.
-            keys_lst = list(self.env.keys())
-            winner_lst = []
+            item_keys = list(self.environment.keys())
+            pool = []
             for i in range(self.n_offspring):
-                p1, p2 = np.random.choice(keys_lst, 2)
-                if self.env[p1]['fitness'] >= self.env[p2]['fitness']:
-                    winner_lst.append(p1)
+                p1, p2 = np.random.choice(item_keys, 2)
+                if self.environment[p1]['fitness'] >= self.environment[p2]['fitness']:
+                    pool.append(p1)
                 else:
-                    winner_lst.append(p2)
+                    pool.append(p2)
             # 6. Variation
             # Apply recombination and mutation operators to the mating pool P' and add
             # the resulting offspring to P
-            assert mod(len(winner_lst), 2) == 0, 'Parents not divisible by 2'
-            for i in range(len(winner_lst)/2):
-                x1 = self.env[winner_lst[i]]['x']
-                x2 = self.env[winner_lst[i+1]]['x']                
+            assert mod(len(pool), 2) == 0, 'Parents not divisible by 2'
+            for i in range(len(pool)/2):
+                x1 = self.environment[pool[i]]['x']
+                x2 = self.environment[pool[i+1]]['x']                
                 offspring = (x1+x2)/2
-                offspring += np.random.randn(dim) * self.noise_var
+                offspring += np.random.randn(dim) * self.noise_variance
                 
-                self.n_pop += 1
-                self.env[self.n_pop] = {
+                self.population_size += 1
+                self.environment[self.population_size] = {
                     'x' : offspring,
                     'obj': self.rescale_one(fun(offspring)),
                     'fitness': 0.0
@@ -114,48 +114,52 @@ class IBEA(object):
 
         best_fitness = -np.infty
         best_fit = None
-        for (k, v) in self.env.items():
-            if v['fitness'] >= best_fitness:
-                best_fitness = v['fitness']
-                best_fit = k
+        for (item, data) in self.environment.items():
+            if data['fitness'] >= best_fitness:
+                best_fitness = data['fitness']
+                best_fit = item
 
-        return self.env[best_fit]['x']
+        return self.environment[best_fit]['x']
     
-    def compute_fitness(self, ind):
-        ''' For all vectors in P\{ind}, compute pairwise indicator function
+    def compute_fitness(self, point):
+        ''' For all vectors in P\{point}, compute pairwise indicator function
         and sum to get fitness value.'''
         neg_sum = 0.0
-        for i in self.env.keys():
-            if i != ind:
-                neg_sum -= np.exp(-self.indicator_e(i, ind)/self.kappa)
+        for indx in self.environment.keys():
+            if indx != point:
+                neg_sum -= np.exp(-self.eps_indic_fun(indx, point)/self.kappa)
 
-        self.env[ind]['fitness'] = neg_sum
+        self.environment[point]['fitness'] = neg_sum
 
-    def indicator_e(self, i1, i2):
-        o1 = self.env[i1]['obj']
-        o2 = self.env[i2]['obj']
-        df = o1 - o2
-        eps = df.min()
-        assert -1 <= eps <= 1, 'Bounds not respected: O1 = {}, O2 = {}, eps = {}'.format(o1, o2, eps)
+    def eps_indic_fun(self, i1, i2):
+        obj1 = self.environment[i1]['obj']
+        obj2 = self.environment[i2]['obj']
+        diff = obj1 - obj2
+        eps = diff.min()
+
+        assert -1 <= eps <= 1, \
+            'Bounds not respected: O1 = {}, O2 = {}, eps = {}'\
+            .format(obj1, obj2, eps)
+
         return eps
 
-    def rescale(self, F):
-        self._min = F.min(axis=0)
-        self._max = F.max(axis=0)
+    def rescale(self, objective):
+        self._min = objective.min(axis=0)
+        self._max = objective.max(axis=0)
 
-        _, dim = F.shape
-        for i in range(dim):
-            F[:, i] = (F[:, i] - self._min[i]) \
-                      / (self._max[i] - self._min[i])
-        return F
+        _, ndims = objective.shape
+        for dim in range(ndims):
+            objective[:, dim] = (objective[:, dim] - self._min[dim]) \
+                      / (self._max[dim] - self._min[dim])
+        return objective
 
-    def rescale_one(self, f):
-        self._min = np.minimum(self._min, f)
-        self._max = np.maximum(self._max, f)
-        for i in range(f.shape[0]):
-            f[i] = (f[i] - self._min[i]) \
-                   / (self._max[i] - self._min[i])
-        return f
+    def rescale_one(self, objective):
+        self._min = np.minimum(self._min, objective)
+        self._max = np.maximum(self._max, objective)
+        for dim in range(objective.shape[0]):
+            objective[dim] = (objective[dim] - self._min[dim]) \
+                   / (self._max[dim] - self._min[dim])
+        return objective
 
 if __name__ == '__main__':
     """call `experiment.main()`"""
