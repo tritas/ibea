@@ -6,56 +6,73 @@ class IBEA(object):
     def __init__(self,
                  rho=1.1,
                  kappa=0.05, # fitness scaling ratio
-                 alpha=1, # population size
+                 alpha=10, # population size
                  mu=1, # number of individuals selected as parents
-                 _lambda=1, # number of offspring individuals
+                 offspring=1, # number of offspring individuals
                  seed=1):
-        self._rho = rho
-        self._kappa = kappa
-        self._alpha = alpha
-        self._mu = mu
-        self._lambda = _lambda
+        self.rho = rho
+        self.kappa = kappa
+        self.alpha = alpha
+        self.mu = mu
+        self.offspring = offspring
         np.random.seed(seed)
 
     def __str__(self):
         return 'Indicator-based Evolutionary Algorithm - Epsilon with params {}'\
             .format()
 
-    def _initialize(self, ndims):
-        self.population = np.zeros((self.alpha, ndims), dtype=np.float64)
-        self.fitness_values = np.zeros(self.alpha, dtype=np.float64)
-        
     def ibea(self, fun, lbounds, ubounds, budget):
-        """Efficient implementation of uniform random search between `lbounds` and `ubounds`."""
         lbounds, ubounds = np.array(lbounds), np.array(ubounds)
-        gen = 0
-
         dim, x_min, f_min = len(lbounds), (lbounds + ubounds) / 2, None
-        max_chunk_size = 1 + 4e4 / dim
-        while budget > 0:
-            chunk = int(min([budget, max_chunk_size]))
-            # about five times faster than "for k in range(budget):..."
-            X = lbounds + (ubounds - lbounds) * np.random.rand(chunk, dim)
-            F = [fun(x) for x in X]
-            if fun.number_of_objectives == 1:
-                index = np.argmin(F)
-                if f_min is None or F[index] < f_min:
-                    x_min, f_min = X[index], F[index]
-            budget -= chunk
-        return x_min
+        done = False
+        # 1. Initialization
+        self.population = np.zeros((self.alpha, dim), dtype=np.float64)
+        self.fitness_values = np.zeros(self.alpha, dtype=np.float64)        
+        generation = 0 
+        while not done:
+            # 2. Fitness assignment
+            for i in range(self.alpha):
+                self.fitness_values[i] = self.compute_fitness(i)
+            # 3.1 Environmental selection
+            unfit_individual = self.fitness_values.argmin()
+            # 3.2 Remove individual (temporary hack)
+            self.population[unfit_individual, :] = np.infty
+            # 3.3 Update fitness values
+            for i in range(self.alpha):
+                self.fitness_values[i] += np.exp(-self.indicator_e(unfit_individual,i)/self.kappa)
 
+            # 4. Check convergence condition
+            done = generation >= budget
+            if done: break
+            # 5. Mating selection
+            
+            # 6. Variation
+            generation += 1
+
+        return f_min
+    
     def compute_fitness(self, ind):
-        self.fitness_values[ind] = 0
+        ''' For all vectors in P\{ind}, compute pairwise indicator function
+        and sum to get fitness value.'''
         for i in range(self.alpha):
             if i != ind:
-                self.fitness_values[ind] -= \
-                    np.exp(-epsilon_indicator(i, ind)/self.kappa)
+                exp_indic = np.exp(-self.indicator_e(i, ind)/self.kappa)
+                self.fitness_values[ind] -= exp_indic # -= instead of += because of negative sum
+
         return
     
     def dominates(x, y):
-        component_wise_cmp = x < y
+        component_wise_cmp = x <= y
 
-    def epsilon_indicator(set_A, set_B): pass
+    def rescale(f_x, lb, ub):
+        ''' Rescale vector in [0, 1] ''' 
+        return (f_x - lb)/(ub - lb)
+
+    def indicator_e(self, i1, i2):
+        x1 = self.population[i1]
+        x2 = self.population[i2]        
+        df = x1 - x2
+        return max(0, df.min())
 
 if __name__ == '__main__':
     """call `experiment.main()`"""
