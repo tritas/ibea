@@ -5,20 +5,31 @@ import numpy as np
 class IBEA(object):
     def __init__(self,
                  rho=1.1,
-                 kappa=0.05,
-                 alpha=1, # number of individuals in initial pop
+                 kappa=0.05, # fitness scaling ratio
+                 alpha=1, # population size
                  mu=1, # number of individuals selected as parents
-                 lambda_=1, # number of offspring individuals
+                 _lambda=1, # number of offspring individuals
                  seed=1):
-        pass
+        self._rho = rho
+        self._kappa = kappa
+        self._alpha = alpha
+        self._mu = mu
+        self._lambda = _lambda
+        np.random.seed(seed)
 
     def __str__(self):
         return 'Indicator-based Evolutionary Algorithm - Epsilon with params {}'\
             .format()
-    
+
+    def _initialize(self, ndims):
+        self.population = np.zeros((self.alpha, ndims), dtype=np.float64)
+        self.fitness_values = np.zeros(self.alpha, dtype=np.float64)
+        
     def ibea(self, fun, lbounds, ubounds, budget):
         """Efficient implementation of uniform random search between `lbounds` and `ubounds`."""
         lbounds, ubounds = np.array(lbounds), np.array(ubounds)
+        gen = 0
+
         dim, x_min, f_min = len(lbounds), (lbounds + ubounds) / 2, None
         max_chunk_size = 1 + 4e4 / dim
         while budget > 0:
@@ -33,11 +44,18 @@ class IBEA(object):
             budget -= chunk
         return x_min
 
+    def compute_fitness(self, ind):
+        self.fitness_values[ind] = 0
+        for i in range(self.alpha):
+            if i != ind:
+                self.fitness_values[ind] -= \
+                    np.exp(-epsilon_indicator(i, ind)/self.kappa)
+        return
     
-    def compute_fitness(self): pass
+    def dominates(x, y):
+        component_wise_cmp = x < y
 
-    def dominates(x, y): pass
-
+    def epsilon_indicator(set_A, set_B): pass
 
 if __name__ == '__main__':
     """call `experiment.main()`"""
