@@ -1,6 +1,10 @@
+# Coco documentation
+
+[Biobjective Performance Assessment with the COCO Platform](http://numbbo.github.io/coco-doc/bbob-biobj/perf-assessment/)
+
 # Implementation of the IBEA-epsilon algorithm [1]
 
-## How to run
+## Running the optimizer
 There are two ways to run the optimizer:
 
 ```shell
@@ -12,6 +16,7 @@ python2 experiment.py
 ```
 
 Note that it is easier to change the experiment parameters in the `IBEA.py` file, by parameterizing the call to `experiment.main`.
+
 ## Convention: Separate parameters
 The idea is to keep the parameters we are testing local.
 The best way is to keep the solver definition in `experiment.py` as: 
@@ -33,7 +38,19 @@ The idea is that the local sub-directory in which results are saved, namely `exd
 
 If you have nice results to share, you may copy the raw or preprocessed results in the toplevel `shared_exdata` directory and push!
 
+## Variation step
+
+### Recombination operator
+The paper applies SBX-20, which stands for Simulated Binary Crossover [2].
+
+### Mutation
+
 # References
-[Biobjective Performance Assessment with the COCO Platform](http://numbbo.github.io/coco-doc/bbob-biobj/perf-assessment/)
+
 
 [1] Eckart Zitzler and Simon Künzli, “Indicator-Based Selection in Multiobjective Search”. In Parallel Problem Solving from Nature (PPSN 2004), pp. 832-842, 2004.
+[2] Deb, Kalyanmoy, and Ram B. Agrawal. "Simulated binary crossover for continuous search space." Complex Systems 9.3 (1994): 1-15.
+[14] L. Thiele, S. Chakraborty, M. Gries, and S. Künzli. Design space exploration of
+network processor architectures. In M. Franklin, P. Crowley, H. Hadimioglu, and
+P. Onufryk, editors, Network Processor Design Issues and Practices, Volume 1,
+chapter 4, pages 55–90. Morgan Kaufmann, October 2002.

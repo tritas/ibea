@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding : utf8 -*-
 """Use case for the COCO experimentation module `cocoex` which can be used as
 template.
 
@@ -251,7 +252,7 @@ max_runs = 1e9  # number of (almost) independent trials per problem instance
 number_of_batches = 1  # allows to run everything in several batches
 current_batch = 1      # 1..number_of_batches
 ##############################################################################
-SOLVER = IBEA().ibea
+SOLVER = IBEA(pr_x=0.9).ibea
 #SOLVER = my_solver # fmin_slsqp # SOLVER = cma.fmin
 suite_name = "bbob-biobj"
 #suite_name = "bbob"
