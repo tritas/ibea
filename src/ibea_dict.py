@@ -7,24 +7,23 @@ import numpy as np
 
 class IBEA(object):
     def __init__(self,
-                 rho=1.1,
                  kappa=0.05, 
-                 alpha=100, 
-                 mu=4, 
+                 alpha=20, 
                  n_offspring=8, 
                  seed=1,
                  var=0.01):
         # --- Algorithm parameters
-        self.rho = rho
-        self.kappa = kappa             # fitness scaling ratio
-        self.alpha = alpha             # population size
-        self.mu = mu                   # number of individuals selected as parents
-        self.noise_variance = var
-        self.n_offspring = n_offspring # number of offspring individuals
-        self._min = None 
-        self._max = None
+        self.kappa = kappa             # Fitness scaling ratio
+        self.alpha = alpha             # Population size
+        self.noise_variance = var      # Noise level for mutation
+        self.n_offspring = n_offspring # Number of offspring individuals
+        self._min = None               # Objective function minima
+        self._max = None               # Objective function maxima
+        self.indicator_max = None      # Indicator function maximum
+        
         # --- Data structure containing: population vectors, fitness and objective values
         self.environment = dict() 
+
         # --- Random state
         np.random.seed(seed)
 
@@ -34,6 +33,7 @@ class IBEA(object):
     def ibea(self, fun, lbounds, ubounds, budget):
         lbounds, ubounds = np.array(lbounds), np.array(ubounds) # [-100, 100]
         dim, f_min = len(lbounds), None
+        
         # 1. Initial population of size alpha
         # Sampled from the uniform distribution [lbounds, ubounds]
         particles = np.random.rand(self.alpha, dim) \
@@ -49,9 +49,15 @@ class IBEA(object):
                 'fitness': 0.0,
             } for p in range(self.alpha)
         }
-        self.population_size = self.alpha
+        # Lazy compute max absolute value of pairwise epsilon indicator 
+        self.indicator_max = max([abs(self.eps_indic_fun(i1, i2))
+                                  for i1 in range(self.alpha)
+                                  for i2 in range(self.alpha)
+                                  if i1 != i2])
+        generation = 0
+        population_size = self.alpha
         done = False
-        generation = 0 
+
         while not done:
             # 2. Fitness assignment
             for i in self.environment.keys():
@@ -67,17 +73,16 @@ class IBEA(object):
                         fit_min = v['fitness'] 
                         worst_fit = k
 
-                # 3.2 Remove individual (1)
-                self.population_size -= 1
                 # 3.3 Update fitness values
                 for i in self.environment.keys():
-                    try:
-                        self.environment[i]['fitness'] += np.exp(
-                            - self.eps_indic_fun(worst_fit, i) / self.kappa)
-                    except TypeError:
-                        pprint(self.environment)
-                # 3.2 Remove individual (2)
+                    self.environment[i]['fitness'] += np.exp(
+                        - self.eps_indic_fun(worst_fit, i) \
+                        / (self.indicator_max * self.kappa))
+                # 3.2 Remove individual
+                population_size -= 1
                 self.environment.pop(worst_fit)
+                # Continue while P does not exceed alpha
+                # TOFIX: does not work with population_size variable
                 env_selection_ok = len(self.environment) <= self.alpha
 
             # 4. Check convergence condition
@@ -88,24 +93,27 @@ class IBEA(object):
             # to fill the temporary mating pool P'.
             item_keys = list(self.environment.keys())
             pool = []
-            for i in range(self.n_offspring):
+            for i in range(2*self.n_offspring):
                 p1, p2 = np.random.choice(item_keys, 2)
                 if self.environment[p1]['fitness'] >= self.environment[p2]['fitness']:
                     pool.append(p1)
                 else:
                     pool.append(p2)
             # 6. Variation
-            # Apply recombination and mutation operators to the mating pool P' and add
-            # the resulting offspring to P
             assert mod(len(pool), 2) == 0, 'Parents not divisible by 2'
-            for i in range(len(pool)/2):
+            for i in range(self.n_offspring):
                 x1 = self.environment[pool[i]]['x']
-                x2 = self.environment[pool[i+1]]['x']                
-                offspring = (x1+x2)/2
+                x2 = self.environment[pool[i+1]]['x']
+                # Apply recombination and mutation operators to the mating pool P'
+                # and add the resulting offspring to P
+                pr_genes = np.random.binomial(1, 0.5, dim)
+                offspring = np.empty(dim, dtype=np.float64)
+                for d in range(dim):
+                    offspring[d] = x1[d] if pr_genes[d] else x2[d]
                 offspring += np.random.randn(dim) * self.noise_variance
                 
-                self.population_size += 1
-                self.environment[self.population_size] = {
+                population_size += 1
+                self.environment[population_size] = {
                     'x' : offspring,
                     'obj': self.rescale_one(fun(offspring)),
                     'fitness': 0.0
@@ -121,15 +129,16 @@ class IBEA(object):
 
         return self.environment[best_fit]['x']
     
-    def compute_fitness(self, point):
-        ''' For all vectors in P\{point}, compute pairwise indicator function
+    def compute_fitness(self, particle):
+        ''' For all vectors in P\{particle}, compute pairwise indicator function
         and sum to get fitness value.'''
         neg_sum = 0.0
         for indx in self.environment.keys():
-            if indx != point:
-                neg_sum -= np.exp(-self.eps_indic_fun(indx, point)/self.kappa)
+            if indx != particle:
+                neg_sum -= np.exp(-self.eps_indic_fun(indx, particle)\
+                                  /(self.indicator_max * self.kappa))
 
-        self.environment[point]['fitness'] = neg_sum
+        self.environment[particle]['fitness'] = neg_sum
 
     def eps_indic_fun(self, i1, i2):
         obj1 = self.environment[i1]['obj']

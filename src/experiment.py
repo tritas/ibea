@@ -256,7 +256,7 @@ SOLVER = IBEA().ibea
 suite_name = "bbob-biobj"
 #suite_name = "bbob"
 suite_instance = "year:2016"
-suite_options = ""  # "dimensions: 2,3,5,10,20 "  # if 40 is not desired
+suite_options = "dimensions: 2,3,5"  # "dimensions: 2,3,5,10,20 "  # if 40 is not desired
 observer_name = suite_name
 observer_options = (
     ' result_folder: %s_on_%s_budget%04dxD '
