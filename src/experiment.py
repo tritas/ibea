@@ -252,16 +252,17 @@ max_runs = 1e9  # number of (almost) independent trials per problem instance
 number_of_batches = 1  # allows to run everything in several batches
 current_batch = 1      # 1..number_of_batches
 ##############################################################################
-SOLVER = IBEA(pr_x=0.9).ibea
+ibea_object = IBEA(pr_x=0.0, pr_mut=0.1, n_offspring=10, var=0.05)
+SOLVER = ibea_object.ibea
 #SOLVER = my_solver # fmin_slsqp # SOLVER = cma.fmin
 suite_name = "bbob-biobj"
 #suite_name = "bbob"
 suite_instance = "year:2016"
-suite_options = "dimensions: 2,3,5"  # "dimensions: 2,3,5,10,20 "  # if 40 is not desired
+suite_options = "dimensions: 2,3,5,10"  # "dimensions: 2,3,5,10,20 "  # if 40 is not desired
 observer_name = suite_name
 observer_options = (
     ' result_folder: %s_on_%s_budget%04dxD '
-                 % (SOLVER.__name__, suite_name, budget) +
+                 % (str(ibea_object), suite_name, budget) +
     ' algorithm_name: %s ' % SOLVER.__name__ +
     ' algorithm_info: "Indicator-based Evolutionary Algorithm (epsilon)" ')
 ######################### END CHANGE HERE ####################################

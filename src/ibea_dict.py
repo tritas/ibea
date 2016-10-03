@@ -9,10 +9,11 @@ Indeed, one parent is selected after a binary tournament for each offspring.
 Furthermore, the ES applies `+` selection, 
 meaning that only fitness (and not age) is taken into account for the selection phase.
 """
-
+from __future__ import division
 from operator import mod
 from pprint import pprint
 import numpy as np
+from collections import deque
 
 class IBEA(object):
     def __init__(self,
@@ -22,7 +23,7 @@ class IBEA(object):
                  seed=1,
                  pr_x=1.0, # 0.5
                  pr_mut=0.01, # 0.8
-                 var=0.01):
+                 var=0.1): # \in [0, 0.1]
         # --- Algorithm parameters
         self.kappa = kappa             # Fitness scaling ratio
         self.alpha = alpha             # Population size
@@ -41,14 +42,16 @@ class IBEA(object):
         np.random.seed(seed)
 
     def __str__(self):
-        return 'Indicator-based Evolutionary Algorithm with Epsilon indicator'
-
+        #return 'Indicator-based Evolutionary Algorithm with Epsilon indicator'
+        return 'ibea_pop{}_offs{}_mut{}_recomb{}_var{}'.format(self.alpha, self.n_offspring,
+                                                           self.pr_mutation, self.pr_crossover,
+                                                           self.noise_variance)
     def ibea(self, fun, lbounds, ubounds, budget):
         lbounds, ubounds = np.array(lbounds), np.array(ubounds) # [-100, 100]
         dim, f_min = len(lbounds), None
         dim_sqrt = np.sqrt(dim+1)
-        # TO Test: Pr(mutation) = 1/n
-        self.pr_mutation = 1 / float(dim)
+        # Pr(mutation) = 1/n
+        self.pr_mutation = 1/dim
         
         # 1. Initial population of size alpha
         # Sampled from the uniform distribution [lbounds, ubounds]
@@ -72,6 +75,8 @@ class IBEA(object):
                                   if i1 != i2])
         generation = 0
         population_size = self.alpha
+        free_indices = deque(range(self.alpha, self.alpha+self.n_offspring))
+        
         done = False
 
         while not done:
@@ -97,9 +102,10 @@ class IBEA(object):
                 # 3.2 Remove individual
                 population_size -= 1
                 self.pop_data.pop(worst_fit)
+                free_indices.append(worst_fit)
                 # Continue while P does not exceed alpha
                 # TOFIX: does not work with population_size variable
-                env_selection_ok = len(self.pop_data) <= self.alpha
+                env_selection_ok = population_size <= self.alpha
 
             # 4. Check convergence condition
             done = generation >= budget
@@ -130,7 +136,7 @@ class IBEA(object):
                     #    offspring[d] = x1[d] if pr_genes[d] else x2[d]
 
                     # One-point crossover
-                    x_ind = np.random.randint(dim) 
+                    x_ind = np.random.randint(dim)
                     offspring[:x_ind] = x1[:x_ind]
                     offspring[x_ind:] = x2[x_ind:]
                 else:
@@ -151,7 +157,8 @@ class IBEA(object):
 
                 # Add the resulting offspring to P                
                 population_size += 1
-                self.pop_data[population_size] = {
+                indx = free_indices.pop()
+                self.pop_data[indx] = {
                     'x' : offspring,
                     'obj': self.rescale_one(fun(offspring)),
                     'fitness': 0.0

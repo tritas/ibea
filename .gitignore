@@ -5,3 +5,6 @@ __pycache__/
 *.py[cod]
 exdata/
 ppdata/
+*.aux
+latex/*.log
+latex/*.gz
