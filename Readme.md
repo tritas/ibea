@@ -45,12 +45,13 @@ The paper applies SBX-20, which stands for Simulated Binary Crossover [2].
 
 ### Mutation
 
-# References
 
+###### References
+[comment]: # (BIBLIOGRAPHY STYLE: MLA)
 
-[1] Eckart Zitzler and Simon Künzli, “Indicator-Based Selection in Multiobjective Search”. In Parallel Problem Solving from Nature (PPSN 2004), pp. 832-842, 2004.
-[2] Deb, Kalyanmoy, and Ram B. Agrawal. "Simulated binary crossover for continuous search space." Complex Systems 9.3 (1994): 1-15.
-[14] L. Thiele, S. Chakraborty, M. Gries, and S. Künzli. Design space exploration of
+1. Eckart Zitzler and Simon Künzli, “Indicator-Based Selection in Multiobjective Search”. In Parallel Problem Solving from Nature (PPSN 2004), pp. 832-842, 2004.
+2. Deb, Kalyanmoy, and Ram B. Agrawal. "Simulated binary crossover for continuous search space." Complex Systems 9.3 (1994): 1-15.
+3. [ref 14] L. Thiele, S. Chakraborty, M. Gries, and S. Künzli. Design space exploration of
 network processor architectures. In M. Franklin, P. Crowley, H. Hadimioglu, and
 P. Onufryk, editors, Network Processor Design Issues and Practices, Volume 1,
 chapter 4, pages 55–90. Morgan Kaufmann, October 2002.
