@@ -2,16 +2,13 @@
 # -*- coding : utf8 -*-
 
 """ Indicator-based Evolutionary Algorithm with Epsilon indicator
-is an evolutionary algorithm for searching a multi-objective space 
-using the concept of the Pareto front.
+is an evolutionary algorithm for searching a multi-objective space using the concept of the Pareto front.
 Formally, the algorithm is classified as a (\mu/\rho + \lambda)-ES.
-Indeed, one parent is selected after a binary tournament for each offspring.
-Furthermore, the ES applies `+` selection, 
-meaning that only fitness (and not age) is taken into account for the selection phase.
+Indeed, the \lambda offsprings are produced by \rho mates selected from \mu after a binary tournament.
+An Evolution Strategy which applies `+` selection takes fitness into account for the selection phase.
 """
 from __future__ import division
 from operator import mod
-from pprint import pprint
 import numpy as np
 from collections import deque
 
