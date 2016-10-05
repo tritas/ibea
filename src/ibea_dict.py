@@ -101,7 +101,6 @@ class IBEA(object):
                 self.pop_data.pop(worst_fit)
                 free_indices.append(worst_fit)
                 # Continue while P does not exceed alpha
-                # TOFIX: does not work with population_size variable
                 env_selection_ok = population_size <= self.alpha
 
             # 4. Check convergence condition
@@ -124,14 +123,8 @@ class IBEA(object):
                 x2 = self.pop_data[pool[i+1]]['x']
                 offspring = np.empty(dim, dtype=np.float64)
 
-                if np.random.binomial(1, self.pr_crossover):
-                    '''Apply recombination operators'''
-                    # Discrete (dominant) recombination
-                    #   -> Good for separable functions
-                    #pr_genes = np.random.binomial(1, 0.5, dim)
-                    #for d in range(dim):
-                    #    offspring[d] = x1[d] if pr_genes[d] else x2[d]
-
+                '''Application of recombination operators'''
+                if np.random.binomial(1, self.pr_crossover)
                     # One-point crossover
                     x_ind = np.random.randint(dim)
                     offspring[:x_ind] = x1[:x_ind]
@@ -140,8 +133,16 @@ class IBEA(object):
                     # Intermediate recombination (noted \rho_I)
                     offspring = np.divide(x1 + x2, 2)
 
-                    # TODO: Weighted recombination (noted \rho_W)
+                ''' Other possiblities:
+                  - Discrete recombination: dimensions \times coin flips i.e Bernouilli(0.5)
+                  to decide which parent's value to inherit - no reason for that to work, it's too random
+                #pr_genes = np.random.binomial(1, 0.5, dim)
+                #for d in range(dim):
+                #    offspring[d] = x1[d] if pr_genes[d] else x2[d]
 
+                  - Weighted recombination (noted \rho_W) - how to choose optimal weight coef?
+                '''
+                
                 if np.random.binomial(1, self.pr_mutation):
                     # Apply isotropic mutation operator
                     offspring += np.random.randn(dim) * self.noise_variance
@@ -184,6 +185,7 @@ class IBEA(object):
         self.pop_data[particle]['fitness'] = neg_sum
 
     def eps_indic_fun(self, i1, i2):
+        ''' Smallest epsilon such that f(x1) - \eps * f(x2) < 0'''
         obj1 = self.pop_data[i1]['obj']
         obj2 = self.pop_data[i2]['obj']
         diff = obj1 - obj2
@@ -196,9 +198,11 @@ class IBEA(object):
         return eps
 
     def rescale(self, objective):
+        # Save objective lower and upper bounds
         self._min = objective.min(axis=0)
         self._max = objective.max(axis=0)
 
+        # Column-wise rescaling 
         _, ndims = objective.shape
         for dim in range(ndims):
             objective[:, dim] = (objective[:, dim] - self._min[dim]) \
@@ -206,8 +210,10 @@ class IBEA(object):
         return objective
 
     def rescale_one(self, objective):
+        # Update objective lower and upper bounds
         self._min = np.minimum(self._min, objective)
         self._max = np.maximum(self._max, objective)
+        # Rescale vector
         for dim in range(objective.shape[0]):
             objective[dim] = (objective[dim] - self._min[dim]) \
                    / (self._max[dim] - self._min[dim])
