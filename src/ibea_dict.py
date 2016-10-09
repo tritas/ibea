@@ -175,7 +175,7 @@ class IBEA(object):
         return self.pop_data[best_fit]['x']
 
     def simulatedBinaryCrossover(self, ind1, ind2, eta):
-        ''' Eta is the crowding degree'''
+        ''' :param: eta: crowding degree'''
         for i, (x1, x2) in enumerate(zip(ind1, ind2)):
             rand = rand()
             if rand <= 0.5:
