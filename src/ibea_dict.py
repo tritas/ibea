@@ -9,7 +9,10 @@ An Evolution Strategy which applies `+` selection takes fitness into account for
 """
 from __future__ import division
 from operator import mod
-import numpy as np
+from numpy import sqrt, power, exp, float64, infty
+from numpy import array, empty, divide, minimum, maximum
+from numpy.random import seed, choice, binomial
+from numpy.random import rand, randint, randn
 from collections import deque
 
 class IBEA(object):
@@ -17,7 +20,7 @@ class IBEA(object):
                  kappa=0.05, 
                  alpha=100, 
                  n_offspring=8, 
-                 seed=1,
+                 seedit=42,
                  pr_x=1.0, # 0.5
                  pr_mut=0.01, # 0.8
                  var=0.1): # \in [0, 0.1]
@@ -36,7 +39,7 @@ class IBEA(object):
         self.pop_data = dict() 
 
         # --- Random state
-        np.random.seed(seed)
+        seed(seedit)
 
     def __str__(self):
         #return 'Indicator-based Evolutionary Algorithm with Epsilon indicator'
@@ -44,18 +47,17 @@ class IBEA(object):
                                                            self.pr_mutation, self.pr_crossover,
                                                            self.noise_variance)
     def ibea(self, fun, lbounds, ubounds, budget):
-        lbounds, ubounds = np.array(lbounds), np.array(ubounds) # [-100, 100]
+        lbounds, ubounds = array(lbounds), array(ubounds) # [-100, 100]
         dim, f_min = len(lbounds), None
-        dim_sqrt = np.sqrt(dim+1)
+        dim_sqrt = sqrt(dim+1)
         # Pr(mutation) = 1/n
         self.pr_mutation = 1/dim
         
         # 1. Initial population of size alpha
         # Sampled from the uniform distribution [lbounds, ubounds]
-        particles = np.random.rand(self.alpha, dim) \
-                 * (ubounds - lbounds) + lbounds
+        particles = rand(self.alpha, dim) * (ubounds - lbounds) + lbounds
         # Rescaling objective values to [0,1]
-        objective_values = np.array([fun(x) for x in particles])
+        objective_values = array([fun(x) for x in particles])
         objective_values = self.rescale(objective_values)
         # Datastructure containing all the population info
         self.pop_data = {
@@ -84,7 +86,7 @@ class IBEA(object):
             env_selection_ok = False
             while not env_selection_ok:
                 # 3.1 Environmental selection
-                fit_min = 10
+                fit_min = infty
                 worst_fit = None
                 for (k, v) in self.pop_data.items():
                     if v['fitness'] <= fit_min:
@@ -93,9 +95,8 @@ class IBEA(object):
 
                 # 3.3 Update fitness values
                 for i in self.pop_data.keys():
-                    self.pop_data[i]['fitness'] += np.exp(
-                        - self.eps_indic_fun(worst_fit, i) \
-                        / (self.indicator_max * self.kappa))
+                    self.pop_data[i]['fitness'] += exp(- self.eps_indic_fun(worst_fit, i) \
+                                                       / (self.indicator_max * self.kappa))
                 # 3.2 Remove individual
                 population_size -= 1
                 self.pop_data.pop(worst_fit)
@@ -112,7 +113,7 @@ class IBEA(object):
             item_keys = list(self.pop_data.keys())
             pool = []
             for i in range(2*self.n_offspring):
-                p1, p2 = np.random.choice(item_keys, 2)
+                p1, p2 = choice(item_keys, 2)
                 if self.pop_data[p1]['fitness'] >= self.pop_data[p2]['fitness']:
                     pool.append(p1)
                 else:
@@ -121,17 +122,17 @@ class IBEA(object):
             for i in range(self.n_offspring):
                 x1 = self.pop_data[pool[i]]['x']
                 x2 = self.pop_data[pool[i+1]]['x']
-                offspring = np.empty(dim, dtype=np.float64)
+                offspring = empty(dim, dtype=float64)
 
                 '''Application of recombination operators'''
-                if np.random.binomial(1, self.pr_crossover)
+                if binomial(1, self.pr_crossover):
                     # One-point crossover
-                    x_ind = np.random.randint(dim)
+                    x_ind = randint(dim)
                     offspring[:x_ind] = x1[:x_ind]
                     offspring[x_ind:] = x2[x_ind:]
                 else:
                     # Intermediate recombination (noted \rho_I)
-                    offspring = np.divide(x1 + x2, 2)
+                    offspring = divide(x1 + x2, 2)
 
                 ''' Other possiblities:
                   - Discrete recombination: dimensions \times coin flips i.e Bernouilli(0.5)
@@ -143,14 +144,14 @@ class IBEA(object):
                   - Weighted recombination (noted \rho_W) - how to choose optimal weight coef?
                 '''
                 
-                if np.random.binomial(1, self.pr_mutation):
+                if binomial(1, self.pr_mutation):
                     # Apply isotropic mutation operator
-                    offspring += np.random.randn(dim) * self.noise_variance
+                    offspring += randn(dim) * self.noise_variance
 
                 ''' Adapt step-size - 1/5-th rule for (1+1)-ES: 
                 self.compute_fitness(offspring)
                 indicator = int(f_parent <= f_offspring)
-                sigma *= np.power(np.exp(indicator - 0.2), 1/dim_sqrt)
+                sigma *= power(exp(indicator - 0.2), 1/dim_sqrt)
                 '''
 
                 # Add the resulting offspring to P                
@@ -164,7 +165,7 @@ class IBEA(object):
                 
             generation += 1
 
-        best_fitness = -np.infty
+        best_fitness = -infty
         best_fit = None
         for (item, data) in self.pop_data.items():
             if data['fitness'] >= best_fitness:
@@ -176,7 +177,7 @@ class IBEA(object):
     def simulatedBinaryCrossover(self, ind1, ind2, eta):
         ''' Eta is the crowding degree'''
         for i, (x1, x2) in enumerate(zip(ind1, ind2)):
-            rand = random.random()
+            rand = rand()
             if rand <= 0.5:
                 beta = 2. * rand
             else:
@@ -193,7 +194,7 @@ class IBEA(object):
         neg_sum = 0.0
         for indx in self.pop_data.keys():
             if indx != particle:
-                neg_sum -= np.exp(-self.eps_indic_fun(indx, particle)\
+                neg_sum -= exp(-self.eps_indic_fun(indx, particle)\
                                   /(self.indicator_max * self.kappa))
 
         self.pop_data[particle]['fitness'] = neg_sum
@@ -225,8 +226,8 @@ class IBEA(object):
 
     def rescale_one(self, objective):
         # Update objective lower and upper bounds
-        self._min = np.minimum(self._min, objective)
-        self._max = np.maximum(self._max, objective)
+        self._min = minimum(self._min, objective)
+        self._max = maximum(self._max, objective)
         # Rescale vector
         for dim in range(objective.shape[0]):
             objective[dim] = (objective[dim] - self._min[dim]) \
