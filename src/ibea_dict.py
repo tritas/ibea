@@ -172,6 +172,20 @@ class IBEA(object):
                 best_fit = item
 
         return self.pop_data[best_fit]['x']
+
+    def simulatedBinaryCrossover(self, ind1, ind2, eta):
+        ''' Eta is the crowding degree'''
+        for i, (x1, x2) in enumerate(zip(ind1, ind2)):
+            rand = random.random()
+            if rand <= 0.5:
+                beta = 2. * rand
+            else:
+                beta = 1. / (2. * (1. - rand))
+            beta **= 1. / (eta + 1.)
+            ind1[i] = 0.5 * (((1 + beta) * x1) + ((1 - beta) * x2))
+            ind2[i] = 0.5 * (((1 - beta) * x1) + ((1 + beta) * x2))
+
+        return ind1, ind2        
     
     def compute_fitness(self, particle):
         ''' For all vectors in P\{particle}, compute pairwise indicator function

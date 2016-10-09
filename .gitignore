@@ -8,3 +8,5 @@ ppdata/
 *.aux
 latex/*.log
 latex/*.gz
+latex/*.aux
+latex/*.dvi
