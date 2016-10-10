@@ -135,8 +135,8 @@ class IBEA(object):
                     child1, child2 = bounded_sbx(parent1['x'], parent2['x'],
                                                  lbounds, ubounds, 5)
                 else:
-                    child1 = parent1
-                    child2 = parent2
+                    child1 = parent1['x']
+                    child2 = parent2['x']
                     
                 # (Isotropic) mutation
                 if binomial(1, self.pr_mutation):
@@ -202,7 +202,7 @@ class IBEA(object):
     def epsilon_indicator(self, i1, i2):
         obj1 = self.pop_data[i1]['obj']
         obj2 = self.pop_data[i2]['obj']
-        return compute_epsilon(obj1, obj2)
+        return self.compute_epsilon(obj1, obj2)
     
     def compute_epsilon(self, obj1, obj2):
         ''' Smallest epsilon such that f(x1) - \eps * f(x2) < 0'''

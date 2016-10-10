@@ -28,7 +28,7 @@ import cocoex
 from cocoex import Suite, Observer, log_level
 verbose = 1
 # Group's solver
-from ibea_dict import IBEA
+from ibea import IBEA
 try: import cma  # cma.fmin is a solver option, "pip install cma" installs cma
 except: pass
 try: from scipy.optimize import fmin_slsqp  # "pip install scipy" installs scipy
