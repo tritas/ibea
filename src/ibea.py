@@ -2,20 +2,21 @@
 # -*- coding : utf8 -*-
 
 """ Indicator-based Evolutionary Algorithm with Epsilon indicator
-is an evolutionary algorithm for searching a multi-objective space using the concept of the Pareto front.
-Formally, the algorithm is classified as a (\mu/\rho + \lambda)-ES.
-Indeed, the \lambda offsprings are produced by \rho mates selected from \mu after a binary tournament.
-An Evolution Strategy which applies `+` selection takes fitness into account for the selection phase.
+is an evolutionary algorithm for searching a multi-objective space by improving on the Pareto front.
+Formally, the algorithm is classified as a (\mu/\rho + \lambda)-ES, i.e.
+\lambda offsprings are produced by \rho mates selected from \mu after a binary tournament.
+An Evolution Strategy applies `+` selection if it only takes fitness into account for the selection phase.
 """
 from __future__ import division
 from operator import mod
-from numpy import sqrt, power, exp, float64, infty
-from numpy import array, empty, divide, minimum, maximum
-from numpy.random import seed, choice, binomial
-from numpy.random import rand, randint, randn
 from collections import deque
 
-from crossovers import bounded_sbx
+from numpy import sqrt, power, exp, float64, infty
+from numpy import array, empty, divide, minimum, maximum, clip
+from numpy.random import seed, choice, binomial
+from numpy.random import rand, randint, randn
+
+from crossover import bounded_sbx
 
 class IBEA(object):
     def __init__(self,
@@ -57,7 +58,7 @@ class IBEA(object):
         dim, f_min = len(lbounds), None
         dim_sqrt = sqrt(dim+1)
         # Pr(mutation) = 1/n
-        self.pr_mutation = 1/dim
+        # self.pr_mutation = 1/dim
         
         # 1. Initial population of size alpha
         # Sampled from the uniform distribution [lbounds, ubounds]
@@ -74,7 +75,7 @@ class IBEA(object):
             } for p in range(self.alpha)
         }
         # Lazy compute max absolute value of pairwise epsilon indicator 
-        self.indicator_max = max([abs(self.eps_indic_fun(i1, i2))
+        self.indicator_max = max([abs(self.epsilon_indicator(i1, i2))
                                   for i1 in range(self.alpha)
                                   for i2 in range(self.alpha)
                                   if i1 != i2])
@@ -87,7 +88,7 @@ class IBEA(object):
         while not done:
             # 2. Fitness assignment
             for i in self.pop_data.keys():
-                self.compute_fitness(i)
+                self.compute_set_fitness(i)
             # 3 Environmental selection
             env_selection_ok = False
             while not env_selection_ok:
@@ -101,7 +102,7 @@ class IBEA(object):
 
                 # 3.3 Update fitness values
                 for i in self.pop_data.keys():
-                    self.pop_data[i]['fitness'] += exp(- self.eps_indic_fun(worst_fit, i) \
+                    self.pop_data[i]['fitness'] += exp(- self.epsilon_indicator(worst_fit, i) \
                                                        / (self.indicator_max * self.kappa))
                 # 3.2 Remove individual
                 self.population_size -= 1
@@ -124,35 +125,45 @@ class IBEA(object):
                     pool.append(p1)
                 else:
                     pool.append(p2)
-            # 6. Variation
+            # 6. Recombination and Variation applied to the mating pool.
             for i in range(self.n_offspring):
-                parent1 = self.pop_data[pool[i]]['x']
-                parent2 = self.pop_data[pool[i+1]]['x']
+                parent1 = self.pop_data[pool[i]]
+                parent2 = self.pop_data[pool[i+1]]
 
-                '''Application of recombination operators'''
+                # Recombination (crossover) operator
                 if binomial(1, self.pr_crossover):
-                    child1, child2 = bounded_sbx(parent1, parent2, lbounds, ubounds)
+                    child1, child2 = bounded_sbx(parent1['x'], parent2['x'],
+                                                 lbounds, ubounds, 5)
                 else:
                     child1 = parent1
                     child2 = parent2
                     
+                # (Isotropic) mutation
                 if binomial(1, self.pr_mutation):
-                    # Apply isotropic mutation operator
                     child1 += randn(dim) * self.noise_variance
                     child2 += randn(dim) * self.noise_variance
 
+                    # Make sure vectors are still bounded
                 child1 = clip(child1, lbounds, ubounds)
                 child2 = clip(child2, lbounds, ubounds)
-                ''' Adapt step-size - 1/5-th rule for (1+1)-ES: 
-                self.compute_fitness(offspring)
-                indicator = int(f_parent <= f_offspring)
-                sigma *= power(exp(indicator - 0.2), 1/dim_sqrt)
-                '''
-                self.add_offspring(child1, fun(child1))
-                self.add_offspring(child2, fun(child2))
+
+                obj_c1 = self.rescale_one(fun(child1))
+                obj_c2 = self.rescale_one(fun(child2))
+
+                fitness_c1 = self.compute_fitness(obj_c1)
+                fitness_c2 = self.compute_fitness(obj_c2)
+                
+                ''' Adapt step-size - 1/5-th rule '''
+                indicator = int(max(parent1['fitness'], parent2['fitness']) \
+                                <= max(fitness_c1, fitness_c2))
+                self.noise_variance *= power(exp(indicator - 0.2), 1/dim_sqrt)
+
+                self.add_offspring(child1, obj_c1)
+                self.add_offspring(child2, obj_c2)
                 
             generation += 1
 
+        # Choose vector maximizing fitness
         best_fitness = -infty
         best_fit = None
         for (item, data) in self.pop_data.items():
@@ -163,31 +174,38 @@ class IBEA(object):
         return self.pop_data[best_fit]['x']
 
 
-    def add_offspring(self, offspring, objective_value):
+    def add_offspring(self, vector, objective_value, fitness=0.0):
         # Add the resulting offspring to P                
         self.population_size += 1
         indx = self.free_indices.pop()
         self.pop_data[indx] = {
-            'x' : offspring,
-            'obj': self.rescale_one(objective_value),
-            'fitness': 0.0
+            'x' : vector,
+            'obj': objective_value,
+            'fitness': fitness
         }
         
-    def compute_fitness(self, particle):
-        ''' For all vectors in P\{particle}, compute pairwise indicator function
+    def compute_fitness(self, objective_value, exclude=-1):
+        ''' For all vectors in P\{exclude}, compute pairwise indicator function
         and sum to get fitness value.'''
-        neg_sum = 0.0
-        for indx in self.pop_data.keys():
-            if indx != particle:
-                neg_sum -= exp(-self.eps_indic_fun(indx, particle)\
-                                  /(self.indicator_max * self.kappa))
+        exp_sum = 0.0
+        for (indx, data) in self.pop_data.items():
+            if indx != exclude:
+                exp_sum -= exp(-self.compute_epsilon(data['obj'], objective_value)\
+                               /(self.indicator_max * self.kappa))
+        return exp_sum
 
-        self.pop_data[particle]['fitness'] = neg_sum
+    def compute_set_fitness(self, particle):
+        particle_obj = self.pop_data[particle]['obj']
+        fitness = self.compute_fitness(particle_obj, particle)
+        self.pop_data[particle]['fitness'] = fitness
 
-    def eps_indic_fun(self, i1, i2):
-        ''' Smallest epsilon such that f(x1) - \eps * f(x2) < 0'''
+    def epsilon_indicator(self, i1, i2):
         obj1 = self.pop_data[i1]['obj']
         obj2 = self.pop_data[i2]['obj']
+        return compute_epsilon(obj1, obj2)
+    
+    def compute_epsilon(self, obj1, obj2):
+        ''' Smallest epsilon such that f(x1) - \eps * f(x2) < 0'''
         diff = obj1 - obj2
         eps = diff.min()
 

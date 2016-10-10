@@ -11,9 +11,10 @@ from numpy import empty, clip, divide, power, exp, float64, nan, inf, seterr
 from numpy.random import binomial, randint, rand
 seterr(all='raise')
 
-def discrete_recombination(x1, x2, dim):
+def discrete_recombination(x1, x2):
     ''' Discrete recombination: dimensions \times coin flips i.e Bernouilli(0.5)
     to decide which parent's value to inherit - no reason for that to work, it's too random '''
+    dim = x1.shape[0]
     pr_genes = binomial(1, 0.5, dim)
     offspring = empty(dim, dtype=float64)
     for d in range(dim):
@@ -26,8 +27,9 @@ def weighted_recombination(x1, x2, coef=0.5):
     offspring = divide(coef * x1 + (1 - coef) * x2, 2)
     return offspring
 
-def one_point_crossover(x1, x2, dim):
+def one_point_crossover(x1, x2):
     # One-point crossover
+    dim = x1.shape[0]
     x_ind = randint(dim)
     offspring = empty(dim, dtype=float64)
     offspring[:x_ind] = x1[:x_ind]
@@ -36,10 +38,10 @@ def one_point_crossover(x1, x2, dim):
 
 def bounded_sbx(parent1, parent2, lbounds, ubounds, eta=5):
     ''' Implementation of the Simulated Binary Crossover operator
-    The idea is to compute the spread factor `beta` as a random number at each index.
-    The goal is to produce child values bounded in (lbound, ubound) such that
-    the crossover is stationary with high probability: this is achieved with a high eta value.
-    To do that we compute `beta` cumulative probability distribution
+    Compute the spread factor `beta` as a random number at each index.
+    Produce child values bounded in (lbound, ubound) such that the crossover is
+    stationary with high probability: this is achieved with a high eta value.
+
     :param eta: controls the probability of producing children close to their parents.
     :reference: Deb, Kalyanmoy, and Ram B. Agrawal. 
     "Simulated binary crossover for continuous search space." 

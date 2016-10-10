@@ -77,7 +77,7 @@
 % rungeneric.py writes data into a subfolder of ppdata
 \newcommand{\bbobdatapath}{ppdata/} % default output folder of rungeneric.py
 \input{\bbobdatapath bbob_pproc_commands.tex} % provide default of algname and algfolder
-% \renewcommand{\algname}{MY-ALGORITHM-NAME}  % name of algorithm as it should appear in the text
+\renewcommand{\algname}{IBEA}  % name of algorithm as it should appear in the text
 % \renewcommand{\algfolder}{FOLDER/} % subfolder of \bbobdatapath for processed algorithm
 % Find all \change commands in the text below and update the information according to your data
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -107,7 +107,7 @@
 \begin{document}
 %
 % --- Author Metadata here ---
-\conferenceinfo{GECCO'16,} {July 20-24, 2016, Denver, CO, USA.}
+\conferenceinfo{GECCO'17,} {July 20-24, 2017, Denver, CO, USA.}
 \CopyrightYear{2016}
 \crdata{TBA}
 \clubpenalty=10000
@@ -117,7 +117,7 @@
 \title{Black-Box Optimization Benchmarking Template for the Bi-Objective BBOB Test Suite
 % \titlenote{If needed}
 }
-\subtitle{Draft version
+\subtitle{Intermediate report
 \titlenote{Submission deadline: April 3rd.}}
 % Camera-ready paper due by May 4th.
 
@@ -146,7 +146,7 @@
 % without further effort on your part as the last section in
 % the body of your article BEFORE References or any Appendices.
 
-\numberofauthors{1} %  in this sample file, there are a *total*
+\numberofauthors{5} %  in this sample file, there are a *total*
 % of EIGHT authors. SIX appear on the 'first-page' (for formatting
 % reasons) and the remaining two appear in the \additionalauthors section.
 %
@@ -196,24 +196,7 @@ Forename Name\\ %\titlenote{Dr.~Trovato insisted his name be first.}\\
 %       \affaddr{Moffett Field}\\
 %       \affaddr{California 94035}\\
 %       \email{fogartys@amesres.org}
-%% 6th. author
-%\alignauthor Charles Palmer\\
-%       \affaddr{Palmer Research Laboratories}\\
-%       \affaddr{8600 Datapoint Drive}\\
-%       \affaddr{San Antonio, Texas 78229}\\
-%       \email{cpalmer@prl.com}
-} % author
-%% There's nothing stopping you putting the seventh, eighth, etc.
-%% author on the opening page (as the 'third row') but we ask,
-%% for aesthetic reasons that you place these 'additional authors'
-%% in the \additional authors block, viz.
-%\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
-%email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
-%(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
-%\date{30 July 1999}
-%% Just remember to make sure that the TOTAL number of authors
-%% is the number that will appear on the first page PLUS the
-%% number that will appear in the \additionalauthors section.
+}
 
 \maketitle
 \begin{abstract}
@@ -231,17 +214,17 @@ to be written
 % Complete with anything that is needed
 \keywords{Benchmarking, Black-box optimization, Bi-objective optimization}
 
-% \section{Introduction}
-%
-% \section{Algorithm Presentation}
-%
-% \section{Experimental Procedure}
-%
+\section{Introduction}
+
+ \section{Algorithm Presentation}
+
+ \section{Experimental Procedure}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{CPU Timing}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % note that the following text is just a proposal and can/should be changed to your needs:
-In order to evaluate the CPU timing of the algorithm, we have run the \change{\algname} with restarts on the entire bbob-biobj test suite \cite{biobj2016func} for $2 D$ function evaluations. The \change{C/Java/Matlab/Octave/Python} code was run on a \change{Mac Intel(R) Core(TM) i5-2400S CPU @ 2.50GHz} with \change{1} processor and \change{4} cores. The time per function evaluation for dimensions 2, 3, 5, 10, 20\change{, 40} equals \change{$x.x$}, \change{$x.x$}, \change{$x.x$}, \change{$xx$}, \change{$xxx$}\change{, and $xxx$} seconds respectively. 
+In order to evaluate the CPU timing of the algorithm, we have run the \algname with restarts on the entire bbob-biobj test suite \cite{biobj2016func} for $2 D$ function evaluations. The Python code was run on a Intel(R) Core(TM) i5-2400S CPU @ 2.50GHz} with 4 processors and 8 cores. The time per function evaluation for dimensions 2, 3, 5, 10, 20 equals \change{$x.x$}, \change{$x.x$}, \change{$x.x$}, \change{$xx$}, \change{$xxx$}\change{, and $xxx$} seconds respectively. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
