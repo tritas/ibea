@@ -15,6 +15,8 @@ from numpy.random import seed, choice, binomial
 from numpy.random import rand, randint, randn
 from collections import deque
 
+from crossovers import bounded_sbx
+
 class IBEA(object):
     def __init__(self,
                  kappa=0.05, 
@@ -34,9 +36,13 @@ class IBEA(object):
         self._min = None               # Objective function minima
         self._max = None               # Objective function maxima
         self.indicator_max = None      # Indicator function maximum
-        
+
         # --- Data structure containing: population vectors, fitness and objective values
-        self.pop_data = dict() 
+        self.pop_data = dict()
+        # --- Free indices for the population dictionary
+        self.free_indices = deque()
+        # --- Population counter
+        self.population_size = 0
 
         # --- Random state
         seed(seedit)
@@ -72,11 +78,11 @@ class IBEA(object):
                                   for i1 in range(self.alpha)
                                   for i2 in range(self.alpha)
                                   if i1 != i2])
-        generation = 0
-        population_size = self.alpha
-        free_indices = deque(range(self.alpha, self.alpha+self.n_offspring))
-        
+        # --- Initialize variables
         done = False
+        generation = 0
+        self.population_size = self.alpha
+        self.free_indices = deque(range(self.alpha, self.alpha+2*self.n_offspring))
 
         while not done:
             # 2. Fitness assignment
@@ -98,11 +104,11 @@ class IBEA(object):
                     self.pop_data[i]['fitness'] += exp(- self.eps_indic_fun(worst_fit, i) \
                                                        / (self.indicator_max * self.kappa))
                 # 3.2 Remove individual
-                population_size -= 1
+                self.population_size -= 1
                 self.pop_data.pop(worst_fit)
-                free_indices.append(worst_fit)
+                self.free_indices.append(worst_fit)
                 # Continue while P does not exceed alpha
-                env_selection_ok = population_size <= self.alpha
+                env_selection_ok = self.population_size <= self.alpha
 
             # 4. Check convergence condition
             done = generation >= budget
@@ -120,48 +126,28 @@ class IBEA(object):
                     pool.append(p2)
             # 6. Variation
             for i in range(self.n_offspring):
-                x1 = self.pop_data[pool[i]]['x']
-                x2 = self.pop_data[pool[i+1]]['x']
-                offspring = empty(dim, dtype=float64)
+                parent1 = self.pop_data[pool[i]]['x']
+                parent2 = self.pop_data[pool[i+1]]['x']
 
                 '''Application of recombination operators'''
                 if binomial(1, self.pr_crossover):
-                    # One-point crossover
-                    x_ind = randint(dim)
-                    offspring[:x_ind] = x1[:x_ind]
-                    offspring[x_ind:] = x2[x_ind:]
+                    child1, child2 = bounded_sbx(parent1, parent2, lbounds, ubounds)
                 else:
-                    # Intermediate recombination (noted \rho_I)
-                    offspring = divide(x1 + x2, 2)
-
-                ''' Other possiblities:
-                  - Discrete recombination: dimensions \times coin flips i.e Bernouilli(0.5)
-                  to decide which parent's value to inherit - no reason for that to work, it's too random
-                #pr_genes = np.random.binomial(1, 0.5, dim)
-                #for d in range(dim):
-                #    offspring[d] = x1[d] if pr_genes[d] else x2[d]
-
-                  - Weighted recombination (noted \rho_W) - how to choose optimal weight coef?
-                '''
-                
+                    child1 = parent1
+                    child2 = parent2
+                    
                 if binomial(1, self.pr_mutation):
                     # Apply isotropic mutation operator
-                    offspring += randn(dim) * self.noise_variance
+                    child1 += randn(dim) * self.noise_variance
+                    child2 += randn(dim) * self.noise_variance
 
                 ''' Adapt step-size - 1/5-th rule for (1+1)-ES: 
                 self.compute_fitness(offspring)
                 indicator = int(f_parent <= f_offspring)
                 sigma *= power(exp(indicator - 0.2), 1/dim_sqrt)
                 '''
-
-                # Add the resulting offspring to P                
-                population_size += 1
-                indx = free_indices.pop()
-                self.pop_data[indx] = {
-                    'x' : offspring,
-                    'obj': self.rescale_one(fun(offspring)),
-                    'fitness': 0.0
-                }
+                self.add_offspring(child1, fun(child1))
+                self.add_offspring(child2, fun(child2))
                 
             generation += 1
 
@@ -174,6 +160,17 @@ class IBEA(object):
 
         return self.pop_data[best_fit]['x']
 
+
+    def add_offspring(self, offspring, objective_value):
+        # Add the resulting offspring to P                
+        self.population_size += 1
+        indx = self.free_indices.pop()
+        self.pop_data[indx] = {
+            'x' : offspring,
+            'obj': self.rescale_one(objective_value),
+            'fitness': 0.0
+        }
+        
     def compute_fitness(self, particle):
         ''' For all vectors in P\{particle}, compute pairwise indicator function
         and sum to get fitness value.'''
