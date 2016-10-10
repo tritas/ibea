@@ -8,15 +8,18 @@ Formally, the algorithm is classified as a (\mu/\rho + \lambda)-ES, i.e.
 An Evolution Strategy applies `+` selection if it only takes fitness into account for the selection phase.
 """
 from __future__ import division
+from traceback import format_exc
 from operator import mod
 from collections import deque
 
-from numpy import sqrt, power, exp, float64, infty
+from numpy import sqrt, power, exp, float64, infty, seterr
 from numpy import array, empty, divide, minimum, maximum, clip
 from numpy.random import seed, choice, binomial
 from numpy.random import rand, randint, randn
 
 from crossover import bounded_sbx
+
+seterr(all='raise')
 
 class IBEA(object):
     def __init__(self,
@@ -137,7 +140,7 @@ class IBEA(object):
                 else:
                     child1 = parent1['x']
                     child2 = parent2['x']
-                    
+
                 # (Isotropic) mutation
                 if binomial(1, self.pr_mutation):
                     child1 += randn(dim) * self.noise_variance
@@ -149,18 +152,22 @@ class IBEA(object):
 
                 obj_c1 = self.rescale_one(fun(child1))
                 obj_c2 = self.rescale_one(fun(child2))
+                '''
+                try:
+                    fitness_c1 = self.compute_fitness(obj_c1)
+                    fitness_c2 = self.compute_fitness(obj_c2)
 
-                fitness_c1 = self.compute_fitness(obj_c1)
-                fitness_c2 = self.compute_fitness(obj_c2)
-                
-                ''' Adapt step-size - 1/5-th rule '''
-                indicator = int(max(parent1['fitness'], parent2['fitness']) \
-                                <= max(fitness_c1, fitness_c2))
-                self.noise_variance *= power(exp(indicator - 0.2), 1/dim_sqrt)
+                    # Adapt step-size - 1/5-th rule
+                    indicator = int(max(parent1['fitness'], parent2['fitness']) \
+                                    <= max(fitness_c1, fitness_c2))
+                    self.noise_variance *= power(exp(indicator - 0.2), 1/dim_sqrt)
 
+                except FloatingPointError, RuntimeWarning:
+                    print(format_exc())
+                '''
                 self.add_offspring(child1, obj_c1)
                 self.add_offspring(child2, obj_c2)
-                
+
             generation += 1
 
         # Choose vector maximizing fitness
