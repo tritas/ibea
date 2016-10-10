@@ -34,12 +34,13 @@ def one_point_crossover(x1, x2, dim):
     offspring[x_ind:] = x2[x_ind:]
     return offspring
 
-def bounded_sbx(parent1, parent2, lbounds, ubounds, eta=0.5):
+def bounded_sbx(parent1, parent2, lbounds, ubounds, eta=5):
     ''' Implementation of the Simulated Binary Crossover operator
-    The idea is to compute the spread factor `beta` at each index and produce child
-    values bounded in (lbound, ubound) s.t the crossover is stationary with high probability.
+    The idea is to compute the spread factor `beta` as a random number at each index.
+    The goal is to produce child values bounded in (lbound, ubound) such that
+    the crossover is stationary with high probability: this is achieved with a high eta value.
     To do that we compute `beta` cumulative probability distribution
-    :param eta: 
+    :param eta: controls the probability of producing children close to their parents.
     :reference: Deb, Kalyanmoy, and Ram B. Agrawal. 
     "Simulated binary crossover for continuous search space." 
     Complex Systems 9.3 (1994): 1-15. ''' 
