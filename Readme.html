@@ -1,59 +1,62 @@
-<h1>Coco documentation</h1>
+<h1>Indicator-Based Evolutionary Algorithm (epsilon indicator) [1]</h1>
+
+<h2>Coco documentation</h2>
 
 <p><a href="http://numbbo.github.io/coco-doc/bbob-biobj/perf-assessment/">Biobjective Performance Assessment with the COCO Platform</a></p>
 
-<h1>Implementation of the IBEA-epsilon algorithm [1]</h1>
-
 <h2>Running the optimizer</h2>
 
-<p>There are two ways to run the optimizer:</p>
-
-<p><code>shell
+<p>There are two ways to run the optimizer: it is possible to change the experiment parameters in the <code>IBEA.py</code> file by parameterizing the call to <code>experiment.main</code>.
+<code>shell
 python2 ibea.py
 </code></p>
 
-<p><code>shell
-python2 experiment.py
+<p>It is also possible to parametrize and run <code>experiment.py</code>: 
+<code>shell
+python2 experiment.py &lt;budget&gt; &lt;current_batch&gt; &lt;no_of_batches&gt;
 </code></p>
 
-<p>Note that it is easier to change the experiment parameters in the <code>IBEA.py</code> file, by parameterizing the call to <code>experiment.main</code>.</p>
+<h2>Keeping testing parameters local</h2>
 
-<h2>Convention: Separate parameters</h2>
-
-<p>The idea is to keep the parameters we are testing local.
-The best way is to keep the solver definition in <code>experiment.py</code> as: </p>
+<p>The idea is to keep the parameters we are testing local. Freely modify the solver object initialization in <code>experiment.py</code> in line 255: </p>
 
 <p><code>python
-SOLVER = IBEA().ibea # line 254
+SOLVER = IBEA().ibea
 </code> </p>
 
-<p>You may change the parameters when initializing the object, however when you commit some changes, please do:</p>
+<p>When you commit, please do <code>git add -p experiment.py</code> and ignore the above hunk. That way you do not to write your params on git and do not risk overwriting ours.</p>
 
-<p><code>shell
-git add -p experiment.py
-</code></p>
+<h2>Sharing experimental results</h2>
 
-<p>so as not to write your params on git (and risk overwriting our own when we merge).</p>
-
-<h2>Convention: Shared experimental results</h2>
-
-<p>The idea is that the local sub-directory in which results are saved, namely <code>exdata</code>, is git ignored so that everyone can local experiments.</p>
+<p>The idea is that <code>exdata</code>, the sub-directory in which results are saved, is ignored by git so that everyone can local experiments.</p>
 
 <p>If you have nice results to share, you may copy the raw or preprocessed results in the toplevel <code>shared_exdata</code> directory and push!</p>
 
 <h2>Variation step</h2>
 
-<h3>Recombination operator</h3>
+<p>Application of crossover and mutation both have tunable probabilities. For most problem functions best results were achieved with both probabilities being close (but not necessarily equal) to 1.</p>
 
-<p>The paper applies SBX-20, which stands for Simulated Binary Crossover [2].</p>
+<h3>Recombination</h3>
+
+<p>The paper applies Simulated Binary Crossover-20, following paper[2]. </p>
+
+<p>Lower values of indices for the approximated <code>spread</code> distribution produce offspring different from their parents, whereas higher ones produce offspring more similar to their parents. </p>
+
+<p>In practice, n=20 produces some numerical instability, the authors of [2] recommend using n = {2, 5}.</p>
 
 <h3>Mutation</h3>
 
-<h1>References</h1>
+<p>For fixed variance, prefer a higher value, e.g sigma in [2, 5].</p>
 
-<p>[1] Eckart Zitzler and Simon Künzli, “Indicator-Based Selection in Multiobjective Search”. In Parallel Problem Solving from Nature (PPSN 2004), pp. 832-842, 2004.
-[2] Deb, Kalyanmoy, and Ram B. Agrawal. "Simulated binary crossover for continuous search space." Complex Systems 9.3 (1994): 1-15.
-[14] L. Thiele, S. Chakraborty, M. Gries, and S. Künzli. Design space exploration of
+<p>The idea is to adapt the step size depending on the success of previous mutations for each input space dimension.</p>
+
+<h6>References</h6>
+
+<ol>
+<li>Eckart Zitzler and Simon Künzli, “Indicator-Based Selection in Multiobjective Search”. In Parallel Problem Solving from Nature (PPSN 2004), pp. 832-842, 2004.</li>
+<li>Deb, Kalyanmoy, and Ram B. Agrawal. "Simulated binary crossover for continuous search space." Complex Systems 9.3 (1994): 1-15.</li>
+<li>[ref 14] L. Thiele, S. Chakraborty, M. Gries, and S. Künzli. Design space exploration of
 network processor architectures. In M. Franklin, P. Crowley, H. Hadimioglu, and
 P. Onufryk, editors, Network Processor Design Issues and Practices, Volume 1,
-chapter 4, pages 55–90. Morgan Kaufmann, October 2002.</p>
+chapter 4, pages 55–90. Morgan Kaufmann, October 2002.</li>
+</ol>
