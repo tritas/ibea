@@ -252,13 +252,13 @@ max_runs = 1e6  # number of (almost) independent trials per problem instance
 number_of_batches = 1  # allows to run everything in several batches
 current_batch = 1      # 1..number_of_batches
 ##############################################################################
-ibea_object = IBEA(pr_x=0.8, pr_mut=0.8, n_offspring=20, var=5.0)
+ibea_object = IBEA(pr_mut=0.8, pr_x=0.8, n_offspring=20, var=5.0)
 SOLVER = ibea_object.ibea
 #SOLVER = my_solver # fmin_slsqp # SOLVER = cma.fmin
 suite_name = "bbob-biobj"
 #suite_name = "bbob"
 suite_instance = "year:2016"
-suite_options = "dimensions: 2, 5, 10, 20"  # "dimensions: 2,3,5,10,20 "  # if 40 is not desired
+suite_options = "dimensions: 2,5,10,20"  # "dimensions: 2,3,5,10,20 "  # if 40 is not desired
 observer_name = suite_name
 observer_options = (
     ' result_folder: %s_on_%s_budget%04dxD '

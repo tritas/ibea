@@ -1,6 +1,8 @@
 #!/usr/bin/env python2
 # -*- coding : utf8 -*-
 # Author: Aris Tritas <aris.tritas@u-psud.fr>
+# Licence: BSD 3 clause
+
 """ Indicator-based Evolutionary Algorithm with Epsilon indicator
 is an evolutionary algorithm for searching a multi-objective space by improving on the Pareto front.
 Formally, the algorithm is classified as a (\mu/\rho + \lambda)-ES, i.e.
@@ -29,7 +31,8 @@ class IBEA(object):
                  seedit=42,
                  pr_x=1.0,
                  pr_mut=1.0,
-                 var=2.0): # \in [0, 0.1]
+                 var=2.0,
+                 max_generations=200): # \in [0, 0.1]
         # --- Algorithm parameters
         self.kappa = kappa             # Fitness scaling ratio
         self.alpha = alpha             # Population size
@@ -40,7 +43,7 @@ class IBEA(object):
         self._min = None               # Objective function minima
         self._max = None               # Objective function maxima
         self.indicator_max = None      # Indicator function maximum
-
+        self.max_generations = max_generations
         # --- Data structure containing: population vectors, fitness and objective values
         self.pop_data = dict()
         # --- Free indices for the population dictionary
@@ -116,7 +119,8 @@ class IBEA(object):
                 env_selection_ok = self.population_size <= self.alpha
 
             # 4. Check convergence condition
-            done = budget <= self.alpha+2*self.n_offspring
+            done = budget <= self.alpha+2*self.n_offspring \
+                   or generation >= self.max_generations
             if done: break
             # 5. Mating selection
             # Perform binary tournament selection with replacement on P in order
