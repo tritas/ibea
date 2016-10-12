@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 # -*- coding : utf8 -*-
-
+# Author: Aris Tritas <aris.tritas@u-psud.fr>
 """ Indicator-based Evolutionary Algorithm with Epsilon indicator
 is an evolutionary algorithm for searching a multi-objective space by improving on the Pareto front.
 Formally, the algorithm is classified as a (\mu/\rho + \lambda)-ES, i.e.
@@ -27,9 +27,9 @@ class IBEA(object):
                  alpha=100, 
                  n_offspring=8, 
                  seedit=42,
-                 pr_x=1.0, # 0.5
-                 pr_mut=0.01, # 0.8
-                 var=0.1): # \in [0, 0.1]
+                 pr_x=1.0,
+                 pr_mut=1.0,
+                 var=2.0): # \in [0, 0.1]
         # --- Algorithm parameters
         self.kappa = kappa             # Fitness scaling ratio
         self.alpha = alpha             # Population size
@@ -69,6 +69,7 @@ class IBEA(object):
         # Rescaling objective values to [0,1]
         objective_values = array([fun(x) for x in particles])
         objective_values = self.rescale(objective_values)
+        budget -= self.alpha
         # Datastructure containing all the population info
         self.pop_data = {
             p : {
@@ -115,7 +116,7 @@ class IBEA(object):
                 env_selection_ok = self.population_size <= self.alpha
 
             # 4. Check convergence condition
-            done = generation >= budget
+            done = budget <= self.alpha+2*self.n_offspring
             if done: break
             # 5. Mating selection
             # Perform binary tournament selection with replacement on P in order
@@ -152,6 +153,7 @@ class IBEA(object):
 
                 obj_c1 = self.rescale_one(fun(child1))
                 obj_c2 = self.rescale_one(fun(child2))
+                budget -= 2
                 '''
                 try:
                     fitness_c1 = self.compute_fitness(obj_c1)

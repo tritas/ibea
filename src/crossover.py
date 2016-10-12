@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 # -*- coding : utf8 -*-
-
+# Author: Aris Tritas <aris.tritas@u-psud.fr>
 """ Indicator-based Evolutionary Algorithm with Epsilon indicator
 Recombination operators, also known as `crossover` operators.
 """
@@ -41,6 +41,7 @@ def bounded_sbx(parent1, parent2, lbounds, ubounds, eta=5):
     Compute the spread factor `beta` as a random number at each index.
     Produce child values bounded in (lbound, ubound) such that the crossover is
     stationary with high probability: this is achieved with a high eta value.
+    Code inspired from the authors' NSGA-II C implementation. 
 
     :param eta: controls the probability of producing children close to their parents.
     :reference: Deb, Kalyanmoy, and Ram B. Agrawal. 
@@ -67,7 +68,6 @@ def bounded_sbx(parent1, parent2, lbounds, ubounds, eta=5):
                     beta_cumul = power(rand_float*alpha, -(eta + 1.0))
                 else:
                     beta_cumul = power(1.0/(2.0-alpha*rand_float), 1.0/(eta+1.0))
-
 
                 c1 = 0.5 * (y1+y2 - beta_cumul * (y2-y1))
 
