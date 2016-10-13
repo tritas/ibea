@@ -45,6 +45,16 @@ For fixed variance, prefer a higher value, e.g sigma in [2, 5].
 
 The idea is to adapt the step size depending on the success of previous mutations for each input space dimension.
 
+## Timing
+    done in 2.7e-03 seconds/evaluation
+  dimension seconds/evaluations
+  -----------------------------
+      2      2.3e-03 
+      5      2.7e-03 
+     10      2.8e-03 
+     20      2.7e-03 
+
+
 ###### References
 [comment]: # (BIBLIOGRAPHY STYLE: MLA)
 
