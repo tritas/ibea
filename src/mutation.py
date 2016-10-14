@@ -19,28 +19,27 @@ def DerandomizedMutation(x, sigma, E, n):
         xRes = x + exp(E) * dot(sigma,z)
         num = power(exp( abs(z) / expct - one), 1/n)
         sigmaRes = dot(sigma, num) * power(exp(E),1/d)
-        
+
         return xRes, sigmaRes
 
 def recombinationESsearchPath(x, sigma, n, lamda, E):
-    '''
-    sigma = vector of step-sizes and/or standard deviations
-    n =
-    lamda = number of offspring, offspring population size
-    E = global step-size = N(0,1)
-    u = number of parents
-    s = search path or evolution path
-    '''
-    z = randn(n)
-    c= sqrt(u/(n+4))
-    u= lamda/4
-    d= 1+sqrt(u/n)
-    di=3*n
-    s=0
-    s=(1-c)*s+sqrt(c*(2-c))*(sqrt(u)/u)*sum(z)
-    sigma_norm = power(exp(norm(s)/mean(z) -1),c/d)
-    sigma_abs = power(exp((norm(s)/mean(E))-1),1/di)
-    sigma = dot(sigma, sigma_abs) * sigma_norm
-    xRes = (1/u)*sum(x)
-    
-    return xRes    
+        '''
+        sigma = vector of step-sizes and/or standard deviations
+        n =
+        lamda = number of offspring, offspring population size
+        E = global step-size = N(0,1)
+        u = number of parents
+        s = search path or evolution path
+        '''
+        z = randn(n)
+        c= sqrt(u/(n+4))
+        u= lamda/4
+        d= 1+sqrt(u/n)
+        di=3*n
+        s=0
+        s=(1-c)*s+sqrt(c*(2-c))*(sqrt(u)/u)*sum(z)
+        sigma_norm = power(exp(norm(s)/mean(z) -1),c/d)
+        sigma_abs = power(exp((norm(s)/mean(E))-1),1/di)
+        sigma = dot(sigma, sigma_abs) * sigma_norm
+        xRes = (1/u)*sum(x)
+        return xRes    

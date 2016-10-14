@@ -59,7 +59,7 @@ class IBEA(object):
         return 'ibea_pop{}_offs{}_mut{}_recomb{}_var{}'.format(self.alpha, self.n_offspring,
                                                            self.pr_mutation, self.pr_crossover,
                                                            self.noise_variance)
-    def ibea(self, fun, lbounds, ubounds, budget):
+    def ibea(self, fun, lbounds, ubounds, remaining_budget):
         lbounds, ubounds = array(lbounds), array(ubounds) # [-100, 100]
         dim, f_min = len(lbounds), None
         dim_sqrt = sqrt(dim+1)
@@ -72,7 +72,7 @@ class IBEA(object):
         # Rescaling objective values to [0,1]
         objective_values = array([fun(x) for x in particles])
         objective_values = self.rescale(objective_values)
-        budget -= self.alpha
+        remaining_budget -= self.alpha
         # Datastructure containing all the population info
         self.pop_data = {
             p : {
@@ -119,7 +119,7 @@ class IBEA(object):
                 env_selection_ok = self.population_size <= self.alpha
 
             # 4. Check convergence condition
-            done = budget <= self.alpha+2*self.n_offspring \
+            done = remaining_budget <= self.alpha+2*self.n_offspring \
                    or generation >= self.max_generations
             if done: break
             # 5. Mating selection
@@ -135,42 +135,54 @@ class IBEA(object):
                     pool.append(p2)
             # 6. Recombination and Variation applied to the mating pool.
             for i in range(self.n_offspring):
-                parent1 = self.pop_data[pool[i]]
-                parent2 = self.pop_data[pool[i+1]]
-
-                # Recombination (crossover) operator
-                if binomial(1, self.pr_crossover):
-                    child1, child2 = bounded_sbx(parent1['x'], parent2['x'],
-                                                 lbounds, ubounds, 5)
-                else:
-                    child1 = parent1['x']
-                    child2 = parent2['x']
-
-                # (Isotropic) mutation
-                if binomial(1, self.pr_mutation):
-                    child1 += randn(dim) * self.noise_variance
-                    child2 += randn(dim) * self.noise_variance
-
-                    # Make sure vectors are still bounded
-                child1 = clip(child1, lbounds, ubounds)
-                child2 = clip(child2, lbounds, ubounds)
-
-                obj_c1 = self.rescale_one(fun(child1))
-                obj_c2 = self.rescale_one(fun(child2))
-                budget -= 2
-                '''
                 try:
+
+                    parent1 = self.pop_data[pool[i]]
+                    parent2 = self.pop_data[pool[i+1]]
+
+                    # Recombination (crossover) operator
+                    if binomial(1, self.pr_crossover):
+                        child1, child2 = bounded_sbx(parent1['x'], parent2['x'],
+                                                     lbounds, ubounds, 5)
+                    else:
+                        child1 = parent1['x']
+                        child2 = parent2['x']
+
+                    # (Isotropic) mutation
+                    if binomial(1, self.pr_mutation):
+                        child1 += randn(dim) * self.noise_variance
+                        child2 += randn(dim) * self.noise_variance
+                except FloatingPointError, RuntimeWarning:
+                    print(format_exc())
+                    print("sigma:{}".format(self.noise_variance))
+                    exit(2)
+                    
+                        # Make sure vectors are still bounded
+                    child1 = clip(child1, lbounds, ubounds)
+                    child2 = clip(child2, lbounds, ubounds)
+                try:
+                    obj_c1 = self.rescale_one(fun(child1))
+                    obj_c2 = self.rescale_one(fun(child2))
+                    remaining_budget -= 2
+
+                    # Make sure the maximum indicator value is up to date
+                    self.update_max_indicator(obj_c1)
+                    self.update_max_indicator(obj_c2)
+                    
                     fitness_c1 = self.compute_fitness(obj_c1)
                     fitness_c2 = self.compute_fitness(obj_c2)
-
                     # Adapt step-size - 1/5-th rule
                     indicator = int(max(parent1['fitness'], parent2['fitness']) \
                                     <= max(fitness_c1, fitness_c2))
-                    self.noise_variance *= power(exp(indicator - 0.2), 1/dim_sqrt)
+                    mult = power(exp(indicator - 0.2), 1/dim_sqrt)
+                    self.noise_variance *= mult
 
                 except FloatingPointError, RuntimeWarning:
                     print(format_exc())
-                '''
+                    print("F1 : {}, F2: {}, I: {}, coef: {}, sigma:{}"\
+                          .format(fitness_c1, fitness_c2, indicator, mult, self.noise_variance))
+                    exit(2)
+
                 self.add_offspring(child1, obj_c1)
                 self.add_offspring(child2, obj_c2)
 
@@ -185,7 +197,6 @@ class IBEA(object):
                 best_fit = item
 
         return self.pop_data[best_fit]['x']
-
 
     def add_offspring(self, vector, objective_value, fitness=0.0):
         # Add the resulting offspring to P                
@@ -216,6 +227,11 @@ class IBEA(object):
         obj1 = self.pop_data[i1]['obj']
         obj2 = self.pop_data[i2]['obj']
         return self.compute_epsilon(obj1, obj2)
+
+    def update_max_indicator(self, added_obj):
+        epsilons = array([self.compute_epsilon(x['obj'], added_obj)
+                          for x in self.pop_data.values()])
+        self.indicator_max = max(self.indicator_max, epsilons.max())
     
     def compute_epsilon(self, obj1, obj2):
         ''' Smallest epsilon such that f(x1) - \eps * f(x2) < 0'''
