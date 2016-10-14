@@ -7,8 +7,14 @@ Recombination operators, also known as `crossover` operators.
 from __future__ import division, print_function
 from sys import stderr
 from traceback import format_exc
-from numpy import empty, clip, divide, power, exp, float64, nan, inf, seterr
+from numpy import float64, nan, inf
+from numpy import empty, clip, divide, power, exp
 from numpy.random import binomial, randint, rand
+
+# Warning: this changes the behaviour of all numpy functions.
+# Set to 'raise' to catch numerical instabilities: can be FloatingPointError, RuntimeWarning,
+# but also underflows and overflows.
+from numpy import seterr
 seterr(all='raise')
 
 def discrete_recombination(x1, x2):
@@ -37,11 +43,11 @@ def one_point_crossover(x1, x2):
     return offspring
 
 def bounded_sbx(parent1, parent2, lbounds, ubounds, eta=5):
-    ''' Implementation of the Simulated Binary Crossover operator
-    Compute the spread factor `beta` as a random number at each index.
-    Produce child values bounded in (lbound, ubound) such that the crossover is
-    stationary with high probability: this is achieved with a high eta value.
-    Code inspired from the authors' NSGA-II C implementation. 
+    ''' Bounded Simulated Binary Crossover operator.
+    Computes the spread factor `beta` as a random number at each index.
+    Produces child values bounded in (lbound, ubound) such that the crossover is
+    stationary (i.e. offspring vectors close to the parent's) with high probability.
+    - Code inspired from the authors' NSGA-II C implementation. 
 
     :param eta: controls the probability of producing children close to their parents.
     :reference: Deb, Kalyanmoy, and Ram B. Agrawal. 
@@ -94,6 +100,7 @@ def bounded_sbx(parent1, parent2, lbounds, ubounds, eta=5):
             except FloatingPointError, RuntimeWarning:
                 print(format_exc())
                 print('alpha={}, beta={}, beta_cumul={}'.format(alpha, beta, beta_cumul))
+                exit(2)
         else:
             child1[i] = parent1[i]
             child2[i] = parent2[i]

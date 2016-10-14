@@ -31,8 +31,9 @@ class IBEA(object):
                  seedit=42,
                  pr_x=1.0,
                  pr_mut=1.0,
-                 var=2.0,
-                 max_generations=200): # \in [0, 0.1]
+                 var=2.0,  # TODO: Find sensible default
+                 max_generations=200,
+                 n_sbx=5): # Can be [2, 20], typically {2, 5}
         # --- Algorithm parameters
         self.kappa = kappa             # Fitness scaling ratio
         self.alpha = alpha             # Population size
@@ -44,6 +45,7 @@ class IBEA(object):
         self._max = None               # Objective function maxima
         self.indicator_max = None      # Indicator function maximum
         self.max_generations = max_generations
+        self.n_sbx = n_sbx             # Simulated Binary Crossover distribution index 
         # --- Data structure containing: population vectors, fitness and objective values
         self.pop_data = dict()
         # --- Free indices for the population dictionary
@@ -135,53 +137,48 @@ class IBEA(object):
                     pool.append(p2)
             # 6. Recombination and Variation applied to the mating pool.
             for i in range(self.n_offspring):
+                parent1 = self.pop_data[pool[i]]
+                parent2 = self.pop_data[pool[i+1]]
+
+                # Recombination (crossover) operator
+                if binomial(1, self.pr_crossover):
+                    child1, child2 = bounded_sbx(parent1['x'], parent2['x'],
+                                                 lbounds, ubounds, self.n_sbx)
+                else:
+                    child1 = parent1['x']
+                    child2 = parent2['x']
+
+                # (Isotropic) mutation
+                if binomial(1, self.pr_mutation):
+                    assert self.noise_variance > 1e-14, 'Dirac detected (variance ~ 0)'
+                    child1 += randn(dim) * self.noise_variance
+                    child2 += randn(dim) * self.noise_variance
+
+                # Make sure vectors are still bounded
+                child1 = clip(child1, lbounds, ubounds)
+                child2 = clip(child2, lbounds, ubounds)
+
+                obj_c1 = self.rescale_one(fun(child1))
+                obj_c2 = self.rescale_one(fun(child2))
+                remaining_budget -= 2
+
+                # Make sure the maximum indicator value is up to date
+                # Costs `alpha` but is necessary
+                self.update_max_indicator(obj_c1)
+                self.update_max_indicator(obj_c2)
+
+                fitness_c1 = self.compute_fitness(obj_c1)
+                fitness_c2 = self.compute_fitness(obj_c2)
                 try:
-
-                    parent1 = self.pop_data[pool[i]]
-                    parent2 = self.pop_data[pool[i+1]]
-
-                    # Recombination (crossover) operator
-                    if binomial(1, self.pr_crossover):
-                        child1, child2 = bounded_sbx(parent1['x'], parent2['x'],
-                                                     lbounds, ubounds, 5)
-                    else:
-                        child1 = parent1['x']
-                        child2 = parent2['x']
-
-                    # (Isotropic) mutation
-                    if binomial(1, self.pr_mutation):
-                        child1 += randn(dim) * self.noise_variance
-                        child2 += randn(dim) * self.noise_variance
-                except FloatingPointError, RuntimeWarning:
-                    print(format_exc())
-                    print("sigma:{}".format(self.noise_variance))
-                    exit(2)
-                    
-                        # Make sure vectors are still bounded
-                    child1 = clip(child1, lbounds, ubounds)
-                    child2 = clip(child2, lbounds, ubounds)
-                try:
-                    obj_c1 = self.rescale_one(fun(child1))
-                    obj_c2 = self.rescale_one(fun(child2))
-                    remaining_budget -= 2
-
-                    # Make sure the maximum indicator value is up to date
-                    self.update_max_indicator(obj_c1)
-                    self.update_max_indicator(obj_c2)
-                    
-                    fitness_c1 = self.compute_fitness(obj_c1)
-                    fitness_c2 = self.compute_fitness(obj_c2)
-                    # Adapt step-size - 1/5-th rule
-                    indicator = int(max(parent1['fitness'], parent2['fitness']) \
-                                    <= max(fitness_c1, fitness_c2))
-                    mult = power(exp(indicator - 0.2), 1/dim_sqrt)
-                    self.noise_variance *= mult
-
+                    self.noise_variance = one_fifth_success(self.noise_variance,
+                                                            max(parent1['fitness'], parent2['fitness']),
+                                                            max(fitness_c1, fitness_c2),
+                                                            1/dim_sqrt)
                 except FloatingPointError, RuntimeWarning:
                     print(format_exc())
                     print("F1 : {}, F2: {}, I: {}, coef: {}, sigma:{}"\
                           .format(fitness_c1, fitness_c2, indicator, mult, self.noise_variance))
-                    exit(2)
+                    exit(42)
 
                 self.add_offspring(child1, obj_c1)
                 self.add_offspring(child2, obj_c2)
