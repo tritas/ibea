@@ -20,7 +20,7 @@ from numpy.random import seed, choice, binomial
 from numpy.random import rand, randint, randn
 
 from crossover import bounded_sbx
-from mutation import DerandomizedMutation, recombinationESsearchPath, one_fifth_success
+from mutation import DerandomizedMutation, SearchPathMutation, one_fifth_success
 
 seterr(all='raise')
 
@@ -150,7 +150,7 @@ class IBEA(object):
                     child2 = parent2['x']
 
                 if binomial(1, self.pr_mutation):
-                    #assert all(sigma > 1e-14), 'Dirac detected (variance ~ 0)'
+                    #assert all(sigma > 0), 'Dirac detected, Variance = {})'.format(sigma)
                     child1, sigma = DerandomizedMutation(child1, sigma, dim)
                     child2, sigma = DerandomizedMutation(child2, sigma, dim)                           
                     # (Isotropic) mutation

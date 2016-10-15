@@ -8,35 +8,33 @@ from __future__ import division
 from traceback import format_exc
 #from math import pow
 from numpy import ones, sqrt, power, exp, float64, infty, dot
-from numpy import power, mean, sum, abs
+from numpy import power, mean, sum, abs, multiply
 from numpy.linalg import norm
 from numpy.random import randn
 
 from numpy import seterr
 seterr(all='raise')
 
-def DerandomizedMutation(x, sigma, n):
-        ''' Intialization conditions: lamda ~ 10
+def DerandomizedMutation(x, sigma, n_dimensions):
+        ''' Adaptation of the variance with both global and dimension-wise components.
         :sigma : vector of step-sizes and/or standard deviations 
         :reference : Nikolaus Hansen, Dirk V. Arnold and Anne Auger, 
-        Evolution Strategies, February 2015.
+        Evolution Strategies, February 2015. (Algorithm 3)
         '''
         try:
                 # Initialize variables
-                d = sqrt(n)
+                d = sqrt(n_dimensions)
                 tau = 1/3
-                ksi = tau * randn()
-                z = randn(n)
-                one = ones(n)
-                # Expectation[|N(0,1)|] - Is this right?
-                expct = abs(randn())
-                assert expct > 1e-14, 'Divide by low expectation (error), draw was {}'.format(expct)
+                global_noise = tau * randn()
+                z = randn(n_dimensions)
+                one = ones(n_dimensions)
+                #expct = abs(randn()) # Expectation[|N(0,1)|] - Is this right?
                 # Mutate vector
-                xRes = x + exp(ksi) * dot(sigma, z)
+                xRes = x + exp(global_noise) * multiply(sigma, z)
                 # Compute sigma adaptation
-                adaptation_vect = exp((abs(z) / expct - one)/n)
+                adaptation_vect = exp((abs(z) - one)/n_dimensions)
                 # Compute new value of sigma
-                adapted_sigma = dot(sigma, adaptation_vect) * exp(ksi/d)
+                adapted_sigma = multiply(sigma, adaptation_vect) * exp(global_noise/d)
         except FloatingPointError, RuntimeWarning:
                 print(format_exc())
                 exit(2)
@@ -45,31 +43,30 @@ def DerandomizedMutation(x, sigma, n):
                 exit(2)
         return xRes, adapted_sigma
 
-def recombinationESsearchPath(x, sigma, n, lamda):
+def SearchPathMutationUpdate(sigma, local_mutations, n_dimensions, mu, lamda):
         ''' (mu/mu, lambda)-ES with Search Path Algorithm
         :reference : Nikolaus Hansen, Dirk V. Arnold and Anne Auger, 
-        Evolution Strategies, February 2015.
+        Evolution Strategies, February 2015. (Algorithm 4)
 
-        sigma = vector of step-sizes and/or standard deviations
-        n =
-        lamda = number of offspring, offspring population size
-        E = global step-size = N(0,1)
-        u = number of parents
-        s = search path or evolution path
-        '''
-        E = abs(randn())
-        z = randn(n)
-        c= sqrt(u/(n+4))
-        u= lamda/4
-        d= 1+sqrt(u/n)
-        di=3*n
-        s=0
-        s=(1-c)*s+sqrt(c*(2-c))*(sqrt(u)/u)*sum(z)
-        sigma_norm = power(exp(norm(s)/mean(z) -1),c/d)
-        sigma_abs = power(exp((norm(s)/mean(E))-1),1/di)
-        sigma = dot(sigma, sigma_abs) * sigma_norm
-        xRes = (1/u)*sum(x)
-        return xRes
+        :param sigma: vector of step-sizes and/or standard deviations
+        :param local_mutations: matrix of (n_offsprings, n_dimensions)
+        sampled from the standard normal distribution
+        :param lamda: number of offsprings
+        :param mu: number of parents '''
+
+        search_path = zeros(n_dimensions) # exponentially fading record of mutation steps
+        c= sqrt(mu/(n_dimensions+4))
+        d= 1 + sqrt(mu/n_dimensions)
+        di=3*n_dimensions
+        one = ones(n_dimensions)
+
+        search_path = (1 - c) * search_path
+        search_path += sqrt(c * (2 - c)) * sqrt(mu) / mu * local_mutations.sum(axis=0)
+        sigma_abs = exp((abs(search_path) - one) / di)
+        sigma_norm = exp((norm(search_path) - 1) * (c / d))
+        sigma = multiply(sigma, sigma_abs) * sigma_norm
+
+        return sigma
 
 def one_fifth_success(sigma, offspring_fitness, parent_fitness, inv_dim_sqrt):
         ''' Adapt step-size using the 1/5-th rule, :references [Retchenberg, Schumer, Steiglitz]

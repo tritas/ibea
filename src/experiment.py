@@ -247,7 +247,7 @@ def coco_optimize(solver, fun, max_evals, max_runs=1e9):
 # ===============================================
 ######################### CHANGE HERE ########################################
 # CAVEAT: this might be modified from input args
-budget = 500 # maxfevals = budget x dimension ### INCREASE budget WHEN THE DATA CHAIN IS STABLE ###
+budget = 1000 # maxfevals = budget x dimension ### INCREASE budget WHEN THE DATA CHAIN IS STABLE ###
 max_runs = 1e6  # number of (almost) independent trials per problem instance
 number_of_batches = 1  # allows to run everything in several batches
 current_batch = 1      # 1..number_of_batches
