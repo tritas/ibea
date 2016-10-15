@@ -5,7 +5,6 @@
 Recombination operators, also known as `crossover` operators.
 """
 from __future__ import division, print_function
-from sys import stderr
 from traceback import format_exc
 from numpy import float64, nan, inf
 from numpy import empty, clip, divide, power, exp

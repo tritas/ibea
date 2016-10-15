@@ -14,12 +14,13 @@ from traceback import format_exc
 from operator import mod
 from collections import deque
 
-from numpy import sqrt, power, exp, float64, infty, seterr
-from numpy import array, empty, divide, minimum, maximum, clip
+from numpy import sqrt, power, exp, float64, infty, seterr, all
+from numpy import array, empty, full, divide, minimum, maximum, clip
 from numpy.random import seed, choice, binomial
 from numpy.random import rand, randint, randn
 
 from crossover import bounded_sbx
+from mutation import DerandomizedMutation, recombinationESsearchPath, one_fifth_success
 
 seterr(all='raise')
 
@@ -39,7 +40,7 @@ class IBEA(object):
         self.alpha = alpha             # Population size
         self.pr_crossover = pr_x       # Crossover probability
         self.pr_mutation = pr_mut      # Mutation probability
-        self.noise_variance = var      # Noise level for mutation
+        self.sigma_init = var          # Noise level for mutation
         self.n_offspring = n_offspring # Number of offspring individuals
         self._min = None               # Objective function minima
         self._max = None               # Objective function maxima
@@ -59,15 +60,15 @@ class IBEA(object):
     def __str__(self):
         #return 'Indicator-based Evolutionary Algorithm with Epsilon indicator'
         return 'ibea_pop{}_offs{}_mut{}_recomb{}_var{}'.format(self.alpha, self.n_offspring,
-                                                           self.pr_mutation, self.pr_crossover,
-                                                           self.noise_variance)
+                                                               self.pr_mutation, self.pr_crossover,
+                                                               self.sigma_init)
     def ibea(self, fun, lbounds, ubounds, remaining_budget):
         lbounds, ubounds = array(lbounds), array(ubounds) # [-100, 100]
         dim, f_min = len(lbounds), None
         dim_sqrt = sqrt(dim+1)
         # Pr(mutation) = 1/n
         # self.pr_mutation = 1/dim
-        
+        sigma = full(dim, self.sigma_init)
         # 1. Initial population of size alpha
         # Sampled from the uniform distribution [lbounds, ubounds]
         particles = rand(self.alpha, dim) * (ubounds - lbounds) + lbounds
@@ -148,11 +149,13 @@ class IBEA(object):
                     child1 = parent1['x']
                     child2 = parent2['x']
 
-                # (Isotropic) mutation
                 if binomial(1, self.pr_mutation):
-                    assert self.noise_variance > 1e-14, 'Dirac detected (variance ~ 0)'
-                    child1 += randn(dim) * self.noise_variance
-                    child2 += randn(dim) * self.noise_variance
+                    #assert all(sigma > 1e-14), 'Dirac detected (variance ~ 0)'
+                    child1, sigma = DerandomizedMutation(child1, sigma, dim)
+                    child2, sigma = DerandomizedMutation(child2, sigma, dim)                           
+                    # (Isotropic) mutation
+                    #child1 += randn(dim) * self.sigma_init
+                    #child2 += randn(dim) * self.sigma_init
 
                 # Make sure vectors are still bounded
                 child1 = clip(child1, lbounds, ubounds)
@@ -167,18 +170,21 @@ class IBEA(object):
                 self.update_max_indicator(obj_c1)
                 self.update_max_indicator(obj_c2)
 
-                fitness_c1 = self.compute_fitness(obj_c1)
-                fitness_c2 = self.compute_fitness(obj_c2)
+                '''
                 try:
-                    self.noise_variance = one_fifth_success(self.noise_variance,
+                    fitness_c1 = self.compute_fitness(obj_c1)
+                    fitness_c2 = self.compute_fitness(obj_c2)
+
+                    self.sigma = one_fifth_success(self.sigma,
                                                             max(parent1['fitness'], parent2['fitness']),
                                                             max(fitness_c1, fitness_c2),
                                                             1/dim_sqrt)
                 except FloatingPointError, RuntimeWarning:
                     print(format_exc())
                     print("F1 : {}, F2: {}, I: {}, coef: {}, sigma:{}"\
-                          .format(fitness_c1, fitness_c2, indicator, mult, self.noise_variance))
+                          .format(fitness_c1, fitness_c2, indicator, mult, self.sigma))
                     exit(42)
+                '''
 
                 self.add_offspring(child1, obj_c1)
                 self.add_offspring(child2, obj_c2)
