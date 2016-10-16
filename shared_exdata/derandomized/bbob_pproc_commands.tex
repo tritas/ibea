@@ -1,0 +1,364 @@
+\providecommand{\algname}{ibea pop150 offs20 mut0.8 recomb0.5 var5.0 on bbob-biobj budget1000xD{}}
+\providecommand{\algfolder}{ibea_pop150_offs20_mut0.8_recomb0.5_var5.0_on_bbob-biobj_budget1000xD/}
+\providecommand{\bbobecdfcaptionallgroups}{
+Empirical cumulative distribution of simulated (bootstrapped) runtimes, measured in number
+         of objective function evaluations, divided by dimension (FEvals/DIM) for the $58$ targets $\{-10^{-4}, -10^{-4.2}, $ $-10^{-4.4}, -10^{-4.6}, -10^{-4.8}, -10^{-5}, 0, 10^{-5}, 10^{-4.9}, 10^{-4.8}, \dots, 10^{-0.1}, 10^0\}$ for all function groups and all dimensions. The aggregation over all 55 functions is shown in the last plot.
+}
+\providecommand{\bbobecdfcaptionsinglefcts}{
+Empirical cumulative distribution of simulated (bootstrapped) runtimes in number
+         of objective function evaluations divided by dimension (FEvals/DIM) for the $58$ targets $\{-10^{-4}, -10^{-4.2}, $ $-10^{-4.4}, -10^{-4.6}, -10^{-4.8}, -10^{-5}, 0, 10^{-5}, 10^{-4.9}, 10^{-4.8}, \dots, 10^{-0.1}, 10^0\}$ for functions $f_1$ to $f_{16}$ and all dimensions. 
+}
+\providecommand{\bbobpptablecaption}[1]{
+%
+                Average runtime (\aRT) to reach given targets, measured
+                in number of function evaluations. For each function, the \aRT\ 
+                and, in braces as dispersion measure, the half difference between 10 and 
+                90\%-tile of (bootstrapped) runtimes is shown for the different
+                target \Df-values as shown in the top row. 
+                \#succ is the number of trials that reached the last target 
+                $\hvref + 10^{-5}$.
+                The median number of conducted function evaluations is additionally given in 
+                \textit{italics}, if the target in the last column was never reached. 
+                
+}
+\providecommand{\bbobppfigdimlegend}[1]{
+%
+        Scaling of runtime to reach $\hvref+10^{\#}$ with dimension;
+        runtime is measured in number of $f$-evaluations and $\#$ is given in the legend;
+        Lines: average runtime (\aRT);
+        Cross (+): median runtime of successful runs to reach the most difficult
+        target that was reached at least once (but not always);
+        Cross ({\color{red}$\times$}): maximum number of
+        $f$-evaluations in any trial. Notched
+        boxes: interquartile range with median of simulated runs;
+        % to reach $\hvref+10^{\#}$.
+        %
+        % Colors represent different target values. 
+        All values are divided by dimension and 
+        plotted as $\log_{10}$ values versus dimension. %
+        %
+        % Shown are $\Df = 10^{\{0.1, 0.01, 1e-3, 1e-4, 1e-5\}}$.  
+        Numbers above \aRT-symbols (if appearing) indicate the number of trials
+        reaching the respective target. Horizontal lines mean linear scaling, slanted
+        grid lines depict quadratic scaling.  
+        
+}
+\providecommand{\bbobpprldistrlegend}[1]{
+%
+         Empirical cumulative distribution functions (ECDF), plotting the fraction of
+         trials with an outcome not larger than the respective value on the $x$-axis.
+         #1%
+         Left subplots: ECDF of the number of function evaluations (FEvals) divided by search space dimension $D$,
+         to fall below $\hvref+\Df$ with $\Df=10^{k}$, where $k$ is the first value in the legend.
+         The thick red line represents the most difficult target value $\hvref+10^{-5}$. %
+         Legends indicate for each target the number of functions that were solved in at
+         least one trial within the displayed budget. %
+         Right subplots: ECDF of the
+         best achieved $\Df$
+         for running times of $0.5D, 1.2D, 3D, 10D, 100D, 1000D,\dots$
+         function evaluations
+         (from right to left cycling cyan-magenta-black\dots) and final $\Df$-value (red),
+         where \Df\ and \textsf{Df} denote the difference to the optimal function value. Shown are aggregations over functions where the single
+         objectives are in the same BBOB function class, as indicated on the
+         left side and the aggregation over all 55 functions in the last
+         row.
+}
+\providecommand{\bbobloglossfigurecaption}[1]{
+%
+        \aRT\ loss ratios (see Figure~\ref{tab:aRTloss} for details).
+        Each cross ({\color{blue}$+$}) represents a single function, the line
+        is the geometric mean.
+        
+}
+\providecommand{\bbobloglosstablecaption}[1]{
+%
+        \aRT\ loss ratio versus the budget in number of $f$-evaluations
+        divided by dimension.
+        For each given budget \FEvals, the target value \ftarget\ is computed
+        as the best target $f$-value reached within the
+        budget by the given algorithm.
+        Shown is then the \aRT\ to reach \ftarget\ for the given algorithm
+        or the budget, if the GECCO-BBOB-2009 best algorithm
+        reached a better target within the budget,
+        divided by the best \aRT\
+        seen in GECCO-BBOB-2009 to reach \ftarget.
+        Line: geometric mean. Box-Whisker error bar: 25-75\%-ile with median
+        (box), 10-90\%-ile (caps), and minimum and maximum \aRT\ loss ratio
+        (points). The vertical line gives the maximal number of function evaluations
+        in a single trial in this function subset. See also
+        Figure~\ref{fig:aRTlogloss} for results on each function subgroup.
+        
+}
+\providecommand{\algname}{ibea pop150 offs20 mut1.0 recomb0.8 var5.0 on bbob-biobj budget1000xD{}}
+\providecommand{\algfolder}{ibea_pop150_offs20_mut1.0_recomb0.8_var5.0_on_bbob-biobj_budget1000xD/}
+\providecommand{\bbobecdfcaptionallgroups}{
+Empirical cumulative distribution of simulated (bootstrapped) runtimes, measured in number
+         of objective function evaluations, divided by dimension (FEvals/DIM) for the $58$ targets $\{-10^{-4}, -10^{-4.2}, $ $-10^{-4.4}, -10^{-4.6}, -10^{-4.8}, -10^{-5}, 0, 10^{-5}, 10^{-4.9}, 10^{-4.8}, \dots, 10^{-0.1}, 10^0\}$ for all function groups and all dimensions. The aggregation over all 55 functions is shown in the last plot.
+}
+\providecommand{\bbobecdfcaptionsinglefcts}{
+Empirical cumulative distribution of simulated (bootstrapped) runtimes in number
+         of objective function evaluations divided by dimension (FEvals/DIM) for the $58$ targets $\{-10^{-4}, -10^{-4.2}, $ $-10^{-4.4}, -10^{-4.6}, -10^{-4.8}, -10^{-5}, 0, 10^{-5}, 10^{-4.9}, 10^{-4.8}, \dots, 10^{-0.1}, 10^0\}$ for functions $f_1$ to $f_{16}$ and all dimensions. 
+}
+\providecommand{\bbobpptablecaption}[1]{
+%
+                Average runtime (\aRT) to reach given targets, measured
+                in number of function evaluations. For each function, the \aRT\ 
+                and, in braces as dispersion measure, the half difference between 10 and 
+                90\%-tile of (bootstrapped) runtimes is shown for the different
+                target \Df-values as shown in the top row. 
+                \#succ is the number of trials that reached the last target 
+                $\hvref + 10^{-5}$.
+                The median number of conducted function evaluations is additionally given in 
+                \textit{italics}, if the target in the last column was never reached. 
+                
+}
+\providecommand{\bbobppfigdimlegend}[1]{
+%
+        Scaling of runtime to reach $\hvref+10^{\#}$ with dimension;
+        runtime is measured in number of $f$-evaluations and $\#$ is given in the legend;
+        Lines: average runtime (\aRT);
+        Cross (+): median runtime of successful runs to reach the most difficult
+        target that was reached at least once (but not always);
+        Cross ({\color{red}$\times$}): maximum number of
+        $f$-evaluations in any trial. Notched
+        boxes: interquartile range with median of simulated runs;
+        % to reach $\hvref+10^{\#}$.
+        %
+        % Colors represent different target values. 
+        All values are divided by dimension and 
+        plotted as $\log_{10}$ values versus dimension. %
+        %
+        % Shown are $\Df = 10^{\{0.1, 0.01, 1e-3, 1e-4, 1e-5\}}$.  
+        Numbers above \aRT-symbols (if appearing) indicate the number of trials
+        reaching the respective target. Horizontal lines mean linear scaling, slanted
+        grid lines depict quadratic scaling.  
+        
+}
+\providecommand{\bbobpprldistrlegend}[1]{
+%
+         Empirical cumulative distribution functions (ECDF), plotting the fraction of
+         trials with an outcome not larger than the respective value on the $x$-axis.
+         #1%
+         Left subplots: ECDF of the number of function evaluations (FEvals) divided by search space dimension $D$,
+         to fall below $\hvref+\Df$ with $\Df=10^{k}$, where $k$ is the first value in the legend.
+         The thick red line represents the most difficult target value $\hvref+10^{-5}$. %
+         Legends indicate for each target the number of functions that were solved in at
+         least one trial within the displayed budget. %
+         Right subplots: ECDF of the
+         best achieved $\Df$
+         for running times of $0.5D, 1.2D, 3D, 10D, 100D, 1000D,\dots$
+         function evaluations
+         (from right to left cycling cyan-magenta-black\dots) and final $\Df$-value (red),
+         where \Df\ and \textsf{Df} denote the difference to the optimal function value. Shown are aggregations over functions where the single
+         objectives are in the same BBOB function class, as indicated on the
+         left side and the aggregation over all 55 functions in the last
+         row.
+}
+\providecommand{\bbobloglossfigurecaption}[1]{
+%
+        \aRT\ loss ratios (see Figure~\ref{tab:aRTloss} for details).
+        Each cross ({\color{blue}$+$}) represents a single function, the line
+        is the geometric mean.
+        
+}
+\providecommand{\bbobloglosstablecaption}[1]{
+%
+        \aRT\ loss ratio versus the budget in number of $f$-evaluations
+        divided by dimension.
+        For each given budget \FEvals, the target value \ftarget\ is computed
+        as the best target $f$-value reached within the
+        budget by the given algorithm.
+        Shown is then the \aRT\ to reach \ftarget\ for the given algorithm
+        or the budget, if the GECCO-BBOB-2009 best algorithm
+        reached a better target within the budget,
+        divided by the best \aRT\
+        seen in GECCO-BBOB-2009 to reach \ftarget.
+        Line: geometric mean. Box-Whisker error bar: 25-75\%-ile with median
+        (box), 10-90\%-ile (caps), and minimum and maximum \aRT\ loss ratio
+        (points). The vertical line gives the maximal number of function evaluations
+        in a single trial in this function subset. See also
+        Figure~\ref{fig:aRTlogloss} for results on each function subgroup.
+        
+}
+\providecommand{\algname}{ibea pop150 offs20 mut0.01 recomb1.0 var5.0 on bbob-biobj budget1000xD{}}
+\providecommand{\algfolder}{ibea_pop150_offs20_mut0.01_recomb1.0_var5.0_on_bbob-biobj_budget1000xD/}
+\providecommand{\bbobecdfcaptionallgroups}{
+Empirical cumulative distribution of simulated (bootstrapped) runtimes, measured in number
+         of objective function evaluations, divided by dimension (FEvals/DIM) for the $58$ targets $\{-10^{-4}, -10^{-4.2}, $ $-10^{-4.4}, -10^{-4.6}, -10^{-4.8}, -10^{-5}, 0, 10^{-5}, 10^{-4.9}, 10^{-4.8}, \dots, 10^{-0.1}, 10^0\}$ for all function groups and all dimensions. The aggregation over all 55 functions is shown in the last plot.
+}
+\providecommand{\bbobecdfcaptionsinglefcts}{
+Empirical cumulative distribution of simulated (bootstrapped) runtimes in number
+         of objective function evaluations divided by dimension (FEvals/DIM) for the $58$ targets $\{-10^{-4}, -10^{-4.2}, $ $-10^{-4.4}, -10^{-4.6}, -10^{-4.8}, -10^{-5}, 0, 10^{-5}, 10^{-4.9}, 10^{-4.8}, \dots, 10^{-0.1}, 10^0\}$ for functions $f_1$ to $f_{16}$ and all dimensions. 
+}
+\providecommand{\bbobpptablecaption}[1]{
+%
+                Average runtime (\aRT) to reach given targets, measured
+                in number of function evaluations. For each function, the \aRT\ 
+                and, in braces as dispersion measure, the half difference between 10 and 
+                90\%-tile of (bootstrapped) runtimes is shown for the different
+                target \Df-values as shown in the top row. 
+                \#succ is the number of trials that reached the last target 
+                $\hvref + 10^{-5}$.
+                The median number of conducted function evaluations is additionally given in 
+                \textit{italics}, if the target in the last column was never reached. 
+                
+}
+\providecommand{\bbobppfigdimlegend}[1]{
+%
+        Scaling of runtime to reach $\hvref+10^{\#}$ with dimension;
+        runtime is measured in number of $f$-evaluations and $\#$ is given in the legend;
+        Lines: average runtime (\aRT);
+        Cross (+): median runtime of successful runs to reach the most difficult
+        target that was reached at least once (but not always);
+        Cross ({\color{red}$\times$}): maximum number of
+        $f$-evaluations in any trial. Notched
+        boxes: interquartile range with median of simulated runs;
+        % to reach $\hvref+10^{\#}$.
+        %
+        % Colors represent different target values. 
+        All values are divided by dimension and 
+        plotted as $\log_{10}$ values versus dimension. %
+        %
+        % Shown are $\Df = 10^{\{0.1, 0.01, 1e-3, 1e-4, 1e-5\}}$.  
+        Numbers above \aRT-symbols (if appearing) indicate the number of trials
+        reaching the respective target. Horizontal lines mean linear scaling, slanted
+        grid lines depict quadratic scaling.  
+        
+}
+\providecommand{\bbobpprldistrlegend}[1]{
+%
+         Empirical cumulative distribution functions (ECDF), plotting the fraction of
+         trials with an outcome not larger than the respective value on the $x$-axis.
+         #1%
+         Left subplots: ECDF of the number of function evaluations (FEvals) divided by search space dimension $D$,
+         to fall below $\hvref+\Df$ with $\Df=10^{k}$, where $k$ is the first value in the legend.
+         The thick red line represents the most difficult target value $\hvref+10^{-5}$. %
+         Legends indicate for each target the number of functions that were solved in at
+         least one trial within the displayed budget. %
+         Right subplots: ECDF of the
+         best achieved $\Df$
+         for running times of $0.5D, 1.2D, 3D, 10D, 100D, 1000D,\dots$
+         function evaluations
+         (from right to left cycling cyan-magenta-black\dots) and final $\Df$-value (red),
+         where \Df\ and \textsf{Df} denote the difference to the optimal function value. Shown are aggregations over functions where the single
+         objectives are in the same BBOB function class, as indicated on the
+         left side and the aggregation over all 55 functions in the last
+         row.
+}
+\providecommand{\bbobloglossfigurecaption}[1]{
+%
+        \aRT\ loss ratios (see Figure~\ref{tab:aRTloss} for details).
+        Each cross ({\color{blue}$+$}) represents a single function, the line
+        is the geometric mean.
+        
+}
+\providecommand{\bbobloglosstablecaption}[1]{
+%
+        \aRT\ loss ratio versus the budget in number of $f$-evaluations
+        divided by dimension.
+        For each given budget \FEvals, the target value \ftarget\ is computed
+        as the best target $f$-value reached within the
+        budget by the given algorithm.
+        Shown is then the \aRT\ to reach \ftarget\ for the given algorithm
+        or the budget, if the GECCO-BBOB-2009 best algorithm
+        reached a better target within the budget,
+        divided by the best \aRT\
+        seen in GECCO-BBOB-2009 to reach \ftarget.
+        Line: geometric mean. Box-Whisker error bar: 25-75\%-ile with median
+        (box), 10-90\%-ile (caps), and minimum and maximum \aRT\ loss ratio
+        (points). The vertical line gives the maximal number of function evaluations
+        in a single trial in this function subset. See also
+        Figure~\ref{fig:aRTlogloss} for results on each function subgroup.
+        
+}
+\providecommand{\algname}{ibea pop100 offs20 mut0.8 recomb0.8 var5.0 on bbob-biobj budget1000xD-006{}}
+\providecommand{\algfolder}{ibea_pop100_offs20_mut0.8_recomb0.8_var5.0_on_bbob-biobj_budget1000xD-006/}
+\providecommand{\bbobecdfcaptionallgroups}{
+Empirical cumulative distribution of simulated (bootstrapped) runtimes, measured in number
+         of objective function evaluations, divided by dimension (FEvals/DIM) for the $58$ targets $\{-10^{-4}, -10^{-4.2}, $ $-10^{-4.4}, -10^{-4.6}, -10^{-4.8}, -10^{-5}, 0, 10^{-5}, 10^{-4.9}, 10^{-4.8}, \dots, 10^{-0.1}, 10^0\}$ for all function groups and all dimensions. The aggregation over all 55 functions is shown in the last plot.
+}
+\providecommand{\bbobecdfcaptionsinglefcts}{
+Empirical cumulative distribution of simulated (bootstrapped) runtimes in number
+         of objective function evaluations divided by dimension (FEvals/DIM) for the $58$ targets $\{-10^{-4}, -10^{-4.2}, $ $-10^{-4.4}, -10^{-4.6}, -10^{-4.8}, -10^{-5}, 0, 10^{-5}, 10^{-4.9}, 10^{-4.8}, \dots, 10^{-0.1}, 10^0\}$ for functions $f_1$ to $f_{16}$ and all dimensions. 
+}
+\providecommand{\bbobpptablecaption}[1]{
+%
+                Average runtime (\aRT) to reach given targets, measured
+                in number of function evaluations. For each function, the \aRT\ 
+                and, in braces as dispersion measure, the half difference between 10 and 
+                90\%-tile of (bootstrapped) runtimes is shown for the different
+                target \Df-values as shown in the top row. 
+                \#succ is the number of trials that reached the last target 
+                $\hvref + 10^{-5}$.
+                The median number of conducted function evaluations is additionally given in 
+                \textit{italics}, if the target in the last column was never reached. 
+                
+}
+\providecommand{\bbobppfigdimlegend}[1]{
+%
+        Scaling of runtime to reach $\hvref+10^{\#}$ with dimension;
+        runtime is measured in number of $f$-evaluations and $\#$ is given in the legend;
+        Lines: average runtime (\aRT);
+        Cross (+): median runtime of successful runs to reach the most difficult
+        target that was reached at least once (but not always);
+        Cross ({\color{red}$\times$}): maximum number of
+        $f$-evaluations in any trial. Notched
+        boxes: interquartile range with median of simulated runs;
+        % to reach $\hvref+10^{\#}$.
+        %
+        % Colors represent different target values. 
+        All values are divided by dimension and 
+        plotted as $\log_{10}$ values versus dimension. %
+        %
+        % Shown are $\Df = 10^{\{0.1, 0.01, 1e-3, 1e-4, 1e-5\}}$.  
+        Numbers above \aRT-symbols (if appearing) indicate the number of trials
+        reaching the respective target. Horizontal lines mean linear scaling, slanted
+        grid lines depict quadratic scaling.  
+        
+}
+\providecommand{\bbobpprldistrlegend}[1]{
+%
+         Empirical cumulative distribution functions (ECDF), plotting the fraction of
+         trials with an outcome not larger than the respective value on the $x$-axis.
+         #1%
+         Left subplots: ECDF of the number of function evaluations (FEvals) divided by search space dimension $D$,
+         to fall below $\hvref+\Df$ with $\Df=10^{k}$, where $k$ is the first value in the legend.
+         The thick red line represents the most difficult target value $\hvref+10^{-5}$. %
+         Legends indicate for each target the number of functions that were solved in at
+         least one trial within the displayed budget. %
+         Right subplots: ECDF of the
+         best achieved $\Df$
+         for running times of $0.5D, 1.2D, 3D, 10D, 100D, 1000D,\dots$
+         function evaluations
+         (from right to left cycling cyan-magenta-black\dots) and final $\Df$-value (red),
+         where \Df\ and \textsf{Df} denote the difference to the optimal function value. Shown are aggregations over functions where the single
+         objectives are in the same BBOB function class, as indicated on the
+         left side and the aggregation over all 55 functions in the last
+         row.
+}
+\providecommand{\bbobloglossfigurecaption}[1]{
+%
+        \aRT\ loss ratios (see Figure~\ref{tab:aRTloss} for details).
+        Each cross ({\color{blue}$+$}) represents a single function, the line
+        is the geometric mean.
+        
+}
+\providecommand{\bbobloglosstablecaption}[1]{
+%
+        \aRT\ loss ratio versus the budget in number of $f$-evaluations
+        divided by dimension.
+        For each given budget \FEvals, the target value \ftarget\ is computed
+        as the best target $f$-value reached within the
+        budget by the given algorithm.
+        Shown is then the \aRT\ to reach \ftarget\ for the given algorithm
+        or the budget, if the GECCO-BBOB-2009 best algorithm
+        reached a better target within the budget,
+        divided by the best \aRT\
+        seen in GECCO-BBOB-2009 to reach \ftarget.
+        Line: geometric mean. Box-Whisker error bar: 25-75\%-ile with median
+        (box), 10-90\%-ile (caps), and minimum and maximum \aRT\ loss ratio
+        (points). The vertical line gives the maximal number of function evaluations
+        in a single trial in this function subset. See also
+        Figure~\ref{fig:aRTlogloss} for results on each function subgroup.
+        
+}
