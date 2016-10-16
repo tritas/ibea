@@ -57,4 +57,5 @@ if __name__ == '__main__':
 
     # Run grid search with pool
     with Pool(max(8, len(params_lst))) as pool:
-        pass
+        results = pool.starmap(run, optimizer_instances)
+        #results.join()
