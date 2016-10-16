@@ -20,7 +20,7 @@ from numpy.random import seed, choice, binomial
 from numpy.random import rand, randint, randn
 
 from crossover import bounded_sbx
-from mutation import DerandomizedMutation, SearchPathMutation, one_fifth_success
+from mutation import DerandomizedMutation #, SearchPathMutation, one_fifth_success
 
 seterr(all='raise')
 
@@ -34,7 +34,8 @@ class IBEA(object):
                  pr_mut=1.0,
                  var=2.0,  # TODO: Find sensible default
                  max_generations=200,
-                 n_sbx=5): # Can be [2, 20], typically {2, 5}
+                 n_sbx=5, # Can be [2, 20], typically {2, 5}
+                 mutation_operator='derandomized'): 
         # --- Algorithm parameters
         self.kappa = kappa             # Fitness scaling ratio
         self.alpha = alpha             # Population size
@@ -46,7 +47,8 @@ class IBEA(object):
         self._max = None               # Objective function maxima
         self.indicator_max = None      # Indicator function maximum
         self.max_generations = max_generations
-        self.n_sbx = n_sbx             # Simulated Binary Crossover distribution index 
+        self.n_sbx = n_sbx             # Simulated Binary Crossover distribution index
+        self.mutation_operator = mutation_operator
         # --- Data structure containing: population vectors, fitness and objective values
         self.pop_data = dict()
         # --- Free indices for the population dictionary
@@ -59,9 +61,13 @@ class IBEA(object):
 
     def __str__(self):
         #return 'Indicator-based Evolutionary Algorithm with Epsilon indicator'
-        return 'ibea_pop{}_offs{}_mut{}_recomb{}_var{}'.format(self.alpha, self.n_offspring,
-                                                               self.pr_mutation, self.pr_crossover,
-                                                               self.sigma_init)
+        desc = 'ibea_pop{}_offs{}_mut{}_recomb{}_var{}{}_sbx{}_max_gen{}'\
+               .format(self.alpha, self.n_offspring,
+                       self.pr_mutation, self.pr_crossover,
+                       self.sigma_init, self.mutation_operator,
+                       self.n_sbx, self.max_generations)
+        return desc
+    
     def ibea(self, fun, lbounds, ubounds, remaining_budget):
         lbounds, ubounds = array(lbounds), array(ubounds) # [-100, 100]
         dim, f_min = len(lbounds), None

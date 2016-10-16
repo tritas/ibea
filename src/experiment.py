@@ -252,7 +252,7 @@ max_runs = 1e6  # number of (almost) independent trials per problem instance
 number_of_batches = 1  # allows to run everything in several batches
 current_batch = 1      # 1..number_of_batches
 ##############################################################################
-ibea_object = IBEA(pr_mut=0.8, pr_x=0.8, n_offspring=20, var=5.0)
+ibea_object = IBEA(alpha=150, pr_mut=0.01, pr_x=1.0, n_offspring=20, var=5.0)
 SOLVER = ibea_object.ibea
 #SOLVER = my_solver # fmin_slsqp # SOLVER = cma.fmin
 suite_name = "bbob-biobj"
