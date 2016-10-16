@@ -10,3 +10,6 @@ latex/*.log
 latex/*.gz
 latex/*.aux
 latex/*.dvi
+latex/*.snm
+latex/*.toc
+latex/*.nav

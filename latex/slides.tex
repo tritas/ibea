@@ -1,0 +1,62 @@
+\documentclass[12pt]{beamer}
+\usepackage{framed}
+\usepackage{amsmath} 
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{dsfont}
+\usepackage{appendixnumberbeamer}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{tgheros}
+%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usetheme{metropolis}
+\usecolortheme{default}
+\usefonttheme[onlymath]{serif}
+%\beamertemplatenavigationsymbolsempty
+%\hypersetup{pdfpagemode=UseNone} % don't show bookmarks on initial view
+
+% a few macros
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\ig}{\includegraphics}
+
+\title{Indicator-based evolutionary Algorithm}
+\author{Karim Kouki \and Ahmed Mazari \and Daro Ozad \and Mihaela Sorostinean \and Aris Tritas}
+
+\institute{
+	M.Sc. Machine Learning, Information and Content - 
+	University of Paris-Saclay
+}
+\date{\today}
+\subject{Optimization}
+
+\begin{document}
+
+  \begin{frame}
+  	\titlepage
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Multi-objective optimization}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Simulated Binary Crossover}
+    The idea is to control the domain of space in which offspring is generated.
+    
+    Approximate distribution to a high-probability stationary `spread` distribution
+  \end{frame}
+    
+  
+\begin{frame}[allowframebreaks]
+  \frametitle<presentation>{Further Reading}    
+\begin{thebibliography}{}
+\beamertemplatearticlebibitems
+\bibitem[Bubeck et al.]{bubeck}
+Bubeck, S., Ernst, D., \& Garivier, A. (2013). Optimal discovery with probabilistic expert advice: finite time analysis and macroscopic optimality. Journal of Machine Learning Research, 14(Feb), 601-623.
+\end{thebibliography}
+\end{frame}
+\end{document}

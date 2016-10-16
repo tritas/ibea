@@ -20,7 +20,7 @@ from numpy.random import seed, choice, binomial
 from numpy.random import rand, randint, randn
 
 from crossover import bounded_sbx
-from mutation import DerandomizedMutation #, SearchPathMutation, one_fifth_success
+from mutation import DerandomizedMutation , SearchPathMutationUpdate, one_fifth_success
 
 seterr(all='raise')
 
