@@ -40,23 +40,59 @@
   \end{frame}
   
   \begin{frame}
-    \frametitle{Multi-objective optimization}
+    \frametitle{Outline}
+    \bi
+    \item Multi-objective optimization
+    \item IBEA
+    \item Implementation \& Tests
+    \item Conclusion
+    \ei
+    
+  \end{frame}
+  
+    \begin{frame}
+    \frametitle{Recombination}
+    
+    Different recombination operators.
+    
+    Choosing a recombination probability.
+    
+  \end{frame}
+  
+    \begin{frame}
+    \frametitle{Mutation}
+    Adapting the step-size is essential to find an optimal domain on each dimension.
+    
+    Fixing the mutation probability
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Simulated Binary Crossover}
+    \textbf{Idea:} control the domain of space in which offspring is generated.
+    
+    \textbf{Definition:} Approximate distribution to a high-probability stationary `spread` distribution with contracting and expanding distributions
+    $$ c(\beta) = 0.5(n_c +1)\beta^{n_c}, \beta \leq 1$$
+        $$ e(\beta) = 0.5(n_c +1)\frac{1}{\beta^{n_c+2}}, \beta > 1$$
+        
+    $\implies$ Tuning the distribution index.
   \end{frame}
   
   \begin{frame}
-    \frametitle{Simulated Binary Crossover}
-    The idea is to control the domain of space in which offspring is generated.
-    
-    Approximate distribution to a high-probability stationary `spread` distribution
+  \centering{
+  Thank you!
+  
+  Questions?
+  }
   \end{frame}
+  
     
   
 \begin{frame}[allowframebreaks]
   \frametitle<presentation>{Further Reading}    
 \begin{thebibliography}{}
 \beamertemplatearticlebibitems
-\bibitem[Bubeck et al.]{bubeck}
-Bubeck, S., Ernst, D., \& Garivier, A. (2013). Optimal discovery with probabilistic expert advice: finite time analysis and macroscopic optimality. Journal of Machine Learning Research, 14(Feb), 601-623.
+\bibitem[Zitzler and Künzli]{ibea} Eckart Zitzler and Simon Künzli, “Indicator-Based Selection in Multiobjective Search”. In Parallel Problem Solving from Nature (PPSN 2004), pp. 832-842, 2004.
+\bibitem[Kalyanmoy and Agrawal]{sbx} Deb, Kalyanmoy, and Ram B. Agrawal. "Simulated binary crossover for continuous search space." Complex Systems 9.3 (1994): 1-15.
 \end{thebibliography}
 \end{frame}
 \end{document}

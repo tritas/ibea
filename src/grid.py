@@ -81,4 +81,4 @@ if __name__ == '__main__':
     try:
         results = pool.map(run, grid)
     except KeyboardInterrupt:
-        exit(2)
+        pool.terminate()
