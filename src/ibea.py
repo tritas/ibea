@@ -28,11 +28,11 @@ class IBEA(object):
     def __init__(self,
                  kappa=0.05, 
                  alpha=100, 
-                 n_offspring=8, 
+                 n_offspring=20, 
                  seedit=42,
                  pr_x=1.0,
                  pr_mut=1.0,
-                 var=2.0,  # TODO: Find sensible default
+                 var=5.0,  # TODO: Find sensible default
                  max_generations=200,
                  n_sbx=5, # Can be [2, 20], typically {2, 5}
                  mutation_operator='derandomized'): 
