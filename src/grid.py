@@ -47,16 +47,20 @@ def run(solver_object, budget=budget,
                current_batch, number_of_batches)
     print(", %s (%s total elapsed time)." % (time.asctime(), ascetime(time.clock() - t0)))
 
+def exclude(lst, elt):
+    new_lst =  lst.round(2).tolist()
+    new_lst.remove(elt)
+    return new_lst
+
 if __name__ == '__main__':
     grid = []
     
-    fix_mutation = 0.8
+    fix_mutation = 0.1
     fix_crossover = 0.7
     
-    pr_mutation = arange(0.1, 1.0, 0.2)
-    pr_crossover = arange(0.5, 1.0, 0.1)
+    pr_mutation = exclude(arange(0.1, 1.0, 0.2), fix_mutation)
+    pr_crossover = exclude(arange(0.5, 1.0, 0.1), fix_crossover)
     variance = arange(3, 9, 2)
-    n_sbx = [2, 5, 10]
     alpha = arange(50, 110, 10)
     offspring = arange(20, 60, 10)
 
@@ -66,8 +70,7 @@ if __name__ == '__main__':
         grid.append(IBEA(pr_mut=fix_mutation, pr_x=c))
     for v in variance:
         grid.append(IBEA(pr_mut=fix_mutation, pr_x=fix_crossover, var=v))
-    for n in n_sbx:
-        grid.append(IBEA(pr_mut=fix_mutation, pr_x=fix_crossover, n_sbx=n))
+
     for a in alpha:
         grid.append(IBEA(pr_mut=fix_mutation, pr_x=fix_crossover, alpha=a))
     for o in offspring:

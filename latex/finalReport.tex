@@ -300,7 +300,9 @@ By using $\alpha = 80$ and offsprings 30, better results were obtained for the f
 Function 15: Isotropic : Variance of 5 better than variance of 10, 
 			 Derandomized: Smaller population as good as isotropic with small variance
 			 
-1-separable 2-moderate (3d): low mutation (0.1) is better for functions 12 and 13 and/or high recombination probability (>=0.8) is bad (why?)
+1-separable 2-moderate (3d): low mutation (0.1) is better for functions 12 and 13 
+							and/or high recombination probability (>=0.8) is bad (why?)
+							smaller initial variance (3) is better for f13
 
 1-separable 4-multi-modal : high variance (10) is bad
 
@@ -324,7 +326,9 @@ Function 33: good results with relatively higher variance. Improved for a smalle
 
 Function 42: Derandomized and/or Higher population are better than pop=60
 
-(3-ill-conditioned 5-weakly-structured: High variance doesn't hurt w.r.t a smaller one. - Can't say much though because the problems are unstructured and hard)
+(3-ill-conditioned 5-weakly-structured: High variance doesn't hurt w.r.t a smaller one. - 
+Can't say much though because the problems are unstructured and hard)
+f44-5d: mut0.8_recomb0.7_var5.0derandomized_sbx2
 
 4-multi-modal 4-multi-modal : Derandomized improves a tiny bit on isotropic.
 4-multi-modal 5-weakly-structured: Function 48: high variance does not perform worse, 
@@ -339,6 +343,7 @@ Cases in which low mutation probability works:
 For 5-d space:
 Function 53 performs very well with pop80, mut0.8, recombination1.0, derandomized
 On the other hand it performs well with low mutation probability (0.1-0.3) on 3d
+Find solutions really quick with var 3.
 
 \subsection{aRT}
 ibea_pop100_offs20_mut0.1_recomb0.7_var5.0derandomized_sbx5_max_gen200_on_bbob-biobj_budget1000xD
