@@ -1,0 +1,2168 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.10.17)  19 OCT 2016 19:50
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**finalReport.tex
+(./finalReport.tex
+LaTeX2e <2016/03/31> patch level 3
+Babel <3.9r> and hyphenation patterns for 34 language(s) loaded.
+(./sig-alternate.cls
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count79
+))
+\Gin@req@height=\dimen102
+\Gin@req@width=\dimen103
+)
+\epsfxsize=\dimen104
+\epsfysize=\dimen105
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/06/28 v2.15d AMS math features
+\@mathmargin=\skip41
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen106
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen107
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count80
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count81
+\leftroot@=\count82
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count83
+\DOTSCASE@=\count84
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen108
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count85
+\c@MaxMatrixCols=\count86
+\dotsspace@=\muskip10
+\c@parentequation=\count87
+\dspbrk@lvl=\count88
+\tag@help=\toks17
+\row@=\count89
+\column@=\count90
+\maxfields@=\count91
+\andhelp@=\toks18
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
+\@envbody=\toks19
+\multlinegap=\skip42
+\multlinetaggap=\skip43
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+)
+Document Class 'sig-alternate' <9th June '13>. Modified by G.K.M. Tobin/Gerry M
+urray/Boris Veytsman
+Based in part upon document Style `acmconf' <22 May 89>. Hacked 4/91 by
+shivers@cs.cmu.edu, 4/93 by theobald@cs.mcgill.ca
+Excerpts were taken from (Journal Style) 'esub2acm.cls'.
+****** Bugs/comments/suggestions/technicalities to Gerry Murray -- murray@hq.ac
+m.org ******
+Questions on the style, SIGS policies, etc. to Adrienne Griscti griscti@acm.org
+
+\ACM@basesize=\count92
+(/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment') Excluding comment 'CCSXML'
+\footheight=\dimen115
+\@maxsep=\dimen116
+\@dblmaxsep=\dimen117
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+\aucount=\count93
+\originalaucount=\count94
+\auwidth=\dimen118
+\auskip=\dimen119
+\auskipcount=\count95
+\auskip=\dimen120
+\allauboxes=\dimen121
+\addauthors=\toks21
+\addauflag=\count96
+\subtitletext=\toks22
+\savesection=\count97
+\sectioncntr=\count98
+\c@figure=\count99
+\c@table=\count100
+\titleboxnotes=\toks23
+\titleboxnoteflag=\count101
+
+Document Class: sig-alternate 2013/05/12 v2.7 based on acmproc.cls V1.3 <Nov. 3
+0 '99>
+(/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+\@acmtitlebox=\box28
+\titlenotecount=\count102
+\tntoks=\toks24
+\tntokstwo=\toks25
+\tntoksthree=\toks26
+\tntoksfour=\toks27
+\tntoksfive=\toks28
+\catcount=\count103
+\copyrightnotice=\toks29
+\conf=\toks30
+\confinfo=\toks31
+\c@part=\count104
+\c@section=\count105
+\c@subsection=\count106
+\c@subsubsection=\count107
+\c@paragraph=\count108
+
+Using 'Abbrev' bibliography style
+LaTeX Info: Redefining \cite on input line 1408.
+\bibindent=\dimen122
+\colcntr=\count109
+\saveb@x=\box29
+\copyrtyr=\toks32
+\acmcopyr=\toks33
+\boilerplate=\toks34
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (./acmcopyright.sty
+Package: acmcopyright 2014/06/29 v1.2 Copyright statemens for ACM classes
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks35
+\XKV@tempa@toks=\toks36
+)
+\XKV@depth=\count110
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)))
+\copyrightetc=\toks37
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2016/06/19 v1.99m Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2016/06/19 v1.99m Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)
+LaTeX Font Info:    Try loading font information for T1+aer on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/ae/t1aer.fd
+File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/05/22 v2.16c rotated objects in LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count111
+\rotFPtop=\skip44
+\rotFPbot=\skip45
+\rot@float@box=\box30
+\rot@mess@toks=\toks38
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
+(./ppdata/bbob_pproc_commands.tex) (./finalReport.aux)
+\openout1 = `finalReport.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count112
+\scratchdimen=\dimen123
+\scratchbox=\box31
+\nofMPsegments=\count113
+\nofMParguments=\count114
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen124
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
+\everyMPtoPDFconversion=\toks40
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Try loading font information for U+msa on input line 202.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 202.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 202.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 202.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+Overfull \hbox (5.35359pt too wide) in paragraph at lines 236--237
+\T1/aer/m/n/9 tect-ing and re-mov-ing the in-di-vid-ual which has the small-
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+Non-PDF special ignored!
+
+]
+
+LaTeX Warning: Citation `biobj2016func' on page \thepage  undefined on input li
+ne 272.
+
+
+LaTeX Warning: Citation `hansen2016exp' on page \thepage  undefined on input li
+ne 279.
+
+
+LaTeX Warning: Citation `hansen2016perfass' on page \thepage  undefined on inpu
+t line 279.
+
+
+LaTeX Warning: Citation `biobj2016perfass' on page \thepage  undefined on input
+ line 279.
+
+
+LaTeX Warning: Citation `biobj2016func' on page \thepage  undefined on input li
+ne 280.
+
+
+LaTeX Warning: Reference `fig:ECDFsingleOne' on page \thepage  undefined on inp
+ut line 281.
+
+
+LaTeX Warning: Reference `fig:ECDFsingleTwo' on page \thepage  undefined on inp
+ut line 281.
+
+
+LaTeX Warning: Reference `fig:ECDFsingleThree' on page \thepage  undefined on i
+nput line 281.
+
+
+LaTeX Warning: Reference `fig:ECDFsGroups' on page \thepage  undefined on input
+ line 281.
+
+
+LaTeX Warning: Reference `tab:aRTs' on page \thepage  undefined on input line 2
+82.
+
+
+LaTeX Warning: Citation `hansen2016cocoplat' on page \thepage  undefined on inp
+ut line 282.
+
+
+Overfull \hbox (15.58586pt too wide) in paragraph at lines 309--313
+\T1/aer/m/n/9 bi-na-tion prob-a-bil-ity (0.7-0.9) High mu-ta-tion prob-a-bil-it
+y (around
+ []
+
+
+Overfull \hbox (11.39146pt too wide) in paragraph at lines 329--332
+[]\T1/aer/m/n/9 (3-ill-conditioned 5-weakly-structured: High vari-ance doesn't
+ []
+
+
+Overfull \hbox (4.30074pt too wide) in paragraph at lines 339--342
+[]\T1/aer/m/n/9 Cases in which low mu-ta-tion prob-a-bil-ity works: 2-moderate
+ []
+
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f001.pdf, id=1
+5, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f001.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f001.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f001.pdf used on input line 360.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f002.pdf, id=1
+6, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f002.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f002.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f002.pdf used on input line 361.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f003.pdf, id=1
+7, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f003.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f003.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f003.pdf used on input line 362.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f004.pdf, id=1
+8, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f004.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f004.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f004.pdf used on input line 363.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f005.pdf, id=1
+9, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f005.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f005.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f005.pdf used on input line 364.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f006.pdf, id=2
+0, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f006.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f006.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f006.pdf used on input line 365.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f007.pdf, id=2
+1, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f007.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f007.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f007.pdf used on input line 366.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f008.pdf, id=2
+2, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f008.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f008.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f008.pdf used on input line 367.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f009.pdf, id=2
+3, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f009.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f009.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f009.pdf used on input line 368.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f010.pdf, id=2
+4, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f010.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f010.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f010.pdf used on input line 369.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f011.pdf, id=2
+5, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f011.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f011.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f011.pdf used on input line 370.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f012.pdf, id=2
+6, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f012.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f012.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f012.pdf used on input line 371.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f013.pdf, id=2
+7, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f013.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f013.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f013.pdf used on input line 372.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f014.pdf, id=2
+8, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f014.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f014.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f014.pdf used on input line 373.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f015.pdf, id=2
+9, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f015.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f015.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f015.pdf used on input line 374.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f016.pdf, id=3
+0, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f016.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f016.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f016.pdf used on input line 375.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+Underfull \hbox (badness 1354) in paragraph at lines 379--379
+\T1/aer/bx/n/9 jec-tive func-tion eval-u-a-tions di-vided by di-men-sion (FE-va
+ls/DIM) for the $\OT1/cmr/m/n/9 58$ \T1/aer/bx/n/9 tar-gets $\OMS/cmsy/m/n/9 f^
+^@\OT1/cmr/m/n/9 10[]\OML/cmm/m/it/9 ; \OMS/cmsy/m/n/9 ^^@\OT1/cmr/m/n/9 10[]\O
+ML/cmm/m/it/9 ;$
+ []
+
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f017.pdf, id=3
+1, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f017.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f017.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f017.pdf used on input line 385.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f018.pdf, id=3
+2, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f018.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f018.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f018.pdf used on input line 386.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f019.pdf, id=3
+3, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f019.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f019.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f019.pdf used on input line 387.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f020.pdf, id=3
+4, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f020.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f020.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f020.pdf used on input line 388.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f021.pdf, id=3
+5, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f021.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f021.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f021.pdf used on input line 389.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f022.pdf, id=3
+6, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f022.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f022.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f022.pdf used on input line 390.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f023.pdf, id=3
+7, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f023.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f023.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f023.pdf used on input line 391.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f024.pdf, id=3
+8, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f024.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f024.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f024.pdf used on input line 392.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f025.pdf, id=3
+9, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f025.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f025.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f025.pdf used on input line 393.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f026.pdf, id=4
+0, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f026.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f026.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f026.pdf used on input line 394.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f027.pdf, id=4
+1, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f027.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f027.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f027.pdf used on input line 395.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f028.pdf, id=4
+2, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f028.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f028.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f028.pdf used on input line 396.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f029.pdf, id=4
+3, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f029.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f029.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f029.pdf used on input line 397.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f030.pdf, id=4
+4, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f030.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f030.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f030.pdf used on input line 398.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f031.pdf, id=4
+5, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f031.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f031.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f031.pdf used on input line 399.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f032.pdf, id=4
+6, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f032.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f032.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f032.pdf used on input line 400.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f033.pdf, id=4
+7, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f033.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f033.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f033.pdf used on input line 401.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f034.pdf, id=4
+8, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f034.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f034.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f034.pdf used on input line 402.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f035.pdf, id=4
+9, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f035.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f035.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f035.pdf used on input line 403.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f036.pdf, id=5
+0, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f036.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f036.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f036.pdf used on input line 404.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+
+LaTeX Warning: Reference `fig:ECDFsingleOne' on page \thepage  undefined on inp
+ut line 416.
+
+
+LaTeX Warning: Reference `fig:ECDFsingleOne' on page \thepage  undefined on inp
+ut line 416.
+
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f037.pdf, id=5
+1, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f037.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f037.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f037.pdf used on input line 421.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f038.pdf, id=5
+2, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f038.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f038.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f038.pdf used on input line 422.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f039.pdf, id=5
+3, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f039.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f039.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f039.pdf used on input line 423.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f040.pdf, id=5
+4, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f040.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f040.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f040.pdf used on input line 424.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f041.pdf, id=5
+5, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f041.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f041.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f041.pdf used on input line 425.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f042.pdf, id=5
+6, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f042.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f042.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f042.pdf used on input line 426.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f043.pdf, id=5
+7, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f043.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f043.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f043.pdf used on input line 427.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f044.pdf, id=5
+8, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f044.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f044.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f044.pdf used on input line 428.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f045.pdf, id=5
+9, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f045.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f045.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f045.pdf used on input line 429.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f046.pdf, id=6
+0, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f046.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f046.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f046.pdf used on input line 430.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f047.pdf, id=6
+1, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f047.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f047.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f047.pdf used on input line 431.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f048.pdf, id=6
+2, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f048.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f048.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f048.pdf used on input line 432.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f049.pdf, id=6
+3, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f049.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f049.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f049.pdf used on input line 433.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f050.pdf, id=6
+4, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f050.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f050.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f050.pdf used on input line 434.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f051.pdf, id=6
+5, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f051.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f051.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f051.pdf used on input line 435.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f052.pdf, id=6
+6, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f052.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f052.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f052.pdf used on input line 436.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f053.pdf, id=6
+7, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f053.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f053.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f053.pdf used on input line 439.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f054.pdf, id=6
+8, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f054.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f054.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f054.pdf used on input line 440.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f055.pdf, id=6
+9, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f055.pdf 
+Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f055.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_f055.pdf used on input line 441.
+(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+
+
+LaTeX Warning: Reference `fig:ECDFsingleOne' on page \thepage  undefined on inp
+ut line 451.
+
+
+LaTeX Warning: Reference `fig:ECDFsingleOne' on page \thepage  undefined on inp
+ut line 451.
+
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separable_1-
+separable.pdf, id=70, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separab
+le_1-separable.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separabl
+e_1-separable.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_1-separable_1-separable.pdf used on input line 470.
+(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separable_2-
+moderate.pdf, id=72, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separab
+le_2-moderate.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separabl
+e_2-moderate.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_1-separable_2-moderate.pdf used on input line 471.
+(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separable_3-
+ill-conditioned.pdf, id=74, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separab
+le_3-ill-conditioned.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separabl
+e_3-ill-conditioned.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_1-separable_3-ill-conditioned.pdf used on input line 472.
+(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separable_4-
+multi-modal.pdf, id=76, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separab
+le_4-multi-modal.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separabl
+e_4-multi-modal.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_1-separable_4-multi-modal.pdf used on input line 473.
+(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separable_5-
+weakly-structured.pdf, id=78, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separab
+le_5-weakly-structured.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separabl
+e_5-weakly-structured.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_1-separable_5-weakly-structured.pdf used on input line 475.
+(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderate_2-m
+oderate.pdf, id=80, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderat
+e_2-moderate.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderate
+_2-moderate.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_2-moderate_2-moderate.pdf used on input line 476.
+(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderate_3-i
+ll-conditioned.pdf, id=82, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderat
+e_3-ill-conditioned.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderate
+_3-ill-conditioned.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_2-moderate_3-ill-conditioned.pdf used on input line 477.
+(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderate_4-m
+ulti-modal.pdf, id=84, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderat
+e_4-multi-modal.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderate
+_4-multi-modal.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_2-moderate_4-multi-modal.pdf used on input line 478.
+(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderate_5-w
+eakly-structured.pdf, id=86, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderat
+e_5-weakly-structured.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderate
+_5-weakly-structured.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_2-moderate_5-weakly-structured.pdf used on input line 480.
+(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-conditio
+ned_3-ill-conditioned.pdf, id=88, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-con
+ditioned_3-ill-conditioned.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-cond
+itioned_3-ill-conditioned.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_3-ill-conditioned_3-ill-conditioned.pdf used on input line 481.
+(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-conditio
+ned_4-multi-modal.pdf, id=90, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-con
+ditioned_4-multi-modal.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-cond
+itioned_4-multi-modal.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_3-ill-conditioned_4-multi-modal.pdf used on input line 482.
+(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-conditio
+ned_5-weakly-structured.pdf, id=92, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-con
+ditioned_5-weakly-structured.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-cond
+itioned_5-weakly-structured.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_3-ill-conditioned_5-weakly-structured.pdf used on input line 483.
+(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_4-multi-modal_
+4-multi-modal.pdf, id=94, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_4-multi-m
+odal_4-multi-modal.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_4-multi-mo
+dal_4-multi-modal.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_4-multi-modal_4-multi-modal.pdf used on input line 485.
+(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_4-multi-modal_
+5-weakly-structured.pdf, id=96, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_4-multi-m
+odal_5-weakly-structured.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_4-multi-mo
+dal_5-weakly-structured.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_4-multi-modal_5-weakly-structured.pdf used on input line 486.
+(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_5-weakly-struc
+tured_5-weakly-structured.pdf, id=98, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_5-weakly-
+structured_5-weakly-structured.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_5-weakly-s
+tructured_5-weakly-structured.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany_5-weakly-structured_5-weakly-structured.pdf used on input line 487.
+(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
+
+<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany.pdf, id=100, 5
+78.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany.pdf Graph
+ic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
+pprldmany.pdf used on input line 488.
+(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
+
+Overfull \hbox (19.93022pt too wide) in paragraph at lines 468--493
+[][] 
+ []
+
+(./ppdata/ibea_epsilon_python/pptable_05D_noiselessall.tex)
+No file finalReport.bbl.
+[2] [3] [4 <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f
+001.pdf> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f00
+2.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f002.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f003.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f003.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f004.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f004.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f005.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f005.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f006.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f006.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f007.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f007.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f008.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f008.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f009.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f009.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f010.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f010.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f011.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f011.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f012.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f012.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f013.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f013.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f014.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f014.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f015.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f015.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f016.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f016.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+>] [5 <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f017.p
+df> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f018.pdf
+
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f018.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f019.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f019.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f020.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f020.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f021.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f021.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f022.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f022.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f023.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f023.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f024.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f024.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f025.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f025.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f026.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f026.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f027.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f027.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f028.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f028.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f029.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f029.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f030.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f030.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f031.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f031.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f032.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f032.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f033.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f033.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f034.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f034.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f035.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f035.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f036.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f036.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+>] [6 <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f037.p
+df> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f038.pdf
+
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f038.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f039.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f039.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f040.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f040.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f041.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f041.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f042.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f042.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f043.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f043.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f044.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f044.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f045.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f045.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f046.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f046.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f047.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f047.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f048.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f048.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f049.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f049.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f050.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f050.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f051.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f051.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f052.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f052.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f053.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f053.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f054.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f054.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f055.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
+nctions/pprldmany_f055.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+>] [7 <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-sepa
+rable_1-separable.pdf> <./ppdata/ibea_epsilon_python/pprldmany-single-functions
+/pprldmany_1-separable_2-moderate.pdf> <./ppdata/ibea_epsilon_python/pprldmany-
+single-functions/pprldmany_1-separable_3-ill-conditioned.pdf> <./ppdata/ibea_ep
+silon_python/pprldmany-single-functions/pprldmany_1-separable_4-multi-modal.pdf
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separabl
+e_5-weakly-structured.pdf> <./ppdata/ibea_epsilon_python/pprldmany-single-funct
+ions/pprldmany_2-moderate_2-moderate.pdf> <./ppdata/ibea_epsilon_python/pprldma
+ny-single-functions/pprldmany_2-moderate_3-ill-conditioned.pdf> <./ppdata/ibea_
+epsilon_python/pprldmany-single-functions/pprldmany_2-moderate_4-multi-modal.pd
+f> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderat
+e_5-weakly-structured.pdf> <./ppdata/ibea_epsilon_python/pprldmany-single-funct
+ions/pprldmany_3-ill-conditioned_3-ill-conditioned.pdf> <./ppdata/ibea_epsilon_
+python/pprldmany-single-functions/pprldmany_3-ill-conditioned_4-multi-modal.pdf
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-cond
+itioned_5-weakly-structured.pdf> <./ppdata/ibea_epsilon_python/pprldmany-single
+-functions/pprldmany_4-multi-modal_4-multi-modal.pdf> <./ppdata/ibea_epsilon_py
+thon/pprldmany-single-functions/pprldmany_4-multi-modal_5-weakly-structured.pdf
+> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_5-weakly-s
+tructured_5-weakly-structured.pdf> <./ppdata/ibea_epsilon_python/pprldmany-sing
+le-functions/pprldmany.pdf>]
+<ppdata/ibea_epsilon_python/ppfigdim_f001.pdf, id=1376, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f001.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f001.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f001.pdf used on i
+nput line 551.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f002.pdf, id=1377, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f002.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f002.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f002.pdf used on i
+nput line 552.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f003.pdf, id=1378, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f003.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f003.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f003.pdf used on i
+nput line 553.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f004.pdf, id=1379, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f004.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f004.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f004.pdf used on i
+nput line 554.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f005.pdf, id=1380, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f005.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f005.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f005.pdf used on i
+nput line 555.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f006.pdf, id=1381, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f006.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f006.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f006.pdf used on i
+nput line 556.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f007.pdf, id=1382, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f007.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f007.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f007.pdf used on i
+nput line 557.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f008.pdf, id=1383, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f008.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f008.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f008.pdf used on i
+nput line 558.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f009.pdf, id=1384, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f009.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f009.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f009.pdf used on i
+nput line 559.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f010.pdf, id=1385, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f010.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f010.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f010.pdf used on i
+nput line 560.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f011.pdf, id=1386, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f011.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f011.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f011.pdf used on i
+nput line 561.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f012.pdf, id=1387, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f012.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f012.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f012.pdf used on i
+nput line 562.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f013.pdf, id=1388, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f013.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f013.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f013.pdf used on i
+nput line 563.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f014.pdf, id=1389, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f014.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f014.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f014.pdf used on i
+nput line 564.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f015.pdf, id=1390, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f015.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f015.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f015.pdf used on i
+nput line 565.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f016.pdf, id=1391, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f016.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f016.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f016.pdf used on i
+nput line 566.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f017.pdf, id=1392, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f017.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f017.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f017.pdf used on i
+nput line 567.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f018.pdf, id=1393, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f018.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f018.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f018.pdf used on i
+nput line 568.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f019.pdf, id=1394, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f019.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f019.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f019.pdf used on i
+nput line 569.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f020.pdf, id=1395, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f020.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f020.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f020.pdf used on i
+nput line 570.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f021.pdf, id=1396, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f021.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f021.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f021.pdf used on i
+nput line 571.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f022.pdf, id=1397, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f022.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f022.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f022.pdf used on i
+nput line 572.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f023.pdf, id=1398, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f023.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f023.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f023.pdf used on i
+nput line 573.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f024.pdf, id=1399, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f024.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f024.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f024.pdf used on i
+nput line 574.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f025.pdf, id=1400, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f025.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f025.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f025.pdf used on i
+nput line 575.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f026.pdf, id=1401, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f026.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f026.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f026.pdf used on i
+nput line 576.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f027.pdf, id=1402, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f027.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f027.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f027.pdf used on i
+nput line 577.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f028.pdf, id=1403, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f028.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f028.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f028.pdf used on i
+nput line 578.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f029.pdf, id=1404, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f029.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f029.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f029.pdf used on i
+nput line 579.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f030.pdf, id=1405, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f030.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f030.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f030.pdf used on i
+nput line 580.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 550--585
+[][]
+ []
+
+<ppdata/ibea_epsilon_python/ppfigdim_f031.pdf, id=1406, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f031.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f031.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f031.pdf used on i
+nput line 591.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f032.pdf, id=1407, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f032.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f032.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f032.pdf used on i
+nput line 592.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f033.pdf, id=1408, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f033.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f033.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f033.pdf used on i
+nput line 593.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f034.pdf, id=1409, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f034.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f034.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f034.pdf used on i
+nput line 594.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f035.pdf, id=1410, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f035.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f035.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f035.pdf used on i
+nput line 595.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f036.pdf, id=1411, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f036.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f036.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f036.pdf used on i
+nput line 596.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f037.pdf, id=1412, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f037.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f037.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f037.pdf used on i
+nput line 597.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f038.pdf, id=1413, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f038.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f038.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f038.pdf used on i
+nput line 598.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f039.pdf, id=1414, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f039.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f039.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f039.pdf used on i
+nput line 599.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f040.pdf, id=1415, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f040.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f040.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f040.pdf used on i
+nput line 600.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f041.pdf, id=1416, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f041.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f041.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f041.pdf used on i
+nput line 601.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f042.pdf, id=1417, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f042.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f042.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f042.pdf used on i
+nput line 602.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f043.pdf, id=1418, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f043.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f043.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f043.pdf used on i
+nput line 603.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f044.pdf, id=1419, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f044.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f044.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f044.pdf used on i
+nput line 604.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f045.pdf, id=1420, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f045.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f045.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f045.pdf used on i
+nput line 605.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f046.pdf, id=1421, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f046.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f046.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f046.pdf used on i
+nput line 606.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f047.pdf, id=1422, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f047.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f047.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f047.pdf used on i
+nput line 607.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f048.pdf, id=1423, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f048.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f048.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f048.pdf used on i
+nput line 608.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f049.pdf, id=1424, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f049.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f049.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f049.pdf used on i
+nput line 609.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f050.pdf, id=1425, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f050.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f050.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f050.pdf used on i
+nput line 610.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f051.pdf, id=1426, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f051.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f051.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f051.pdf used on i
+nput line 611.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f052.pdf, id=1427, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f052.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f052.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f052.pdf used on i
+nput line 612.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f053.pdf, id=1428, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f053.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f053.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f053.pdf used on i
+nput line 613.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f054.pdf, id=1429, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f054.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f054.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f054.pdf used on i
+nput line 614.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+<ppdata/ibea_epsilon_python/ppfigdim_f055.pdf, id=1430, 578.16pt x 433.62pt>
+File: ppdata/ibea_epsilon_python/ppfigdim_f055.pdf Graphic file (type pdf)
+
+<use ppdata/ibea_epsilon_python/ppfigdim_f055.pdf>
+Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f055.pdf used on i
+nput line 615.
+(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 590--620
+[][]
+ []
+
+
+LaTeX Warning: Reference `fig:aRTgraphs' on page \thepage  undefined on input l
+ine 620.
+
+[8
+
+
+] [9 <./ppdata/ibea_epsilon_python/ppfigdim_f001.pdf> <./ppdata/ibea_epsilon_py
+thon/ppfigdim_f002.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f002.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f003.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f003.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f004.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f004.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f005.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f005.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f006.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f006.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f007.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f007.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f008.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f008.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f009.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f009.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f010.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f010.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f011.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f011.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f012.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f012.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f013.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f013.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f014.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f014.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f015.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f015.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f016.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f016.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f017.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f017.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f018.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f018.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f019.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f019.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f020.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f020.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f021.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f021.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f022.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f022.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f023.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f023.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f024.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f024.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f025.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f025.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f026.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f026.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f027.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f027.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f028.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f028.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f029.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f029.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f030.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f030.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+>] [10 <./ppdata/ibea_epsilon_python/ppfigdim_f031.pdf> <./ppdata/ibea_epsilon_
+python/ppfigdim_f032.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f032.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f033.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f033.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f034.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f034.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f035.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f035.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f036.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f036.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f037.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f037.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f038.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f038.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f039.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f039.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f040.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f040.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f041.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f041.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f042.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f042.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f043.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f043.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f044.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f044.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f045.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f045.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f046.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f046.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f047.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f047.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f048.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f048.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f049.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f049.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f050.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f050.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f051.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f051.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f052.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f052.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f053.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f053.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f054.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f054.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./ppdata/ibea_epsilon_python/ppfigdim_f055.pdf
+
+pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f055.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+>] (./finalReport.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4508 strings out of 494294
+ 85758 string characters out of 6162463
+ 181325 words of memory out of 5000000
+ 7596 multiletter control sequences out of 15000+600000
+ 57576 words of font info for 84 fonts, out of 8000000 for 9000
+ 372 hyphenation exceptions out of 8191
+ 41i,15n,37p,953b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8
+a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on finalReport.pdf (10 pages, 5997403 bytes).
+PDF statistics:
+ 2237 PDF objects out of 2487 (max. 8388607)
+ 995 compressed objects within 10 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 727 words of extra memory for PDF output out of 10000 (max. 10000000)
+

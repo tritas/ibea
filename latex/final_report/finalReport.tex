@@ -78,7 +78,7 @@
 \newcommand{\bbobdatapath}{ppdata/} % default output folder of rungeneric.py
 \input{\bbobdatapath bbob_pproc_commands.tex} % provide default of algname and algfolder
 \renewcommand{\algname}{IBEA}  % name of algorithm as it should appear in the text
-% \renewcommand{\algfolder}{FOLDER/} % subfolder of \bbobdatapath for processed algorithm
+ \renewcommand{\algfolder}{ibea_epsilon_python/} % subfolder of \bbobdatapath for processed algorithm
 % Find all \change commands in the text below and update the information according to your data
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -314,13 +314,13 @@ function 18: High recombination probability (0.7-0.9)
 2-moderate 2-moderate: 
 Variance is a critical factor. 
 Mutation with probability 1 without adaptation of the variance gives worse results.
-Function 20 gives good results with mut0.3 in 5d - best mut0.3_recomb0.7 
-28-2d as good for pop100_offs20_mut0.1_recomb0.7_var5.0 as for pop100_offs20_mut0.8_recomb0.6
+Function 20 gives good results with mut0.3 in 5d - best mut0.3 recomb0.7 
+28-2d as good for pop100 offs20 mut0.1 recomb0.7 var5.0 as for pop100 offs20 mut0.8 recomb0.6
 
 2-moderate 5-weakly-structured
 Better results with low mutation probability (0.1-0.3)
 Function 33: good results with relatively higher variance. Improved for a smaller population and moderate variance
-26, 33: best with mut0.8_recomb0.6
+26, 33: best with mut0.8 recomb0.6
 
 3-ill-conditioned 3-ill-conditioned: variance is not the determinating factor. Isotropic a little worse.
 
@@ -328,7 +328,7 @@ Function 42: Derandomized and/or Higher population are better than pop=60
 
 (3-ill-conditioned 5-weakly-structured: High variance doesn't hurt w.r.t a smaller one. - 
 Can't say much though because the problems are unstructured and hard)
-f44-5d: mut0.8_recomb0.7_var5.0derandomized_sbx2
+f44-5d: mut0.8 recomb0.7 var5.0derandomized sbx2
 
 4-multi-modal 4-multi-modal : Derandomized improves a tiny bit on isotropic.
 4-multi-modal 5-weakly-structured: Function 48: high variance does not perform worse, 
@@ -346,7 +346,7 @@ On the other hand it performs well with low mutation probability (0.1-0.3) on 3d
 Find solutions really quick with var 3.
 
 \subsection{aRT}
-ibea_pop100_offs20_mut0.1_recomb0.7_var5.0derandomized_sbx5_max_gen200_on_bbob-biobj_budget1000xD
+ibea pop100 offs20 mut0.1 recomb0.7 var5.0derandomized sbx5 max gen200 on bbob-biobj budget1000xD
 gets to 10-3 on f12
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
