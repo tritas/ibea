@@ -114,11 +114,11 @@
 %\widowpenalty = 10000
 % --- End of Author Metadata ---
 
-\title{Black-Box Optimization Benchmarking Template for the Bi-Objective BBOB Test Suite
+\title{Benchmarking of the Indicator-based evolution algorithm using the Bi-Objective BBOB Test Suite
 % \titlenote{If needed}
 }
-\subtitle{Intermediate report
-\titlenote{Submission deadline: October 10th.}}
+\subtitle{Final report
+\titlenote{Submission deadline: October 21st.}}
 % Camera-ready paper due by May 4th.
 
 %
@@ -201,8 +201,7 @@ Ahmed Mazari %\titlenote{The secretary disavows
 
 \maketitle
 \begin{abstract}
-The purpose of our project is to implement and benchmark the Indicator Based Evolutionary Algorithm (IBEA) using  the Comparing Continuous Optimizer (COCO) platform.
-
+This project set as objectives to study, implement and benchmark the Indicator Based Evolutionary Algorithm (IBEA) using  the Comparing Continuous Optimizer (COCO) platform.  IBEA uses as performance measure for the optimization goal an indicator of the relative quality of two sets of solution vectors with respect to the Pareto front. Our group's focus was on the epsilon indicator. The report is outlined as follows: first we present the specificity of the indicator used, as well as the thought process behind the evolution strategy. Then we describe our experimental methodology along with the results obtained for different parametrizations and variation operators. Finally, those results are discussed and compared with related multi-objective approaches.
 \end{abstract}
 
 % Add any ACM category that you feel is needed, not mandatory anymore
@@ -227,7 +226,12 @@ In turn, Adaptive-IBEA scales the objective function values as well as the range
 
 Also, the authors reported a significant improvement in the quality of the resulted Pareto-set approximation with respect to the optimization goal.
 
+In our work we proposed a python implementation of the IBEA algorithm based on the steps presented by the authors in (paper nr). We then used this implementation to benchmark  the algorithm for various categories of problems through the COCO platform. Section 3 of this paper provides a brief description of the IBEA algorithm. In section 4 we present the implementation steps as well as other considerations regarding it, while in section 5 we detail the experiments we have conducted. Finally section 6 presents the results of these experiments and following discussions, while section 7 provides conclusions and ideas for future work.
+
+ \section{Epsilon indicator}
+ Give the formula of the epsilon indicator and the fitness, get into a little more detail about the dominance preserving relation and the values of the fitness function (to explain why it needs to be scaled as well).
  \section{Algorithm Presentation}
+ 
 The input of the algorithm is the size of the population ($\alpha$), a maximum number of generations (corresponding to the budget) set as termination criterion and a fitness scaling factor ($\kappa$). The output of the algorithm is an approximation of the Pareto-set.
 \begin{enumerate}
 \item \textbf{Initialization:} consists in randomly generating an initial population P of the given size  and setting a generation counter m to 0.
@@ -237,39 +241,63 @@ The input of the algorithm is the size of the population ($\alpha$), a maximum n
 
 \item \textbf{Termination:} after the environmental selection is performed, the termination criterion of the algorithm is checked; if the maximum number of generations is reached or another termination criterion is met, the algorithm returns the set of decision vectors A.
 
-\item \textbf{Mating Selection:} consists in creating as temporary mating pool P’ which is filled with individuals from P by performing binary tournament selection with replacement on P.
+\item \textbf{Mating Selection:} consists in creating as temporary mating pool P' which is filled with individuals from P by performing binary tournament selection with replacement on P.
 
-\item \textbf{Variation:} finally the variation step consists applying recombination and mutation operators to the previously created mating pool. In this case, the operator SBX-20 was chosen for the recombination part, while a polynomial distribution was used for the mutation part.  The offspring resulted after applying these operators is added to P, while also incrementing the generation counter. The algorithm is then performed again from step 2, until a termination criterion is met.
-
-\subsection{Recombination}
-
-\subsection{Variation}
+\item \textbf{Variation:} finally the variation step consists applying recombination and mutation operators to the previously created mating pool. The offspring resulted after applying these operators is added to P, while also incrementing the generation counter. The algorithm is then performed again from step 2, until a termination criterion is met.
 \end{enumerate}
 
- \section{Experimental Procedure}
- For the first part of the project our milestone was to have a working version of the algorithm, and potentially reasonable results on at least some groups of functions.
- 
-Needless to say, to begin with, a thorough understanding of the problem's setting is required. As such, the first step was to have both individual and group readings of the paper. 
-
+\section{Implementation}
 As far as the implementation in Python is concerned we chose to represent the population in a compact data structure and did all numerical computation with NumPy. The steps of the algorithm were inlined in a single optimization function, except for the recombination and mutation operators which were implemented in separate functions to achieve modularity during testing.
 
-We tried intermediate weighting and discrete recombination before implementing the Simulated Binary Crossover operator. However, results using these operators were not encouraging. The reason for that may be a rather naive exploration of the search space.
+Python dictionary, grid search
 
-For the mutation step, we simply added isotropic Gaussian noise with fixed variance to the produced offspring. However, it is well known that fixing variance does not speed up search optimally.
+\section{Experiments}
+ For the first part of the project our milestone was to have a working version of the algorithm, and potentially reasonable results on at least some groups of functions.
+ 
 Without further changes to the original strategy, our algorithm does not seem to reach the optimal Pareto set of solution vectors. We tried applying recombination and mutation with high and low probabilities respectively, following the literature. This did not yield improved results, which leads us to think that either our implementation lacks robustness, or has a subtle bug.
 
-Going forward, we intend to:
+We intended to:
 \begin{enumerate}
-\item Further test and validate the robustness of the current implementation
-\item Experiment with self-adaptive strategies for the mutation step, and potentially
+\item Experiment with self-adaptive strategies for the mutation step, and 
 \item Implement Self-Adaptive SBX which seeks an optimal index for the approximation distribution used
 \end{enumerate}
 
+\section{Experiments}
+The proposed implementation of the IBEA algorithm was tested with the collection of benchmark problems comprised in the COCO platform. We performed several experiments with various combinations of parameters in order to evaluate the influence of specific parameters on the results for different categories of benchmark problems. Therefore we varied the following parameters:
+\begin{itemize}
+\item The budget - various values between 300, 500, 750, 850, 1000
+\item Population size - varied between 50, 60, 80, 100, 200
+\item Number of offspring - 20, 30 or 40
+\item Mutation probability - 0.7, 0.8, 0.9, 1.0
+\item Recombination probability - or probability of crossover for the recombination step - 0.4, 0.6, 0.8, 0.9, 1.0
+\item Variance - 1.3 , 2.5, 5, 10, 15
+\item Offspring : - 20, 30, 35, 40
+\item Dimension : 2, 5, 10, 20, 40
+\item Max iterations: $10^6$, $10^9$
+\item Distribution index for the SBX operator: 2, 5 or 20 (the value suggested by the authors)
+\item Operators : Isotropic, Derandomized
+\end{itemize}
+
+Since the number of variable parameters was considerable, carrying experiments with all combinations between them was impossible, so we selected a limited number of combinations which we considered might give significant results. The sets of parameters that we used in our experiments are illustrated in table 1.  
+Running a bi-objective algorithm in a laptop is not an easy task. It’s is both time and RAM consuming.  The execution takes from 5 to 23 hours to finish with a budget of 1000. The timing experiment  is intrinsically associated with the size of the population and the dimension. 
+For that reason, we tried only one configuration for 40 dimensions that took almost 48h  with a moderate budget of 300.  
+In order to try several parameterizations of the algorithm we  were obliged to make non stopping running of the algorithm on different machine with different parameter in order to evaluate how  the algorithm performs under different parameterizations. We conclude from this empirical study that a high variance and low variance impacts negatively the performance of the algorithm. The trick is to find a trade-off between the size of population, variance and the recombination values.
+
+\subsection{Recombination}
+
+We tried intermediate weighting and discrete recombination before implementing the Simulated Binary Crossover operator. However, results using these operators were not encouraging. The reason for that may be a rather naive exploration of the search space.
+
+In this case, the Simulated Binary Operator was chosen for the recombination part.
+\subsection{Variation}
+
+For the mutation step, we simply added isotropic Gaussian noise with fixed variance to the produced offspring. However, it is well known that fixing variance does not speed up search optimally.
+a polynomial distribution was used for the mutation part.  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{CPU Timing}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % note that the following text is just a proposal and can/should be changed to your needs:
-In order to evaluate the CPU timing of the algorithm, we have run the \algname with restarts on the entire bbob-biobj test suite \cite{biobj2016func} for $2 D$ function evaluations. The Python code was run on a Intel(R) Core(TM) i5-2400S CPU @ 2.50GHz with 4 processors and 8 cores. The time per function evaluation for dimensions 2, 3, 5, 10, 20 equals $1.7e-03$, $1.9e-03$, $2.0e-03$, $2.2e-03$, $2.4e-03$ seconds respectively. 
+(Ubuntu 16.04 64 bits i5 and i7, MAC os, Windows)
+In order to evaluate the CPU timing of the algorithm, we have run the \algname with restarts on the entire bbob-biobj test suite \cite{biobj2016func} for $2 D$ function evaluations. The Python code was run on a Intel(R) Core(TM) i5-2400S CPU @ 2.50GHz with 4 processors and 8 cores. The time per function evaluation for dimensions 2, 3, 5, 10, 20 equals $1.7e{-3}$, $1.9e{-3}$, $2.0e{-3}$, $2.2e{-3}$, $2.4e{-3}$ seconds respectively.  
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -300,39 +328,43 @@ By using $\alpha = 80$ and offsprings 30, better results were obtained for the f
 Function 15: Isotropic : Variance of 5 better than variance of 10, 
 			 Derandomized: Smaller population as good as isotropic with small variance
 			 
-1-separable 2-moderate (3d): low mutation (0.1) is better for functions 12 and 13 
-							and/or high recombination probability (>=0.8) is bad (why?)
-							smaller initial variance (3) is better for f13
+\subsubsection*{1-separable 2-moderate (3d)}: 
+low mutation (0.1) is better for functions 12 and 13 and/or high recombination probability (>=0.8) is bad (why?)
 
-1-separable 4-multi-modal : high variance (10) is bad
+smaller initial variance (3) is better for f13
 
-1-separable 5-weakly-structured
+\subsubsection*{1-separable 4-multi-modal} : high variance (10) is bad
+
+\subsubsection*{1-separable 5-weakly-structured}
 function 18: High recombination probability (0.7-0.9)
 			  High mutation probability (around 0.7-0.8)  (along with isotropic pop 100)
 			  High variance is bad
 
-2-moderate 2-moderate: 
+\subsubsection*{2-moderate 2-moderate}
 Variance is a critical factor. 
 Mutation with probability 1 without adaptation of the variance gives worse results.
 Function 20 gives good results with mut0.3 in 5d - best mut0.3 recomb0.7 
 28-2d as good for pop100 offs20 mut0.1 recomb0.7 var5.0 as for pop100 offs20 mut0.8 recomb0.6
 
-2-moderate 5-weakly-structured
+\subsubsection*{2-moderate 5-weakly-structured}
 Better results with low mutation probability (0.1-0.3)
 Function 33: good results with relatively higher variance. Improved for a smaller population and moderate variance
 26, 33: best with mut0.8 recomb0.6
 
-3-ill-conditioned 3-ill-conditioned: variance is not the determinating factor. Isotropic a little worse.
+\subsubsection*{3-ill-conditioned 3-ill-conditioned} 
+variance is not the determinating factor. Isotropic a little worse.
 
 Function 42: Derandomized and/or Higher population are better than pop=60
 
-(3-ill-conditioned 5-weakly-structured: High variance doesn't hurt w.r.t a smaller one. - 
+\subsubsection*{3-ill-conditioned 5-weakly-structured} 
+High variance doesn't hurt w.r.t a smaller one. - 
 Can't say much though because the problems are unstructured and hard)
 f44-5d: mut0.8 recomb0.7 var5.0derandomized sbx2
 
-4-multi-modal 4-multi-modal : Derandomized improves a tiny bit on isotropic.
-4-multi-modal 5-weakly-structured: Function 48: high variance does not perform worse, 
-								    on other functions of  derandomized is better
+\subsubsection*{4-multi-modal 4-multi-modal} 
+Derandomized improves a tiny bit on isotropic.
+\subsubsection*{4-multi-modal 5-weakly-structured}
+ Function 48: high variance does not perform worse, on other functions of  derandomized is better
 								    
 Functions 54, 55: Can't say much. Derandomized/Smaller variance better.
 
@@ -346,8 +378,15 @@ On the other hand it performs well with low mutation probability (0.1-0.3) on 3d
 Find solutions really quick with var 3.
 
 \subsection{aRT}
-ibea pop100 offs20 mut0.1 recomb0.7 var5.0derandomized sbx5 max gen200 on bbob-biobj budget1000xD
-gets to 10-3 on f12
+We observe with no surprise that our algorithm has a runtime of $1e{-3}$ iff the variance is adapted. gets to 10-3 on f12
+
+We also observe that using a better indicator tends to find targets much faster.
+
+\section{Related Work}
+Comparison with results stemming from the same approach was performed, and to an extent is it quite revealing. For lack of time, no comparison was done with the state-of-the-art. However, using the tools provided by COCO as well as the datasets shared by other groups, and after comparison with the implementation of IBEA-$\epsilon$ in the C language as well as results of groups studing IBEA-HV. We can safely say that the $\epsilon$ indicator may be overly simplistic for the wide range of optimization functions benchmarked.
+
+\section{Conclusion}
+Covariance matrix adaptation, different indicator function.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
