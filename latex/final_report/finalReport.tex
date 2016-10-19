@@ -304,11 +304,10 @@ In order to evaluate the CPU timing of the algorithm, we have run the \algname w
 \section{Results}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Results of \algname\ from experiments according to \cite{hansen2016exp}, \cite{hansen2016perfass} and \cite{biobj2016perfass} on the benchmark
+Results of \algname\ from experiments according to \cite{hansen2016exp} and \cite{brockhoff2016biobjective} on the benchmark
 functions given in \cite{biobj2016func} are presented in
 Figures~\ref{fig:ECDFsingleOne}, \ref{fig:ECDFsingleTwo}, \ref{fig:ECDFsingleThree}, and \ref{fig:ECDFsGroups}, and in
 Table~\ref{tab:aRTs}. The experiments were performed with COCO \cite{hansen2016cocoplat}, version 1.0.1, the plots were produced with version 1.0.4.
-
 \subsection{Comparison of isotropic and derandomized mutation operators}
 Derandomized mutation performs better on the following functions: (initial variance is 5, mutation prob is 0.8, crossover is  SBX-5 and Pr(0.8))
 \begin{itemize}
@@ -382,11 +381,7 @@ We observe with no surprise that our algorithm has a runtime of $1e{-3}$ iff the
 
 We also observe that using a better indicator tends to find targets much faster.
 
-\section{Related Work}
-Comparison with results stemming from the same approach was performed, and to an extent is it quite revealing. For lack of time, no comparison was done with the state-of-the-art. However, using the tools provided by COCO as well as the datasets shared by other groups, and after comparison with the implementation of IBEA-$\epsilon$ in the C language as well as results of groups studing IBEA-HV. We can safely say that the $\epsilon$ indicator may be overly simplistic for the wide range of optimization functions benchmarked.
 
-\section{Conclusion}
-Covariance matrix adaptation, different indicator function.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -553,17 +548,25 @@ multimodal-multimodal & multimodal-weakstructure & weakstructure-weakstructure &
 \end{sidewaystable*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Discussion}  % and/or conclusions etc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+\section{Related Work}
+Comparison with results stemming from the same approach was performed, and to an extent is it quite revealing. For lack of time, no comparison was done with the state-of-the-art. However, using the tools provided by COCO as well as the datasets shared by other groups, and after comparison with the implementation of IBEA-$\epsilon$ in the C language as well as results of groups studing IBEA-HV. We can safely say that the $\epsilon$ indicator may be overly simplistic for the wide range of optimization functions benchmarked.
+
+\section*{Conclusion}
+Covariance matrix adaptation, different indicator function.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % REFERENCES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % The following two commands are all you need in the
 % initial runs of your .tex file to
 % produce the bibliography for the citations in your paper.
+
 \bibliographystyle{abbrv}
-\bibliography{bbob}  % bbob.bib is the name of the Bibliography in this case
+\bibliography{report.bib}
+%\bibliographystyle{abbrv}
+%\bibliography{bbob}  % bbob.bib is the name of the Bibliography in this case
 % You must have a proper ".bib" file and remember to run:
 % latex bibtex latex latex
 % to resolve all references
