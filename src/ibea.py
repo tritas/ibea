@@ -20,7 +20,7 @@ from numpy.random import seed, choice, binomial
 from numpy.random import rand, randint, randn
 
 from crossover import bounded_sbx
-from mutation import DerandomizedMutation , SearchPathMutationUpdate, one_fifth_success
+from mutation import DerandomizedMutation, SearchPathMutationUpdate, one_fifth_success
 
 seterr(all='raise')
 
@@ -28,10 +28,10 @@ class IBEA(object):
     def __init__(self,
                  kappa=0.05, 
                  alpha=100, 
-                 n_offspring=20, 
+                 n_offspring=25, 
                  seedit=42,
-                 pr_x=1.0,
-                 pr_mut=1.0,
+                 pr_x=0.7,
+                 pr_mut=0.1,
                  var=5.0,  # TODO: Find sensible default
                  max_generations=200,
                  n_sbx=5, # Can be [2, 20], typically {2, 5}
@@ -48,7 +48,13 @@ class IBEA(object):
         self.indicator_max = None      # Indicator function maximum
         self.max_generations = max_generations
         self.n_sbx = n_sbx             # Simulated Binary Crossover distribution index
-        self.mutation_operator = mutation_operator
+
+        # Choose mutation operator function 
+        if mutation_operator == 'derandomized': self.mutation_operator = DerandomizedMutation
+        elif mutation_operator == 'isotropic': self.mutation_operation = isotropic_mutation
+        elif mutation_operation == 'search_path' : self.mutation_operation = SearchPathMutationUpdate
+        else: raise ValueError # Something something is not implemented (CMA is it you?)
+        
         # --- Data structure containing: population vectors, fitness and objective values
         self.pop_data = dict()
         # --- Free indices for the population dictionary

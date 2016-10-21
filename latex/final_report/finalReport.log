@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.10.17)  19 OCT 2016 22:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.10.17)  21 OCT 2016 02:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -248,7 +248,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
-(./ppdata/bbob_pproc_commands.tex) (./finalReport.aux)
+(./comparison/bbob_pproc_commands.tex) (./finalReport.aux)
 \openout1 = `finalReport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
@@ -363,165 +363,229 @@ Overfull \hbox (4.30074pt too wide) in paragraph at lines 370--373
  []
 
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f001.pdf, id=1
-9, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f001.pdf 
-Graphic file (type pdf)
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f001' not found.
 
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f001.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f001.pdf used on input line 394.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.394 ...prldmany-single-functions/pprldmany_f001}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f002.pdf, id=2
-0, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f002.pdf 
-Graphic file (type pdf)
 
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f002.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f002.pdf used on input line 395.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f002' not found.
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f003.pdf, id=2
-1, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f003.pdf 
-Graphic file (type pdf)
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.395 ...prldmany-single-functions/pprldmany_f002}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f003.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f003.pdf used on input line 396.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f004.pdf, id=2
-2, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f004.pdf 
-Graphic file (type pdf)
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f003' not found.
 
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f004.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f004.pdf used on input line 397.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.396 ...prldmany-single-functions/pprldmany_f003}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f005.pdf, id=2
-3, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f005.pdf 
-Graphic file (type pdf)
 
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f005.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f005.pdf used on input line 398.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f004' not found.
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f006.pdf, id=2
-4, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f006.pdf 
-Graphic file (type pdf)
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.397 ...prldmany-single-functions/pprldmany_f004}
+                                                  \\[-1.8ex]
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f006.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f006.pdf used on input line 399.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f007.pdf, id=2
-5, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f007.pdf 
-Graphic file (type pdf)
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f005' not found.
 
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f007.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f007.pdf used on input line 400.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.398 ...prldmany-single-functions/pprldmany_f005}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f008.pdf, id=2
-6, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f008.pdf 
-Graphic file (type pdf)
 
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f008.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f008.pdf used on input line 401.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f006' not found.
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f009.pdf, id=2
-7, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f009.pdf 
-Graphic file (type pdf)
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.399 ...prldmany-single-functions/pprldmany_f006}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f009.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f009.pdf used on input line 402.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f010.pdf, id=2
-8, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f010.pdf 
-Graphic file (type pdf)
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f007' not found.
 
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f010.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f010.pdf used on input line 403.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.400 ...prldmany-single-functions/pprldmany_f007}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f011.pdf, id=2
-9, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f011.pdf 
-Graphic file (type pdf)
 
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f011.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f011.pdf used on input line 404.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f008' not found.
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f012.pdf, id=3
-0, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f012.pdf 
-Graphic file (type pdf)
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.401 ...prldmany-single-functions/pprldmany_f008}
+                                                  \\[-1.8ex]
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f012.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f012.pdf used on input line 405.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f013.pdf, id=3
-1, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f013.pdf 
-Graphic file (type pdf)
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f009' not found.
 
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f013.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f013.pdf used on input line 406.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.402 ...prldmany-single-functions/pprldmany_f009}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f014.pdf, id=3
-2, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f014.pdf 
-Graphic file (type pdf)
 
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f014.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f014.pdf used on input line 407.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f010' not found.
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f015.pdf, id=3
-3, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f015.pdf 
-Graphic file (type pdf)
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.403 ...prldmany-single-functions/pprldmany_f010}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f015.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f015.pdf used on input line 408.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f016.pdf, id=3
-4, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f016.pdf 
-Graphic file (type pdf)
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f011' not found.
 
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f016.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f016.pdf used on input line 409.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.404 ...prldmany-single-functions/pprldmany_f011}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f012' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.405 ...prldmany-single-functions/pprldmany_f012}
+                                                  \\[-1.8ex]
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f013' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.406 ...prldmany-single-functions/pprldmany_f013}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f014' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.407 ...prldmany-single-functions/pprldmany_f014}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f015' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.408 ...prldmany-single-functions/pprldmany_f015}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f016' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.409 ...prldmany-single-functions/pprldmany_f016}
+                                                  \\[-1.8ex]
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 Underfull \hbox (badness 1354) in paragraph at lines 413--413
 \T1/aer/bx/n/9 jec-tive func-tion eval-u-a-tions di-vided by di-men-sion (FE-va
@@ -531,1565 +595,812 @@ ML/cmm/m/it/9 ;$
  []
 
 
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f017.pdf, id=3
-5, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f017.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f017.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f017.pdf used on input line 419.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f018.pdf, id=3
-6, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f018.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f018.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f018.pdf used on input line 420.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f019.pdf, id=3
-7, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f019.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f019.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f019.pdf used on input line 421.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f020.pdf, id=3
-8, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f020.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f020.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f020.pdf used on input line 422.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f021.pdf, id=3
-9, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f021.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f021.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f021.pdf used on input line 423.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f022.pdf, id=4
-0, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f022.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f022.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f022.pdf used on input line 424.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f023.pdf, id=4
-1, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f023.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f023.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f023.pdf used on input line 425.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f024.pdf, id=4
-2, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f024.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f024.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f024.pdf used on input line 426.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f025.pdf, id=4
-3, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f025.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f025.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f025.pdf used on input line 427.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f026.pdf, id=4
-4, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f026.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f026.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f026.pdf used on input line 428.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f027.pdf, id=4
-5, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f027.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f027.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f027.pdf used on input line 429.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f028.pdf, id=4
-6, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f028.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f028.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f028.pdf used on input line 430.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f029.pdf, id=4
-7, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f029.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f029.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f029.pdf used on input line 431.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f030.pdf, id=4
-8, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f030.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f030.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f030.pdf used on input line 432.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f031.pdf, id=4
-9, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f031.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f031.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f031.pdf used on input line 433.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f032.pdf, id=5
-0, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f032.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f032.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f032.pdf used on input line 434.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f033.pdf, id=5
-1, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f033.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f033.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f033.pdf used on input line 435.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f034.pdf, id=5
-2, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f034.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f034.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f034.pdf used on input line 436.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f035.pdf, id=5
-3, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f035.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f035.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f035.pdf used on input line 437.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f036.pdf, id=5
-4, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f036.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f036.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f036.pdf used on input line 438.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f037.pdf, id=5
-5, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f037.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f037.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f037.pdf used on input line 455.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f038.pdf, id=5
-6, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f038.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f038.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f038.pdf used on input line 456.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f039.pdf, id=5
-7, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f039.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f039.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f039.pdf used on input line 457.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f040.pdf, id=5
-8, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f040.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f040.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f040.pdf used on input line 458.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f041.pdf, id=5
-9, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f041.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f041.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f041.pdf used on input line 459.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f042.pdf, id=6
-0, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f042.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f042.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f042.pdf used on input line 460.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f043.pdf, id=6
-1, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f043.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f043.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f043.pdf used on input line 461.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f044.pdf, id=6
-2, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f044.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f044.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f044.pdf used on input line 462.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f045.pdf, id=6
-3, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f045.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f045.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f045.pdf used on input line 463.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f046.pdf, id=6
-4, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f046.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f046.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f046.pdf used on input line 464.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f047.pdf, id=6
-5, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f047.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f047.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f047.pdf used on input line 465.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f048.pdf, id=6
-6, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f048.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f048.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f048.pdf used on input line 466.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f049.pdf, id=6
-7, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f049.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f049.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f049.pdf used on input line 467.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f050.pdf, id=6
-8, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f050.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f050.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f050.pdf used on input line 468.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f051.pdf, id=6
-9, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f051.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f051.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f051.pdf used on input line 469.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f052.pdf, id=7
-0, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f052.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f052.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f052.pdf used on input line 470.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f053.pdf, id=7
-1, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f053.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f053.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f053.pdf used on input line 473.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f054.pdf, id=7
-2, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f054.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f054.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f054.pdf used on input line 474.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f055.pdf, id=7
-3, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f055.pdf 
-Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f055.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_f055.pdf used on input line 475.
-(pdftex.def)             Requested size: 126.0pt x 94.49684pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separable_1-
-separable.pdf, id=74, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separab
-le_1-separable.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separabl
-e_1-separable.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_1-separable_1-separable.pdf used on input line 504.
-(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separable_2-
-moderate.pdf, id=76, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separab
-le_2-moderate.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separabl
-e_2-moderate.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_1-separable_2-moderate.pdf used on input line 505.
-(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separable_3-
-ill-conditioned.pdf, id=78, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separab
-le_3-ill-conditioned.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separabl
-e_3-ill-conditioned.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_1-separable_3-ill-conditioned.pdf used on input line 506.
-(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separable_4-
-multi-modal.pdf, id=80, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separab
-le_4-multi-modal.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separabl
-e_4-multi-modal.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_1-separable_4-multi-modal.pdf used on input line 507.
-(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separable_5-
-weakly-structured.pdf, id=82, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separab
-le_5-weakly-structured.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separabl
-e_5-weakly-structured.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_1-separable_5-weakly-structured.pdf used on input line 509.
-(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderate_2-m
-oderate.pdf, id=84, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderat
-e_2-moderate.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderate
-_2-moderate.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_2-moderate_2-moderate.pdf used on input line 510.
-(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderate_3-i
-ll-conditioned.pdf, id=86, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderat
-e_3-ill-conditioned.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderate
-_3-ill-conditioned.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_2-moderate_3-ill-conditioned.pdf used on input line 511.
-(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderate_4-m
-ulti-modal.pdf, id=88, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderat
-e_4-multi-modal.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderate
-_4-multi-modal.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_2-moderate_4-multi-modal.pdf used on input line 512.
-(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderate_5-w
-eakly-structured.pdf, id=90, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderat
-e_5-weakly-structured.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderate
-_5-weakly-structured.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_2-moderate_5-weakly-structured.pdf used on input line 514.
-(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-conditio
-ned_3-ill-conditioned.pdf, id=92, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-con
-ditioned_3-ill-conditioned.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-cond
-itioned_3-ill-conditioned.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_3-ill-conditioned_3-ill-conditioned.pdf used on input line 515.
-(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-conditio
-ned_4-multi-modal.pdf, id=94, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-con
-ditioned_4-multi-modal.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-cond
-itioned_4-multi-modal.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_3-ill-conditioned_4-multi-modal.pdf used on input line 516.
-(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-conditio
-ned_5-weakly-structured.pdf, id=96, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-con
-ditioned_5-weakly-structured.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-cond
-itioned_5-weakly-structured.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_3-ill-conditioned_5-weakly-structured.pdf used on input line 517.
-(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_4-multi-modal_
-4-multi-modal.pdf, id=98, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_4-multi-m
-odal_4-multi-modal.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_4-multi-mo
-dal_4-multi-modal.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_4-multi-modal_4-multi-modal.pdf used on input line 519.
-(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_4-multi-modal_
-5-weakly-structured.pdf, id=100, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_4-multi-m
-odal_5-weakly-structured.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_4-multi-mo
-dal_5-weakly-structured.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_4-multi-modal_5-weakly-structured.pdf used on input line 520.
-(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_5-weakly-struc
-tured_5-weakly-structured.pdf, id=102, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_5-weakly-
-structured_5-weakly-structured.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_5-weakly-s
-tructured_5-weakly-structured.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany_5-weakly-structured_5-weakly-structured.pdf used on input line 521.
-(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
-
-<ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany.pdf, id=104, 5
-78.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany.pdf Graph
-ic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/pprldmany-single-functions/
-pprldmany.pdf used on input line 522.
-(pdftex.def)             Requested size: 135.0747pt x 92.66371pt.
-
-Overfull \hbox (19.93022pt too wide) in paragraph at lines 502--527
-[][] 
- []
-
-(./ppdata/ibea_epsilon_python/pptable_05D_noiselessall.tex) (./finalReport.bbl)
-[3] [4] [5
-
- <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f001.pdf> <
-./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f002.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f002.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f003.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f003.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f004.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f004.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f005.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f005.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f006.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f006.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f007.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f007.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f008.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f008.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f009.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f009.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f010.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f010.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f011.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f011.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f012.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f012.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f013.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f013.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f014.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f014.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f015.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f015.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f016.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f016.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
->] [6 <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f017.p
-df> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f018.pdf
-
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f018.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f019.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f019.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f020.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f020.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f021.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f021.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f022.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f022.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f023.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f023.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f024.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f024.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f025.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f025.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f026.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f026.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f027.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f027.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f028.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f028.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f029.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f029.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f030.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f030.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f031.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f031.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f032.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f032.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f033.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f033.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f034.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f034.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f035.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f035.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f036.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f036.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
->] [7 <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f037.p
-df> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f038.pdf
-
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f038.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f039.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f039.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f040.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f040.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f041.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f041.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f042.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f042.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f043.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f043.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f044.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f044.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f045.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f045.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f046.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f046.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f047.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f047.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f048.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f048.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f049.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f049.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f050.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f050.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f051.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f051.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f052.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f052.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f053.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f053.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f054.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f054.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_f055.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/pprldmany-single-fu
-nctions/pprldmany_f055.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
->] [8 <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-sepa
-rable_1-separable.pdf> <./ppdata/ibea_epsilon_python/pprldmany-single-functions
-/pprldmany_1-separable_2-moderate.pdf> <./ppdata/ibea_epsilon_python/pprldmany-
-single-functions/pprldmany_1-separable_3-ill-conditioned.pdf> <./ppdata/ibea_ep
-silon_python/pprldmany-single-functions/pprldmany_1-separable_4-multi-modal.pdf
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_1-separabl
-e_5-weakly-structured.pdf> <./ppdata/ibea_epsilon_python/pprldmany-single-funct
-ions/pprldmany_2-moderate_2-moderate.pdf> <./ppdata/ibea_epsilon_python/pprldma
-ny-single-functions/pprldmany_2-moderate_3-ill-conditioned.pdf> <./ppdata/ibea_
-epsilon_python/pprldmany-single-functions/pprldmany_2-moderate_4-multi-modal.pd
-f> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_2-moderat
-e_5-weakly-structured.pdf> <./ppdata/ibea_epsilon_python/pprldmany-single-funct
-ions/pprldmany_3-ill-conditioned_3-ill-conditioned.pdf> <./ppdata/ibea_epsilon_
-python/pprldmany-single-functions/pprldmany_3-ill-conditioned_4-multi-modal.pdf
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_3-ill-cond
-itioned_5-weakly-structured.pdf> <./ppdata/ibea_epsilon_python/pprldmany-single
--functions/pprldmany_4-multi-modal_4-multi-modal.pdf> <./ppdata/ibea_epsilon_py
-thon/pprldmany-single-functions/pprldmany_4-multi-modal_5-weakly-structured.pdf
-> <./ppdata/ibea_epsilon_python/pprldmany-single-functions/pprldmany_5-weakly-s
-tructured_5-weakly-structured.pdf> <./ppdata/ibea_epsilon_python/pprldmany-sing
-le-functions/pprldmany.pdf>]
-<ppdata/ibea_epsilon_python/ppfigdim_f001.pdf, id=1381, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f001.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f001.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f001.pdf used on i
-nput line 593.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f002.pdf, id=1382, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f002.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f002.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f002.pdf used on i
-nput line 594.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f003.pdf, id=1383, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f003.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f003.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f003.pdf used on i
-nput line 595.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f004.pdf, id=1384, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f004.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f004.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f004.pdf used on i
-nput line 596.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f005.pdf, id=1385, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f005.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f005.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f005.pdf used on i
-nput line 597.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f006.pdf, id=1386, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f006.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f006.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f006.pdf used on i
-nput line 598.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f007.pdf, id=1387, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f007.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f007.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f007.pdf used on i
-nput line 599.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f008.pdf, id=1388, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f008.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f008.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f008.pdf used on i
-nput line 600.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f009.pdf, id=1389, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f009.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f009.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f009.pdf used on i
-nput line 601.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f010.pdf, id=1390, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f010.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f010.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f010.pdf used on i
-nput line 602.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f011.pdf, id=1391, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f011.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f011.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f011.pdf used on i
-nput line 603.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f012.pdf, id=1392, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f012.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f012.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f012.pdf used on i
-nput line 604.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f013.pdf, id=1393, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f013.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f013.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f013.pdf used on i
-nput line 605.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f014.pdf, id=1394, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f014.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f014.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f014.pdf used on i
-nput line 606.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f015.pdf, id=1395, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f015.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f015.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f015.pdf used on i
-nput line 607.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f016.pdf, id=1396, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f016.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f016.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f016.pdf used on i
-nput line 608.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f017.pdf, id=1397, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f017.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f017.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f017.pdf used on i
-nput line 609.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f018.pdf, id=1398, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f018.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f018.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f018.pdf used on i
-nput line 610.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f019.pdf, id=1399, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f019.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f019.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f019.pdf used on i
-nput line 611.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f020.pdf, id=1400, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f020.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f020.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f020.pdf used on i
-nput line 612.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f021.pdf, id=1401, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f021.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f021.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f021.pdf used on i
-nput line 613.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f022.pdf, id=1402, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f022.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f022.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f022.pdf used on i
-nput line 614.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f023.pdf, id=1403, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f023.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f023.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f023.pdf used on i
-nput line 615.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f024.pdf, id=1404, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f024.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f024.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f024.pdf used on i
-nput line 616.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f025.pdf, id=1405, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f025.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f025.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f025.pdf used on i
-nput line 617.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f026.pdf, id=1406, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f026.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f026.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f026.pdf used on i
-nput line 618.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f027.pdf, id=1407, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f027.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f027.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f027.pdf used on i
-nput line 619.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f028.pdf, id=1408, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f028.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f028.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f028.pdf used on i
-nput line 620.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f029.pdf, id=1409, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f029.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f029.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f029.pdf used on i
-nput line 621.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f030.pdf, id=1410, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f030.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f030.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f030.pdf used on i
-nput line 622.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 592--627
-[][]
- []
-
-<ppdata/ibea_epsilon_python/ppfigdim_f031.pdf, id=1411, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f031.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f031.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f031.pdf used on i
-nput line 633.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f032.pdf, id=1412, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f032.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f032.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f032.pdf used on i
-nput line 634.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f033.pdf, id=1413, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f033.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f033.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f033.pdf used on i
-nput line 635.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f034.pdf, id=1414, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f034.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f034.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f034.pdf used on i
-nput line 636.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f035.pdf, id=1415, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f035.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f035.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f035.pdf used on i
-nput line 637.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f036.pdf, id=1416, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f036.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f036.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f036.pdf used on i
-nput line 638.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f037.pdf, id=1417, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f037.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f037.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f037.pdf used on i
-nput line 639.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f038.pdf, id=1418, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f038.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f038.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f038.pdf used on i
-nput line 640.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f039.pdf, id=1419, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f039.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f039.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f039.pdf used on i
-nput line 641.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f040.pdf, id=1420, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f040.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f040.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f040.pdf used on i
-nput line 642.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f041.pdf, id=1421, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f041.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f041.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f041.pdf used on i
-nput line 643.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f042.pdf, id=1422, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f042.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f042.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f042.pdf used on i
-nput line 644.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f043.pdf, id=1423, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f043.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f043.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f043.pdf used on i
-nput line 645.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f044.pdf, id=1424, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f044.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f044.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f044.pdf used on i
-nput line 646.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f045.pdf, id=1425, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f045.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f045.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f045.pdf used on i
-nput line 647.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f046.pdf, id=1426, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f046.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f046.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f046.pdf used on i
-nput line 648.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f047.pdf, id=1427, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f047.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f047.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f047.pdf used on i
-nput line 649.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f048.pdf, id=1428, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f048.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f048.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f048.pdf used on i
-nput line 650.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f049.pdf, id=1429, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f049.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f049.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f049.pdf used on i
-nput line 651.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f050.pdf, id=1430, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f050.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f050.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f050.pdf used on i
-nput line 652.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f051.pdf, id=1431, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f051.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f051.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f051.pdf used on i
-nput line 653.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f052.pdf, id=1432, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f052.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f052.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f052.pdf used on i
-nput line 654.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f053.pdf, id=1433, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f053.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f053.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f053.pdf used on i
-nput line 655.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f054.pdf, id=1434, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f054.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f054.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f054.pdf used on i
-nput line 656.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-<ppdata/ibea_epsilon_python/ppfigdim_f055.pdf, id=1435, 578.16pt x 433.62pt>
-File: ppdata/ibea_epsilon_python/ppfigdim_f055.pdf Graphic file (type pdf)
-
-<use ppdata/ibea_epsilon_python/ppfigdim_f055.pdf>
-Package pdftex.def Info: ppdata/ibea_epsilon_python/ppfigdim_f055.pdf used on i
-nput line 657.
-(pdftex.def)             Requested size: 112.39563pt x 84.2942pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 632--662
-[][]
- []
-
-[9
-
-
-
-] [10 <./ppdata/ibea_epsilon_python/ppfigdim_f001.pdf> <./ppdata/ibea_epsilon_p
-ython/ppfigdim_f002.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f002.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f003.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f003.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f004.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f004.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f005.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f005.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f006.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f006.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f007.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f007.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f008.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f008.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f009.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f009.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f010.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f010.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f011.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f011.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f012.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f012.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f013.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f013.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f014.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f014.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f015.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f015.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f016.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f016.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f017.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f017.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f018.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f018.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f019.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f019.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f020.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f020.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f021.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f021.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f022.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f022.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f023.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f023.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f024.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f024.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f025.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f025.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f026.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f026.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f027.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f027.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f028.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f028.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f029.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f029.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f030.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f030.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
->] [11 <./ppdata/ibea_epsilon_python/ppfigdim_f031.pdf> <./ppdata/ibea_epsilon_
-python/ppfigdim_f032.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f032.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f033.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f033.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f034.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f034.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f035.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f035.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f036.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f036.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f037.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f037.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f038.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f038.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f039.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f039.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f040.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f040.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f041.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f041.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f042.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f042.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f043.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f043.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f044.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f044.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f045.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f045.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f046.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f046.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f047.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f047.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f048.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f048.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f049.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f049.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f050.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f050.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f051.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f051.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f052.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f052.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f053.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f053.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f054.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f054.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./ppdata/ibea_epsilon_python/ppfigdim_f055.pdf
-
-pdfTeX warning: pdflatex (file ./ppdata/ibea_epsilon_python/ppfigdim_f055.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
->] (./finalReport.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f017' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.419 ...prldmany-single-functions/pprldmany_f017}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f018' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.420 ...prldmany-single-functions/pprldmany_f018}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f019' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.421 ...prldmany-single-functions/pprldmany_f019}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f020' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.422 ...prldmany-single-functions/pprldmany_f020}
+                                                  \\[-1.8ex]
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f021' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.423 ...prldmany-single-functions/pprldmany_f021}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f022' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.424 ...prldmany-single-functions/pprldmany_f022}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f023' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.425 ...prldmany-single-functions/pprldmany_f023}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f024' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.426 ...prldmany-single-functions/pprldmany_f024}
+                                                  \\[-1.8ex]
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f025' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.427 ...prldmany-single-functions/pprldmany_f025}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f026' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.428 ...prldmany-single-functions/pprldmany_f026}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f027' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.429 ...prldmany-single-functions/pprldmany_f027}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f028' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.430 ...prldmany-single-functions/pprldmany_f028}
+                                                  \\[-1.8ex]
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f029' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.431 ...prldmany-single-functions/pprldmany_f029}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f030' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.432 ...prldmany-single-functions/pprldmany_f030}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f031' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.433 ...prldmany-single-functions/pprldmany_f031}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f032' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.434 ...prldmany-single-functions/pprldmany_f032}
+                                                  \\[-1.8ex]
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f033' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.435 ...prldmany-single-functions/pprldmany_f033}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f034' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.436 ...prldmany-single-functions/pprldmany_f034}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f035' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.437 ...prldmany-single-functions/pprldmany_f035}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f036' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.438 ...prldmany-single-functions/pprldmany_f036}
+                                                  \\[-1.8ex]
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f037' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.455 ...prldmany-single-functions/pprldmany_f037}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f038' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.456 ...prldmany-single-functions/pprldmany_f038}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f039' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.457 ...prldmany-single-functions/pprldmany_f039}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f040' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.458 ...prldmany-single-functions/pprldmany_f040}
+                                                  \\[-1.8ex]
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f041' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.459 ...prldmany-single-functions/pprldmany_f041}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f042' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.460 ...prldmany-single-functions/pprldmany_f042}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f043' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.461 ...prldmany-single-functions/pprldmany_f043}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f044' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.462 ...prldmany-single-functions/pprldmany_f044}
+                                                  \\[-1.8ex]
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f045' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.463 ...prldmany-single-functions/pprldmany_f045}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f046' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.464 ...prldmany-single-functions/pprldmany_f046}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f047' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.465 ...prldmany-single-functions/pprldmany_f047}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f048' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.466 ...prldmany-single-functions/pprldmany_f048}
+                                                  \\[-1.8ex]
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f049' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.467 ...prldmany-single-functions/pprldmany_f049}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f050' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.468 ...prldmany-single-functions/pprldmany_f050}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f051' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.469 ...prldmany-single-functions/pprldmany_f051}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f052' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.470 ...prldmany-single-functions/pprldmany_f052}
+                                                  
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f053' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.473 ...prldmany-single-functions/pprldmany_f053}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f054' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.474 ...prldmany-single-functions/pprldmany_f054}
+                                                  &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_f055' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.475 ...prldmany-single-functions/pprldmany_f055}
+                                                  \\[-1.8ex]
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_1-separable_1-separab
+le' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.504 ...ctions/pprldmany_1-separable_1-separable}
+                                                   &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_1-separable_2-moderat
+e' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.505 ...nctions/pprldmany_1-separable_2-moderate}
+                                                   &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_1-separable_3-ill-con
+ditioned' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.506 .../pprldmany_1-separable_3-ill-conditioned}
+                                                   &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_1-separable_4-multi-m
+odal' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.507 ...ions/pprldmany_1-separable_4-multi-modal}
+                                                  \\
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_1-separable_5-weakly-
+structured' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.509 ...prldmany_1-separable_5-weakly-structured}
+                                                   &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_2-moderate_2-moderate
+' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.510 ...unctions/pprldmany_2-moderate_2-moderate}
+                                                   &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_2-moderate_3-ill-cond
+itioned' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.511 ...s/pprldmany_2-moderate_3-ill-conditioned}
+                                                   &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_2-moderate_4-multi-mo
+dal' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.512 ...tions/pprldmany_2-moderate_4-multi-modal}
+                                                  \\
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_2-moderate_5-weakly-s
+tructured' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.514 ...pprldmany_2-moderate_5-weakly-structured}
+                                                   &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_3-ill-conditioned_3-i
+ll-conditioned' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.515 ...many_3-ill-conditioned_3-ill-conditioned}
+                                                   &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_3-ill-conditioned_4-m
+ulti-modal' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.516 ...prldmany_3-ill-conditioned_4-multi-modal}
+                                                   &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_3-ill-conditioned_5-w
+eakly-structured' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.517 ...ny_3-ill-conditioned_5-weakly-structured}
+                                                   \\
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_4-multi-modal_4-multi
+-modal' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.519 ...ns/pprldmany_4-multi-modal_4-multi-modal}
+                                                   &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_4-multi-modal_5-weakl
+y-structured' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.520 ...ldmany_4-multi-modal_5-weakly-structured}
+                                                   &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany_5-weakly-structured_5
+-weakly-structured' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.521 ..._5-weakly-structured_5-weakly-structured}
+                                                   &
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pprldmany-single-functions/pprldmany' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.522 ...ip]{pprldmany-single-functions/pprldmany}
+                                                  
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `comparison/ibea_epsilon_python/pptable_05D_noiselessall.te
+x' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.542 ...path\algfolder pptable_05D_noiselessall}}
+                                                  %^^M
+*** (cannot \read from terminal in nonstop modes)
+
+ 
 Here is how much of TeX's memory you used:
- 4515 strings out of 494294
- 85832 string characters out of 6162463
- 178183 words of memory out of 5000000
- 7597 multiletter control sequences out of 15000+600000
- 61195 words of font info for 88 fonts, out of 8000000 for 9000
+ 3939 strings out of 494294
+ 50335 string characters out of 6162463
+ 135861 words of memory out of 5000000
+ 7085 multiletter control sequences out of 15000+600000
+ 52844 words of font info for 74 fonts, out of 8000000 for 9000
  372 hyphenation exceptions out of 8191
- 41i,15n,37p,953b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvet
-ic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on finalReport.pdf (11 pages, 6026074 bytes).
-PDF statistics:
- 2249 PDF objects out of 2487 (max. 8388607)
- 1003 compressed objects within 11 object streams
- 0 named destinations out of 1000 (max. 500000)
- 727 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 41i,11n,37p,948b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
