@@ -75,7 +75,7 @@
 %%%%%%%%% TO BE EDITED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % rungeneric.py writes data into a subfolder of ppdata
-\newcommand{\bbobdatapath}{comparison/} % default output folder of rungeneric.py
+\newcommand{\bbobdatapath}{ppdata/} % default output folder of rungeneric.py
 \input{\bbobdatapath bbob_pproc_commands.tex} % provide default of algname and algfolder
 \renewcommand{\algname}{IBEA}  % name of algorithm as it should appear in the text
  \renewcommand{\algfolder}{ibea_epsilon_python/} % subfolder of \bbobdatapath for processed algorithm
@@ -177,7 +177,7 @@ Ahmed Mazari %\titlenote{The secretary disavows
 %       \affaddr{Dublin, Ohio 43017-6221}\\
 %       \email{webmaster@marysville-ohio.com}
 %% 3rd. author
-\alignauthor Daro Ozad %\titlenote{This author is the
+\alignauthor Daro Heng %\titlenote{This author is the
 %one who did all the really hard work.}\\
 %       \affaddr{The Th{\o}rv{\"a}ld Group}\\
 %       \affaddr{1 Th{\o}rv{\"a}ld Circle}\\
@@ -201,7 +201,7 @@ Ahmed Mazari %\titlenote{The secretary disavows
 
 \maketitle
 \begin{abstract}
-This project set as objectives to study, implement and benchmark the Indicator Based Evolutionary Algorithm (IBEA) using  the Comparing Continuous Optimizer (COCO) platform.  IBEA uses as performance measure for the optimization goal an indicator of the relative quality of two sets of solution vectors with respect to the Pareto front. Our group's focus was on the epsilon indicator. The report is outlined as follows: first we present the specificity of the indicator used, as well as the thought process behind the evolution strategy. Then we describe our experimental methodology along with the results obtained for different parametrizations and variation operators. Finally, those results are discussed and compared with related multi-objective approaches.
+The objective of this project was to study, implement and benchmark the Indicator Based Evolutionary Algorithm (IBEA) using  the Comparing Continuous Optimizer (COCO) platform. Firstly, a brief presentation of evolution strategies and the algorithm is provided. Secondly, our implementation and experimental setup is described. Finally, we discuss the obtained results and compare them to both baseline approaches and related work.
 \end{abstract}
 
 % Add any ACM category that you feel is needed, not mandatory anymore
@@ -215,36 +215,19 @@ This project set as objectives to study, implement and benchmark the Indicator B
 % Complete with anything that is needed
 \keywords{Benchmarking, Black-box optimization, Bi-objective optimization}
 
-\section{Introduction}
-In the context of a multi-objective optimization, the main goal is to find a good approximation of the set of Pareto-optimal solutions. IBEA defines an optimization goal using a performance measure, in our case and indicator of the relative quality of two sets of solution vectors with respect to the Pareto front. The fitness of an approximation set is defined as a dominance-preserving relation, and is computed with the epsilon indicator function. Since defining what a good approximation means is highly user dependent, the authors propose an algorithm which adapts to arbitrary preference information and optimization scenarios while removing the need to add diversity preservation techniques. As the authors noted in the paper, the main advantages of IBEA are:
-\begin{itemize}
-\item Generalization: the population size can be arbitrary, and
-\item Speed: the comparisons are done between pairs of individuals and not between sets of candidate solution vectors.
-\end{itemize}
+\section{Setting}
+In the context of a multi-objective optimization, the main goal is to find a good approximation of the set of Pareto-optimal solutions.
+An evolutionary algorithm is an exploration strategy of the domain space $\mathbb{R}^d$ which seeks optimal solution vectors defined in $\mathbb{R}^2$.
 
-In turn, Adaptive-IBEA scales the objective function values as well as the range of values taken by the indicator function. This scheme decreases the need parameter tuning in face of problem and indicator function diversity.
+The input of the algorithm is the size of the population ($\alpha$), and a fitness scaling factor ($\kappa$). The output of the algorithm is an approximation of the Pareto-set.
 
-Also, the authors reported a significant improvement in the quality of the resulted Pareto-set approximation with respect to the optimization goal.
+The performance measure used by IBEA for the optimization goal is a binary indicator of the relative quality of two solution vectors sets in the Pareto objective space. Likewise, this indicator is defined for pairwise comparisons of solution vectors. The epsilon indicator reduces the minimum distance to improve on the Pareto set approximation to a single scalar. Intuitively, this may incur a  loss of information with respect to each dimension of the multi-objective optimization. Indeed, we are required to choose the minimum distance of improvement across all objectives. However, this means that we may miss on potential improvement on a specific axis.
 
-In our work we proposed a python implementation of the IBEA algorithm based on the steps presented by the authors in (paper nr). We then used this implementation to benchmark  the algorithm for various categories of problems through the COCO platform. Section 3 of this paper provides a brief description of the IBEA algorithm. In section 4 we present the implementation steps as well as other considerations regarding it, while in section 5 we detail the experiments we have conducted. Finally section 6 presents the results of these experiments and following discussions, while section 7 provides conclusions and ideas for future work.
-
- \section{Epsilon indicator}
- Give the formula of the epsilon indicator and the fitness, get into a little more detail about the dominance preserving relation and the values of the fitness function (to explain why it needs to be scaled as well).
- \section{Algorithm Presentation}
+The fitness of an approximation set is defined as a dominance preserving relation, and is computed with the epsilon indicator function.
+$$ F(x^1) = \sum_{x^2 \in P \setminus \{x^1\}} - \exp{\frac{I(\{x^1\}, \{x^2\})}{\kappa}}$$
+The domain space typically has axes with different scales. Therefore, Adaptive-IBEA scales the objective function values as well as the range of values taken by the indicator function. This scheme decreases the need parameter tuning in face of problem and indicator function diversity.
  
-The input of the algorithm is the size of the population ($\alpha$), a maximum number of generations (corresponding to the budget) set as termination criterion and a fitness scaling factor ($\kappa$). The output of the algorithm is an approximation of the Pareto-set.
-\begin{enumerate}
-\item \textbf{Initialization:} consists in randomly generating an initial population P of the given size  and setting a generation counter m to 0.
-\item \textbf{Fitness assignment:} is represented by the computation and assignment of  a fitness value for each individual in P; this fitness value is a measure of usefulness of each individual in regard to the optimization goal, so the algorithm tries to maximize it.
-
-\item \textbf{Environmental selection:} consists of iteratively detecting and removing  the individual which has the smallest fitness value form the population and then updating the fitness values for all remaining individuals  until the current size of the population P does not exceed $\alpha$.
-
-\item \textbf{Termination:} after the environmental selection is performed, the termination criterion of the algorithm is checked; if the maximum number of generations is reached or another termination criterion is met, the algorithm returns the set of decision vectors A.
-
-\item \textbf{Mating Selection:} consists in creating as temporary mating pool P' which is filled with individuals from P by performing binary tournament selection with replacement on P.
-
-\item \textbf{Variation:} finally the variation step consists applying recombination and mutation operators to the previously created mating pool. The offspring resulted after applying these operators is added to P, while also incrementing the generation counter. The algorithm is then performed again from step 2, until a termination criterion is met.
-\end{enumerate}
+\textbf{Remark} detail about the dominance preserving relation
 
 \section{Implementation}
 As far as the implementation in Python is concerned we chose to represent the population in a compact data structure and did all numerical computation with NumPy. The steps of the algorithm were inlined in a single optimization function, except for the recombination and mutation operators which were implemented in separate functions to achieve modularity during testing.
@@ -252,6 +235,7 @@ As far as the implementation in Python is concerned we chose to represent the po
 Python dictionary, grid search
 
 \section{Experiments}
+\subsection{La galere}
  For the first part of the project our milestone was to have a working version of the algorithm, and potentially reasonable results on at least some groups of functions.
  
 Without further changes to the original strategy, our algorithm does not seem to reach the optimal Pareto set of solution vectors. We tried applying recombination and mutation with high and low probabilities respectively, following the literature. This did not yield improved results, which leads us to think that either our implementation lacks robustness, or has a subtle bug.
@@ -261,8 +245,7 @@ We intended to:
 \item Experiment with self-adaptive strategies for the mutation step, and 
 \item Implement Self-Adaptive SBX which seeks an optimal index for the approximation distribution used
 \end{enumerate}
-
-\section{Experiments}
+\subsection{Setup}
 The proposed implementation of the IBEA algorithm was tested with the collection of benchmark problems comprised in the COCO platform. We performed several experiments with various combinations of parameters in order to evaluate the influence of specific parameters on the results for different categories of benchmark problems. Therefore we varied the following parameters:
 \begin{itemize}
 \item The budget - various values between 300, 500, 750, 850, 1000
@@ -279,13 +262,13 @@ The proposed implementation of the IBEA algorithm was tested with the collection
 \end{itemize}
 
 Since the number of variable parameters was considerable, carrying experiments with all combinations between them was impossible, so we selected a limited number of combinations which we considered might give significant results. The sets of parameters that we used in our experiments are illustrated in table 1.  
-Running a bi-objective algorithm in a laptop is not an easy task. It’s is both time and RAM consuming.  The execution takes from 5 to 23 hours to finish with a budget of 1000. The timing experiment  is intrinsically associated with the size of the population and the dimension. 
+Running a bi-objective algorithm in a laptop is not an easy task. It's both time and RAM consuming.  The execution takes from 5 to 23 hours to finish with a budget of 1000. The timing experiment  is intrinsically associated with the size of the population and the dimension. 
 For that reason, we tried only one configuration for 40 dimensions that took almost 48h  with a moderate budget of 300.  
 In order to try several parameterizations of the algorithm we  were obliged to make non stopping running of the algorithm on different machine with different parameter in order to evaluate how  the algorithm performs under different parameterizations. We conclude from this empirical study that a high variance and low variance impacts negatively the performance of the algorithm. The trick is to find a trade-off between the size of population, variance and the recombination values.
 
 \subsection{Recombination}
 
-We tried intermediate weighting and discrete recombination before implementing the Simulated Binary Crossover operator. However, results using these operators were not encouraging. The reason for that may be a rather naive exploration of the search space.
+The operator we used were intermediate weighting, discrete recombination  and finally, the Simulated Binary Crossover \cite{deb1994simulated}. However, results using these operators were not encouraging. The reason for that may be a rather naive exploration of the search space.
 
 In this case, the Simulated Binary Operator was chosen for the recombination part.
 \subsection{Variation}
@@ -296,7 +279,6 @@ a polynomial distribution was used for the mutation part.
 \section{CPU Timing}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % note that the following text is just a proposal and can/should be changed to your needs:
-(Ubuntu 16.04 64 bits i5 and i7, MAC os, Windows)
 In order to evaluate the CPU timing of the algorithm, we have run the \algname with restarts on the entire bbob-biobj test suite \cite{biobj2016func} for $2 D$ function evaluations. The Python code was run on a Intel(R) Core(TM) i5-2400S CPU @ 2.50GHz with 4 processors and 8 cores. The time per function evaluation for dimensions 2, 3, 5, 10, 20 equals $1.7e{-3}$, $1.9e{-3}$, $2.0e{-3}$, $2.2e{-3}$, $2.4e{-3}$ seconds respectively.  
 
 
