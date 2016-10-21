@@ -1,52 +1,3 @@
-% This is "sig-alternate.tex" V2.1 April 2013
-% This file should be compiled with V2.5 of "sig-alternate.cls" May 2012
-%
-% This example file demonstrates the use of the 'sig-alternate.cls'
-% V2.5 LaTeX2e document class file. It is for those submitting
-% articles to ACM Conference Proceedings WHO DO NOT WISH TO
-% STRICTLY ADHERE TO THE SIGS (PUBS-BOARD-ENDORSED) STYLE.
-% The 'sig-alternate.cls' file will produce a similar-looking,
-% albeit, 'tighter' paper resulting in, invariably, fewer pages.
-%
-% ----------------------------------------------------------------------------------------------------------------
-% This .tex file (and associated .cls V2.5) produces:
-%       1) The Permission Statement
-%       2) The Conference (location) Info information
-%       3) The Copyright Line with ACM data
-%       4) NO page numbers
-%
-% as against the acm_proc_article-sp.cls file which
-% DOES NOT produce 1) thru' 3) above.
-%
-% Using 'sig-alternate.cls' you have control, however, from within
-% the source .tex file, over both the CopyrightYear
-% (defaulted to 200X) and the ACM Copyright Data
-% (defaulted to X-XXXXX-XX-X/XX/XX).
-% e.g.
-% \CopyrightYear{2007} will cause 2007 to appear in the copyright line.
-% \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 to appear in the copyright line.
-%
-% ---------------------------------------------------------------------------------------------------------------
-% This .tex source is an example which *does* use
-% the .bib file (from which the .bbl file % is produced).
-% REMEMBER HOWEVER: After having produced the .bbl file,
-% and prior to final submission, you *NEED* to 'insert'
-% your .bbl file into your source .tex file so as to provide
-% ONE 'self-contained' source file.
-%
-% ================= IF YOU HAVE QUESTIONS =======================
-% Questions regarding the SIGS styles, SIGS policies and
-% procedures, Conferences etc. should be sent to
-% Adrienne Griscti (griscti@acm.org)
-%
-% Technical questions _only_ to
-% Gerald Murray (murray@hq.acm.org)
-%
-% Technical questions related to COCO/BBOB to bbob@lri.fr
-% ===============================================================
-%
-% For tracking purposes - this is V2.0 - May 2012
-
 \documentclass{sig-alternate}
 \pdfpagewidth=8.5in
 \pdfpageheight=11in
@@ -54,6 +5,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Packages
+\usepackage{bm}
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage[dvipsnames]{xcolor}
@@ -69,15 +21,16 @@
 % Definitions
 
 % Algorithm names as they appear in the tables, uncomment if necessary
-\newcommand{\algAtables}{\algaperfprof}  % first argument in the post-processing
-\newcommand{\algBtables}{\algbperfprof}  % first argument in the post-processing
-\newcommand{\algCtables}{\algcperfprof}  % first argument in the post-processing
-\newcommand{\algDtables}{\algdperfprof}  % second argument in the post-processing
-\newcommand{\algEtables}{\algeperfprof}  % second argument in the post-processing
+%\newcommand{\algAtables}{\algaperfprof}  % first argument in the post-processing
+%\newcommand{\algBtables}{\algbperfprof}  % first argument in the post-processing
+%\newcommand{\algCtables}{\algcperfprof}  % first argument in the post-processing
+%\newcommand{\algDtables}{\algdperfprof}  % second argument in the post-processing
+%\newcommand{\algEtables}{\algeperfprof}  % second argument in the post-processing
 % location of pictures files
 \newcommand{\bbobdatapath}{comparison/}
 \input{\bbobdatapath bbob_pproc_commands.tex}
 \graphicspath{{\bbobdatapath}}
+\newcommand{\algname}{IBEA}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % pre-defined commands
@@ -117,144 +70,195 @@
 
 \IfFileExists{\bbobdatapath ppfig2_f001.pdf}{2 algorithms currently not supported}{}
 
-%
-% --- Author Metadata here ---
-\conferenceinfo{GECCO'17,} {July 1-2, 2017, Berlin, Germany.}
-\CopyrightYear{2017}
-\crdata{TBA}
-\clubpenalty=10000
-\widowpenalty = 10000
-% --- End of Author Metadata ---
+\title{Benchmarking of the Indicator-based evolution algorithm using the Bi-Objective BBOB Test Suite
+% \titlenote{If needed}
+}
+\subtitle{Final report
+\titlenote{Submission deadline: October 21st.}}
 
-\title{Black-Box Optimization Benchmarking Template for the Comparison of Multiple Algorithms on the Biobjective {\Large \bbobbiobj} Testbed}
-\subtitle{Draft version
-\titlenote{Submission deadline: March 28th.}}
-%Camera-ready paper due April 16th.}}
-
-%
-% You need the command \numberofauthors to handle the 'placement
-% and alignment' of the authors beneath the title.
-%
-% For aesthetic reasons, we recommend 'three authors at a time'
-% i.e. three 'name/affiliation blocks' be placed beneath the title.
-%
-% NOTE: You are NOT restricted in how many 'rows' of
-% "name/affiliations" may appear. We just ask that you restrict
-% the number of 'columns' to three.
-%
-% Because of the available 'opening page real-estate'
-% we ask you to refrain from putting more than six authors
-% (two rows with three columns) beneath the article title.
-% More than six makes the first-page appear very cluttered indeed.
-%
-% Use the \alignauthor commands to handle the names
-% and affiliations for an 'aesthetic maximum' of six authors.
-% Add names, affiliations, addresses for
-% the seventh etc. author(s) as the argument for the
-% \additionalauthors command.
-% These 'additional authors' will be output/set for you
-% without further effort on your part as the last section in
-% the body of your article BEFORE References or any Appendices.
-
-\numberofauthors{1} %  in this sample file, there are a *total*
-% of EIGHT authors. SIX appear on the 'first-page' (for formatting
-% reasons) and the remaining two appear in the \additionalauthors section.
-%
+\numberofauthors{5}
 \author{
-% You can go ahead and credit any number of authors here,
-% e.g. one 'row of three' or two rows (consisting of one row of three
-% and a second row of one, two or three).
-%
-% The command \alignauthor (no curly braces needed) should
-% precede each author name, affiliation/snail-mail address and
-% e-mail address. Additionally, tag each line of
-% affiliation/address with \affaddr, and tag the
-% e-mail address with \email.
-%
-% 1st. author
+\alignauthor 
+Daro Heng
 \alignauthor
-Forename Name\\ %\titlenote{Dr.~Trovato insisted his name be first.}\\
-%       \affaddr{Institute for Clarity in Documentation}\\
-%       \affaddr{1932 Wallamaloo Lane}\\
-%       \affaddr{Wallamaloo, New Zealand}\\
-%       \email{trovato@corporation.com}
-%% 2nd. author
-%\alignauthor
-%G.K.M. Tobin\titlenote{The secretary disavows
-%any knowledge of this author's actions.}\\
-%       \affaddr{Institute for Clarity in Documentation}\\
-%       \affaddr{P.O. Box 1212}\\
-%       \affaddr{Dublin, Ohio 43017-6221}\\
-%       \email{webmaster@marysville-ohio.com}
-%% 3rd. author
-%\alignauthor Lars Th{\o}rv{\"a}ld\titlenote{This author is the
-%one who did all the really hard work.}\\
-%       \affaddr{The Th{\o}rv{\"a}ld Group}\\
-%       \affaddr{1 Th{\o}rv{\"a}ld Circle}\\
-%       \affaddr{Hekla, Iceland}\\
-%       \email{larst@affiliation.org}
-%\and  % use '\and' if you need 'another row' of author names
-%% 4th. author
-%\alignauthor Lawrence P. Leipuner\\
-%       \affaddr{Brookhaven Laboratories}\\
-%       \affaddr{Brookhaven National Lab}\\
-%       \affaddr{P.O. Box 5000}\\
-%       \email{lleipuner@researchlabs.org}
-%% 5th. author
-%\alignauthor Sean Fogarty\\
-%       \affaddr{NASA Ames Research Center}\\
-%       \affaddr{Moffett Field}\\
-%       \affaddr{California 94035}\\
-%       \email{fogartys@amesres.org}
-%% 6th. author
-%\alignauthor Charles Palmer\\
-%       \affaddr{Palmer Research Laboratories}\\
-%       \affaddr{8600 Datapoint Drive}\\
-%       \affaddr{San Antonio, Texas 78229}\\
-%       \email{cpalmer@prl.com}
-} % author
-%% There's nothing stopping you putting the seventh, eighth, etc.
-%% author on the opening page (as the 'third row') but we ask,
-%% for aesthetic reasons that you place these 'additional authors'
-%% in the \additional authors block, viz.
-%\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
-%email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
-%(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
-%\date{30 July 1999}
-%% Just remember to make sure that the TOTAL number of authors
-%% is the number that will appear on the first page PLUS the
-%% number that will appear in the \additionalauthors section.
+Karim Kouki
+\alignauthor
+Ahmed Mazari
+\and
+\alignauthor 
+Mihaela Sorostinean
+\alignauthor 
+Aris Tritas
+}
 
 \maketitle
 \begin{abstract}
-to be written
+The objective of this project was to study, implement and benchmark the Indicator Based Evolutionary Algorithm \\ (IBEA) using  the Comparing Continuous Optimizer (COCO) platform. Firstly we provide a brief overview of the algorithm. Secondly, we describe our implementation and experimental setup. Finally, we discuss the obtained results and compare them to both baseline approaches and related work.
 \end{abstract}
 
-% Add any ACM category that you feel is needed, not mandatory anymore
-%\category{G.1.6}{Numerical Analysis}{Optimization}[global optimization,
-%unconstrained optimization]
-%\category{F.2.1}{Analysis of Algorithms and Problem Complexity}{Numerical Algorithms and Problems}
+\section{Setting}
+In the context of a multi-objective optimization, the main goal is to find a good approximation of the set of Pareto-optimal solutions.
+An evolutionary algorithm is an exploration strategy of the domain space $\mathbb{R}^n$ which seeks optimal solution vectors defined in the objective space $\mathbb{R}^k$ (here $k=2$).
 
-% Complete with anything that is needed
-\terms{Algorithms}
+The performance measure used by IBEA for determining the relative quality of two solution sets in the objective space is a binary indicator function $I: \Omega \times \Omega \rightarrow \mathbb{R}$. 
+In terms of two decision vectors $\bm{x}^1$ and $\bm{x}^2$,  the \textit{domination} relation is defined as : $\bm{x}^1 \succ \bm{x}^2 \leftrightarrow ( f_i(\bm{x}^1) \leq f_i(\bm{x}^2) \; \forall i \in \{1, ..., n\} \;\text{and}\; f_j(\bm{x}^1) < f_j(\bm{x}^2)$ for at least one objective$)$. 
+The epsilon indicator is compliant with this dominance relationship and defined for pairwise comparisons as: $$I_{\epsilon^+} (\{\bm{x}^1\}, \{\bm{x}^2\}) = \min_\epsilon f_i(\bm{x}^1) - \epsilon \leq f_i(\bm{x}^2) \; \forall i \in \{1, ..., n\}$$. 
+It reduces the minimum distance to improve on the Pareto set approximation to a single scalar. 
+Intuitively, this may incur a  loss of information with respect to each dimension of the multi-objective optimization. 
+Indeed, we are required to choose the minimum distance of improvement across all objectives. However, the fact that we choose to \emph{conservatively} improve on the fitness estimate means that we may miss on potential improvement on one or more objectives.
 
-% Complete with anything that is needed
-\keywords{Benchmarking, Black-box optimization, Bi-objective optimization}
+The fitness value is defined in the sequel as a measure of the usefulness of each individual with regards to the optimization goal. As such, the algorithm tries to maximize it.
+$$ F(\bm{x}^1) = \sum_{\bm{x}^2 \in P \setminus \{\bm{x}^1\}} - \exp{\frac{I(\{\bm{x}^1\}, \{\bm{x}^2\})}{\kappa}}$$ where $P$ is the population set, and $\bm{x} \in \mathbb{R}^n$. The fitness function of an approximation set is defined as a \emph{dominance preserving relation}.
 
-% \section{Introduction}
-%
-% \section{Algorithm Presentation}
-%
-% \section{Experimental Procedure}
-%
+The domain space typically has axes with different scales. Therefore, Adaptive-IBEA scales the objective function values as well as the range of values taken by the indicator function. This scheme decreases the need parameter tuning in face of problem and indicator function diversity.
 
+\section{Implementation}
+The input of the algorithm is the size of the population ($\alpha$), a maximum number of generations (corresponding to the budget) set as termination criterion and a fitness scaling factor ($\kappa$). The output of the algorithm is an approximation of the Pareto-set.
+\begin{enumerate}
+\item \textbf{Initialization:} randomly generate an initial population P of the given size and set generation counter to 0.
+\item \textbf{Fitness assignment:} computate and assign a fitness value to each individual in P.
+
+\item \textbf{Environmental selection:} detect and remove individuals which have the smallest fitness values from the population until the current size of the population P does not exceed $\alpha$. Update the fitness values for all remaining individuals.
+
+\item \textbf{Termination:} after the environmental selection is performed, the termination criterion of the algorithm is checked; if the maximum number of generations is reached or another termination criterion is met, the algorithm returns the set of decision vectors A.
+
+\item \textbf{Mating Selection:} consists in creating as temporary mating pool P' which is filled with individuals from P by performing binary tournament selection with replacement on P.
+
+\item \textbf{Variation:} finally the variation step consists applying recombination and mutation operators to the previously created mating pool. In this case, the operator SBX-20 was chosen for the recombination part, while a polynomial distribution was used for the mutation part.  The offspring resulted after applying these operators is added to P, while also incrementing the generation counter. The algorithm is then performed again from step 2, until a termination criterion is met.
+
+\end{enumerate}
+As far as the implementation in Python is concerned we chose to represent the population in a compact data structure and did all numerical computation with NumPy. The steps of the algorithm were inlined in a single optimization function, except for the recombination and mutation operators which were implemented in separate functions to achieve modularity during testing.
+
+Python dictionary, grid search
+
+\section{Experiments}
+\subsection{La galere}
+ For the first part of the project our milestone was to have a working version of the algorithm, and potentially reasonable results on at least some groups of functions.
+ 
+Without further changes to the original strategy, our algorithm does not seem to reach the optimal Pareto set of solution vectors. We tried applying recombination and mutation with high and low probabilities respectively, following the literature. This did not yield improved results, which leads us to think that either our implementation lacks robustness, or has a subtle bug.
+
+We intended to:
+\begin{enumerate}
+\item Experiment with self-adaptive strategies for the mutation step, and 
+\item Implement Self-Adaptive SBX which seeks an optimal index for the approximation distribution used
+\end{enumerate}
+\subsection{Setup}
+The proposed implementation of the IBEA algorithm was tested with the collection of benchmark problems comprised in the COCO platform. We performed several experiments with various combinations of parameters in order to evaluate the influence of specific parameters on the results for different categories of benchmark problems. Therefore we varied the following parameters:
+\begin{itemize}
+\item The budget - various values between 300, 500, 750, 850, 1000
+\item Population size - varied between 50, 60, 80, 100, 200
+\item Number of offspring - 20, 30 or 40
+\item Mutation probability - 0.7, 0.8, 0.9, 1.0
+\item Recombination probability - or probability of crossover for the recombination step - 0.4, 0.6, 0.8, 0.9, 1.0
+\item Variance - 1.3 , 2.5, 5, 10, 15
+\item Offspring : - 20, 30, 35, 40
+\item Dimension : 2, 5, 10, 20, 40
+\item Max iterations: $10^6$, $10^9$
+\item Distribution index for the SBX operator: 2, 5 or 20 (the value suggested by the authors)
+\item Operators : Isotropic, Derandomized
+\end{itemize}
+
+Since the number of variable parameters was considerable, carrying experiments with all combinations between them was impossible, so we selected a limited number of combinations which we considered might give significant results. The sets of parameters that we used in our experiments are illustrated in table 1.  
+Running a bi-objective algorithm in a laptop is not an easy task. It's both time and RAM consuming.  The execution takes from 5 to 23 hours to finish with a budget of 1000. The timing experiment  is intrinsically associated with the size of the population and the dimension. 
+For that reason, we tried only one configuration for 40 dimensions that took almost 48h  with a moderate budget of 300.  
+In order to try several parameterizations of the algorithm we  were obliged to make non stopping running of the algorithm on different machine with different parameter in order to evaluate how  the algorithm performs under different parameterizations. We conclude from this empirical study that a high variance and low variance impacts negatively the performance of the algorithm. The trick is to find a trade-off between the size of population, variance and the recombination values.
+
+\subsection{Recombination}
+
+The operator we used were intermediate weighting, discrete recombination  and finally, the Simulated Binary Crossover \cite{deb1994simulated}. However, results using these operators were not encouraging. The reason for that may be a rather naive exploration of the search space.
+
+In this case, the Simulated Binary Operator was chosen for the recombination part.
+\subsection{Variation}
+
+For the mutation step, we simply added isotropic Gaussian noise with fixed variance to the produced offspring. However, it is well known that fixing variance does not speed up search optimally.
+a polynomial distribution was used for the mutation part.  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{CPU Timing}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % note that the following text is just a proposal and can/should be changed to your needs:
-In order to evaluate the CPU timing of the algorithm, we have run the \change{IBEA} with restarts on the entire bbob-biobj test suite \cite{biobj2016func} for $2 D$ function evaluations. The \change{C/Java/Matlab/Octave/Python} code was run on a \change{Mac Intel(R) Core(TM) i5-2400S CPU @ 2.50GHz} with \change{1} processor and \change{4} cores. The time per function evaluation for dimensions 2, 3, 5, 10, 20\change{, 40} equals \change{$x.x$}, \change{$x.x$}, \change{$x.x$}, \change{$xx$}, \change{$xxx$}\change{, and $xxx$} seconds respectively. 
+In order to evaluate the CPU timing of the algorithm, we have run the \algname with restarts on the entire bbob-biobj test suite \cite{biobj2016func} for $2 D$ function evaluations. The Python code was run on a Intel(R) Core(TM) i5-2400S CPU @ 2.50GHz with 4 processors and 8 cores. The time per function evaluation for dimensions 2, 3, 5, 10, 20 equals $1.7e{-3}$, $1.9e{-3}$, $2.0e{-3}$, $2.2e{-3}$, $2.4e{-3}$ seconds respectively.  
 
-\change{repeat the above for any algorithm tested}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Results of \algname\ from experiments according to \cite{hansen2016exp} and \cite{brockhoff2016biobjective} on the benchmark
+functions given in \cite{biobj2016func} are presented in
+Figures~\ref{fig:ECDFsingleOne}, \ref{fig:ECDFsingleTwo}, \ref{fig:ECDFsingleThree}, and \ref{fig:ECDFsGroups}, and in
+Table~\ref{tab:aRTs}. The experiments were performed with COCO \cite{hansen2016cocoplat}, version 1.0.1, the plots were produced with version 1.0.4.
+\subsection{Comparison of isotropic and derandomized mutation operators}
+Derandomized mutation performs better on the following functions: (initial variance is 5, mutation prob is 0.8, crossover is  SBX-5 and Pr(0.8))
+\begin{itemize}
+\item Rosenbrock function 28.
+\item Function 23
+\item Much better on functions 26 \& 34
+\item Function 2
+\end{itemize}
+By using $\alpha = 80$ and offsprings 30, better results were obtained for the following functions:
+\begin{itemize}
+\item function 13 (as well as function 12)
+\item function 16
+\item function 19
+\item 2-moderate 4-multi-modal:  no good results in function group overall except for a slight improvement with this configuration on function 25
+\end{itemize}
+
+Function 15: Isotropic : Variance of 5 better than variance of 10, 
+			 Derandomized: Smaller population as good as isotropic with small variance
+			 
+\subsubsection*{1-separable 2-moderate (3d)}: 
+low mutation (0.1) is better for functions 12 and 13 and/or high recombination probability (>=0.8) is bad (why?)
+
+smaller initial variance (3) is better for f13
+
+\subsubsection*{1-separable 4-multi-modal} : high variance (10) is bad
+
+\subsubsection*{1-separable 5-weakly-structured}
+function 18: High recombination probability (0.7-0.9)
+			  High mutation probability (around 0.7-0.8)  (along with isotropic pop 100)
+			  High variance is bad
+
+\subsubsection*{2-moderate 2-moderate}
+Variance is a critical factor. 
+Mutation with probability 1 without adaptation of the variance gives worse results.
+Function 20 gives good results with mut0.3 in 5d - best mut0.3 recomb0.7 
+28-2d as good for pop100 offs20 mut0.1 recomb0.7 var5.0 as for pop100 offs20 mut0.8 recomb0.6
+
+\subsubsection*{2-moderate 5-weakly-structured}
+Better results with low mutation probability (0.1-0.3)
+Function 33: good results with relatively higher variance. Improved for a smaller population and moderate variance
+26, 33: best with mut0.8 recomb0.6
+
+\subsubsection*{3-ill-conditioned 3-ill-conditioned} 
+variance is not the determinating factor. Isotropic a little worse.
+
+Function 42: Derandomized and/or Higher population are better than pop=60
+
+\subsubsection*{3-ill-conditioned 5-weakly-structured} 
+High variance doesn't hurt w.r.t a smaller one. - 
+Can't say much though because the problems are unstructured and hard)
+f44-5d: mut0.8 recomb0.7 var5.0derandomized sbx2
+
+\subsubsection*{4-multi-modal 4-multi-modal} 
+Derandomized improves a tiny bit on isotropic.
+\subsubsection*{4-multi-modal 5-weakly-structured}
+ Function 48: high variance does not perform worse, on other functions of  derandomized is better
+								    
+Functions 54, 55: Can't say much. Derandomized/Smaller variance better.
+
+Cases in which low mutation probability works:
+2-moderate 5-weakly-structured: best is 0.3
+3-ill-conditioned 5-weakly-structured: function 44 has good results
+
+For 5-d space:
+Function 53 performs very well with pop80, mut0.8, recombination1.0, derandomized
+On the other hand it performs well with low mutation probability (0.1-0.3) on 3d
+Find solutions really quick with var 3.
+
+\subsection{aRT}
+We observe with no surprise that our algorithm has a runtime of $1e{-3}$ iff the variance is adapted. gets to 10-3 on f12
+
+We also observe that using a better indicator tends to find targets much faster.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
@@ -285,6 +289,13 @@ the smallest number of overall function evaluations for any
 unsuccessful trial under consideration.
 
 
+\section{Related Work}
+Comparison with results stemming from the same approach was performed, and to an extent is it quite revealing. For lack of time, no comparison was done with the state-of-the-art. However, using the tools provided by COCO as well as the datasets shared by other groups, and after comparison with the implementation of IBEA-$\epsilon$ in the C language as well as results of groups studing IBEA-HV. We can safely say that the $\epsilon$ indicator may be overly simplistic for the wide range of optimization functions benchmarked.
+
+\section*{Conclusion}
+Covariance matrix adaptation, different indicator function.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -292,81 +303,81 @@ unsuccessful trial under consideration.
 % ECDFs per function in dimension 10
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{figure*}
-%\centering
-%\begin{tabular}{@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}}
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f001_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f002_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f003_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f004_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f005_02D}\\[-1.8ex]
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f006_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f007_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f008_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f009_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f010_02D}\\[-1.8ex]
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f011_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f012_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f013_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f014_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f015_02D}\\[-1.8ex]
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f016_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f017_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f018_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f019_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f020_02D}\\[-1.8ex]
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f021_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f022_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f023_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f024_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f025_02D}\\[-1.8ex]
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f026_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f027_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f028_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f029_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f030_02D}\\[-1.8ex]
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f031_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f032_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f033_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f034_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f035_02D}\\[-1.8ex]
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f036_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f037_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f038_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f039_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f040_02D}\\[-1.8ex]
-%
-%\end{tabular}
-% \caption{\label{fig:ECDFsingleOne}
-% Bootstrapped empirical cumulative distribution of the number of objective function evaluations divided by dimension (FEvals/DIM) for $58$ targets with target precision in $\{-10^{-4}, -10^{-4.2}, $ $-10^{-4.4}, -10^{-4.6}, -10^{-4.8}, -10^{-5}, 0, 10^{-5}, 10^{-4.9}, 10^{-4.8}, \dots, 10^{-0.1}, 10^0\}$ for each single function $f_{1}$ to $f_{40}$ in 10-D. 
-%}
-%\end{figure*}
-%
-%\begin{figure*}
-%\centering
-%\begin{tabular}{@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}}
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f041_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f042_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f043_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f044_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f045_02D}\\[-1.8ex]
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f046_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f047_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f048_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f049_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f040_02D}\\[-1.8ex]
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f051_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f052_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f053_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f054_02D}&
-%\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f055_02D}\\[-1.8ex]
-%\end{tabular}
-% \caption{\label{fig:ECDFsingleTwo}
-% Bootstrapped empirical cumulative distribution of the number of objective function evaluations divided by dimension (FEvals/DIM) as in Fig.~\ref{fig:ECDFsingleOne} but for functions $f_{41}$ to $f_{55}$ in 10-D.
-%}
-%\end{figure*}
-%
-%
+\begin{figure*}
+\centering
+\begin{tabular}{@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}}
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f001_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f002_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f003_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f004_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f005_02D}\\[-1.8ex]
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f006_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f007_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f008_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f009_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f010_02D}\\[-1.8ex]
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f011_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f012_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f013_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f014_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f015_02D}\\[-1.8ex]
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f016_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f017_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f018_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f019_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f020_02D}\\[-1.8ex]
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f021_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f022_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f023_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f024_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f025_02D}\\[-1.8ex]
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f026_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f027_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f028_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f029_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f030_02D}\\[-1.8ex]
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f031_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f032_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f033_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f034_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f035_02D}\\[-1.8ex]
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f036_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f037_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f038_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f039_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f040_02D}\\[-1.8ex]
+
+\end{tabular}
+ \caption{\label{fig:ECDFsingleOne}
+ Bootstrapped empirical cumulative distribution of the number of objective function evaluations divided by dimension (FEvals/DIM) for $58$ targets with target precision in $\{-10^{-4}, -10^{-4.2}, $ $-10^{-4.4}, -10^{-4.6}, -10^{-4.8}, -10^{-5}, 0, 10^{-5}, 10^{-4.9}, 10^{-4.8}, \dots, 10^{-0.1}, 10^0\}$ for each single function $f_{1}$ to $f_{40}$ in 10-D. 
+}
+\end{figure*}
+
+\begin{figure*}
+\centering
+\begin{tabular}{@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}l@{\hspace*{-0.005\textwidth}}}
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f041_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f042_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f043_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f044_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f045_02D}\\[-1.8ex]
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f046_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f047_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f048_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f049_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f040_02D}\\[-1.8ex]
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f051_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f052_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f053_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f054_02D}&
+\includegraphics[width=0.2\textwidth]{pprldmany-single-functions/pprldmany_f055_02D}\\[-1.8ex]
+\end{tabular}
+ \caption{\label{fig:ECDFsingleTwo}
+ Bootstrapped empirical cumulative distribution of the number of objective function evaluations divided by dimension (FEvals/DIM) as in Fig.~\ref{fig:ECDFsingleOne} but for functions $f_{41}$ to $f_{55}$ in 10-D.
+}
+\end{figure*}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -727,15 +738,17 @@ multimodal-multimodal & multimodal-weakstructure & weakstructure-weakstructure &
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% REFERENCES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
 % The following two commands are all you need in the
 % initial runs of your .tex file to
 % produce the bibliography for the citations in your paper.
+
 \bibliographystyle{abbrv}
-\bibliography{bbob}  % bbob.bib is the name of the Bibliography in this case
-% You must have a proper ".bib" file
-%  and remember to run:
+\bibliography{report.bib}
+%\bibliographystyle{abbrv}
+%\bibliography{bbob}  % bbob.bib is the name of the Bibliography in this case
+% You must have a proper ".bib" file and remember to run:
 % latex bibtex latex latex
 % to resolve all references
 % to create the ~.bbl file.  Insert that ~.bbl file into
@@ -744,6 +757,7 @@ multimodal-multimodal & multimodal-weakstructure & weakstructure-weakstructure &
 %
 % ACM needs 'a single self-contained file'!
 %
+\clearpage % otherwise the last figure might be missing
 
-% \clearpage % otherwise the last figure might be missing
+% Please uncomment for final version to fit paper to 8 pages.
 \end{document}
