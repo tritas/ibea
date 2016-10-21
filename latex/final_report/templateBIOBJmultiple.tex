@@ -115,8 +115,9 @@ The domain space typically has axes with different scales. Therefore, Adaptive-I
 \section{Implementation}
 The input of the algorithm is the size of the population ($\alpha$), a maximum number of generations (corresponding to the budget) set as termination criterion and a fitness scaling factor ($\kappa$). The output of the algorithm is an approximation of the Pareto-set.
 \begin{enumerate}
-\item \textbf{Initialization:} randomly generate an initial population P of the given size and set generation counter to 0.
-\item \textbf{Fitness assignment:} computate and assign a fitness value to each individual in P.
+\item \textbf{Initialization:} generate an initial population P of given size uniformly between the lower and upper bound of the domain space.
+
+\item \textbf{Fitness assignment:} compute and assign a fitness value to each individual in P.
 
 \item \textbf{Environmental selection:} detect and remove individuals which have the smallest fitness values from the population until the current size of the population P does not exceed $\alpha$. Update the fitness values for all remaining individuals.
 
@@ -124,14 +125,15 @@ The input of the algorithm is the size of the population ($\alpha$), a maximum n
 
 \item \textbf{Mating Selection:} consists in creating as temporary mating pool P' which is filled with individuals from P by performing binary tournament selection with replacement on P.
 
-\item \textbf{Variation:} finally the variation step consists applying recombination and mutation operators to the previously created mating pool. In this case, the operator SBX-20 was chosen for the recombination part, while a polynomial distribution was used for the mutation part.  The offspring resulted after applying these operators is added to P, while also incrementing the generation counter. The algorithm is then performed again from step 2, until a termination criterion is met.
+\item \textbf{Variation:} finally the variation step consists applying recombination and mutation operators to the previously created mating pool.  
+The offspring resulting from variation is added to P and the generation counter is incremented. The algorithm is then performed again from step 2, until a termination criterion is met.
 
 \end{enumerate}
-As far as the implementation in Python is concerned we chose to represent the population in a compact data structure and did all numerical computation with NumPy. The steps of the algorithm were inlined in a single optimization function, except for the recombination and mutation operators which were implemented in separate functions to achieve modularity during testing.
 
-Python dictionary, grid search
+The Python implementation keeps all population data (vector, objective and fitness value) in a dictionary for optimal access time. All numerical computation is done with NumPy. The main algorithm algorithms were inlined in a single optimization function, except for the recombination and mutation operators which were implemented in separate functions to achieve modularity during testing. The optimization function does not use multiple cores. However, run-level parallelism is achieved 
 
-\section{Experiments}
+\subsection*{Budget pitfall} Using too small a budget was not caught before the intermediate report. As such, benchmarking was substantially delayed.
+\section{Experimental setup}
 \subsection{La galere}
  For the first part of the project our milestone was to have a working version of the algorithm, and potentially reasonable results on at least some groups of functions.
  
@@ -148,8 +150,8 @@ The proposed implementation of the IBEA algorithm was tested with the collection
 \item The budget - various values between 300, 500, 750, 850, 1000
 \item Population size - varied between 50, 60, 80, 100, 200
 \item Number of offspring - 20, 30 or 40
-\item Mutation probability - 0.7, 0.8, 0.9, 1.0
-\item Recombination probability - or probability of crossover for the recombination step - 0.4, 0.6, 0.8, 0.9, 1.0
+\item Mutation probability low (0.0, 0.05, 0.1) and high (0.7, 0.8, 0.9, 1.0)
+\item Crossover probability - 0.4, 0.6, 0.7, 0.8, 0.9, 1.0
 \item Variance - 1.3 , 2.5, 5, 10, 15
 \item Offspring : - 20, 30, 35, 40
 \item Dimension : 2, 5, 10, 20, 40
@@ -185,8 +187,7 @@ In order to evaluate the CPU timing of the algorithm, we have run the \algname w
 
 Results of \algname\ from experiments according to \cite{hansen2016exp} and \cite{brockhoff2016biobjective} on the benchmark
 functions given in \cite{biobj2016func} are presented in
-Figures~\ref{fig:ECDFsingleOne}, \ref{fig:ECDFsingleTwo}, \ref{fig:ECDFsingleThree}, and \ref{fig:ECDFsGroups}, and in
-Table~\ref{tab:aRTs}. The experiments were performed with COCO \cite{hansen2016cocoplat}, version 1.0.1, the plots were produced with version 1.0.4.
+Figures~\ref{fig:ECDFsingleOne}, \ref{fig:ECDFsingleTwo}. The experiments were performed with COCO \cite{hansen2016cocoplat}, version 15.4. We compared ECDFs on $2-D$ with two baseline algorithms: Random Search and NSGA-II. We also compared our best configuration with the corresponding C implementation of the Epsilon indicator, as well as the Python implementation of the Hypervolume indicator function. 
 \subsection{Comparison of isotropic and derandomized mutation operators}
 Derandomized mutation performs better on the following functions: (initial variance is 5, mutation prob is 0.8, crossover is  SBX-5 and Pr(0.8))
 \begin{itemize}
@@ -283,17 +284,21 @@ number of trials that actually reached \Itarget\
 is tested with the rank-sum test for a given target $\Itarget$
 using, for each trial,
 either the number of needed function evaluations to reach
-$\Itarget$ (inverted and multiplied by $-1$), or, if the target
+$\Itarget$ (inverted and multiplied by $-1$), or, if the target	
 was not reached, the best $\DI$-value achieved, measured only up to
 the smallest number of overall function evaluations for any
 unsuccessful trial under consideration.
 
 
 \section{Related Work}
-Comparison with results stemming from the same approach was performed, and to an extent is it quite revealing. For lack of time, no comparison was done with the state-of-the-art. However, using the tools provided by COCO as well as the datasets shared by other groups, and after comparison with the implementation of IBEA-$\epsilon$ in the C language as well as results of groups studing IBEA-HV. We can safely say that the $\epsilon$ indicator may be overly simplistic for the wide range of optimization functions benchmarked.
+Comparison with results stemming from the same approach was performed, and to an extent is it quite revealing. 
+For lack of time, no comparison was done with the state-of-the-art. 
+However, using the tools provided by COCO as well as the datasets shared by other groups, 
+and after comparison with the implementation of IBEA-$\epsilon$ in the C language as well as results of groups studing IBEA-HV. 
+We can safely say that the $\epsilon$ indicator may be overly simplistic for the wide range of optimization functions benchmarked.
 
 \section*{Conclusion}
-Covariance matrix adaptation, different indicator function.
+Going forward, we may think that a more advanced step-size adaptation scheme such as CMA, and also importantly a different indicator function may function well for different problems.
 
 
 
