@@ -29,6 +29,10 @@ The idea is that `exdata`, the sub-directory in which results are saved, is igno
 
 If you have nice results to share, you may copy the raw or preprocessed results in the toplevel `shared_exdata` directory and push!
 
+```bash
+python2 -m bbob_pproc -o latex/final_report/comparison ./contrib/results/IBEAe_C/ ./contrib/results/IBEAe_Python/ ./contrib/results/IBEA_HV_Python/ ./contrib/results/Random_Search-5/
+```
+
 ## Variation step
 
 Application of crossover and mutation both have tunable probabilities. For most problem functions best results were achieved with both probabilities being close (but not necessarily equal) to 1.
