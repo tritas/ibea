@@ -98,22 +98,19 @@ The objective of this project was to study, implement and benchmark the Indicato
 
 \section{Setting}
 In the context of a multi-objective optimization, the main goal is to find a good approximation of the set of Pareto-optimal solutions.
-An evolutionary algorithm is an exploration strategy of the domain space $\mathbb{R}^n$ which seeks optimal solution vectors defined in the objective space $\mathbb{R}^k$ (here $k=2$).
+An evolutionary algorithm is an exploration strategy of the domain space $\mathbb{R}^n$ which seeks optimal solution vectors defined in the objective space $\mathbb{R}^k$ (here $k=2$) by promoting at each generation the fittest and/or the  newest individuals from a population of decision vectors.
 
 The performance measure used by IBEA for determining the relative quality of two solution sets in the objective space is a binary indicator function $I: \Omega \times \Omega \rightarrow \mathbb{R}$. 
-In terms of two decision vectors $\bm{x}^1$ and $\bm{x}^2$,  the \textit{domination} relation is defined as : $\bm{x}^1 \succ \bm{x}^2 \leftrightarrow ( f_i(\bm{x}^1) \leq f_i(\bm{x}^2) \; \forall i \in \{1, ..., n\} \;\text{and}\; f_j(\bm{x}^1) < f_j(\bm{x}^2)$ for at least one objective$)$. 
-The epsilon indicator is compliant with this dominance relationship and defined for pairwise comparisons as: $$I_{\epsilon^+} (\{\bm{x}^1\}, \{\bm{x}^2\}) = \min_\epsilon f_i(\bm{x}^1) - \epsilon \leq f_i(\bm{x}^2) \; \forall i \in \{1, ..., n\}$$. 
-It reduces the minimum distance to improve on the Pareto set approximation to a single scalar. 
-Intuitively, this may incur a  loss of information with respect to each dimension of the multi-objective optimization. 
-Indeed, we are required to choose the minimum distance of improvement across all objectives. However, the fact that we choose to \emph{conservatively} improve on the fitness estimate means that we may miss on potential improvement on one or more objectives.
-
-The fitness value is defined in the sequel as a measure of the usefulness of each individual with regards to the optimization goal. As such, the algorithm tries to maximize it.
+In terms of two decision vectors $\bm{x}^1$ and $\bm{x}^2$,  the domination relation is defined as : $\bm{x}^1 \succ \bm{x}^2 \leftrightarrow ( f_i(\bm{x}^1) \leq f_i(\bm{x}^2) \; \forall i \in \{1, ..., n\} \;\text{and}\; f_j(\bm{x}^1) < f_j(\bm{x}^2)$ for at least one objective$)$. 
+The epsilon indicator, which is compliant with this domination relationship, is defined for pairwise comparisons as: $$I_{\epsilon^+} (\{\bm{x}^1\}, \{\bm{x}^2\}) = \min_\epsilon f_i(\bm{x}^1) - \epsilon \leq f_i(\bm{x}^2) \; \forall i \in \{1, ..., n\}$$. 
+Its focus is to summarize the minimum distance needed to improve on the Pareto set approximation to a single scalar. 
+Intuitively, the reduction to a single scalar may incur a  loss of information regarding some dimensions of objective space. Indeed, the fact that the indicator chooses the minimum improvement across all objectives implies \emph{conservative} rather than more \emph{optimistic} updates of the fitness estimate. Clearly, we may miss out on potential improvement on some of the targeted objectives. The fitness value is defined in the sequel as a measure of the usefulness of each individual with regards to the optimization goal. As such, the algorithm tries to maximize it.
 $$ F(\bm{x}^1) = \sum_{\bm{x}^2 \in P \setminus \{\bm{x}^1\}} - \exp{\frac{I(\{\bm{x}^1\}, \{\bm{x}^2\})}{\kappa}}$$ where $P$ is the population set, and $\bm{x} \in \mathbb{R}^n$. The fitness function of an approximation set is defined as a \emph{dominance preserving relation}.
 
-The domain space typically has axes with different scales. Therefore, Adaptive-IBEA scales the objective function values as well as the range of values taken by the indicator function. This scheme decreases the need parameter tuning in face of problem and indicator function diversity.
+Moreover, as the optimization functions are typically unnormalized, IBEA scales both the values taken by the objective function as well as the values taken by the indicator function. Consequently the need for parameter tuning in face of problem and indicator function diversity is decreased.
 
 \section{Implementation}
-The input of the algorithm is the size of the population ($\alpha$), a maximum number of generations (corresponding to the budget) set as termination criterion and a fitness scaling factor ($\kappa$). The output of the algorithm is an approximation of the Pareto-set.
+The input of the algorithm is the size of the population ($\alpha$), a maximum number of generations, a budget in function evaluations, and a fitness scaling factor ($\kappa$). The output of the algorithm is an approximation of the Pareto-set.
 \begin{enumerate}
 \item \textbf{Initialization:} generate an initial population P of given size uniformly between the lower and upper bound of the domain space.
 
@@ -130,55 +127,39 @@ The offspring resulting from variation is added to P and the generation counter 
 
 \end{enumerate}
 
-The Python implementation keeps all population data (vector, objective and fitness value) in a dictionary for optimal access time. All numerical computation is done with NumPy. The main algorithm algorithms were inlined in a single optimization function, except for the recombination and mutation operators which were implemented in separate functions to achieve modularity during testing. The optimization function does not use multiple cores. However, run-level parallelism is achieved 
-
-\subsection*{Budget pitfall} Using too small a budget was not caught before the intermediate report. As such, benchmarking was substantially delayed.
-\section{Experimental setup}
-\subsection{La galere}
- For the first part of the project our milestone was to have a working version of the algorithm, and potentially reasonable results on at least some groups of functions.
- 
-Without further changes to the original strategy, our algorithm does not seem to reach the optimal Pareto set of solution vectors. We tried applying recombination and mutation with high and low probabilities respectively, following the literature. This did not yield improved results, which leads us to think that either our implementation lacks robustness, or has a subtle bug.
-
-We intended to:
-\begin{enumerate}
-\item Experiment with self-adaptive strategies for the mutation step, and 
-\item Implement Self-Adaptive SBX which seeks an optimal index for the approximation distribution used
-\end{enumerate}
-\subsection{Setup}
-The proposed implementation of the IBEA algorithm was tested with the collection of benchmark problems comprised in the COCO platform. We performed several experiments with various combinations of parameters in order to evaluate the influence of specific parameters on the results for different categories of benchmark problems. Therefore we varied the following parameters:
-\begin{itemize}
-\item The budget - various values between 300, 500, 750, 850, 1000
-\item Population size - varied between 50, 60, 80, 100, 200
-\item Number of offspring - 20, 30 or 40
-\item Mutation probability low (0.0, 0.05, 0.1) and high (0.7, 0.8, 0.9, 1.0)
-\item Crossover probability - 0.4, 0.6, 0.7, 0.8, 0.9, 1.0
-\item Variance - 1.3 , 2.5, 5, 10, 15
-\item Offspring : - 20, 30, 35, 40
-\item Dimension : 2, 5, 10, 20, 40
-\item Max iterations: $10^6$, $10^9$
-\item Distribution index for the SBX operator: 2, 5 or 20 (the value suggested by the authors)
-\item Operators : Isotropic, Derandomized
-\end{itemize}
-
-Since the number of variable parameters was considerable, carrying experiments with all combinations between them was impossible, so we selected a limited number of combinations which we considered might give significant results. The sets of parameters that we used in our experiments are illustrated in table 1.  
-Running a bi-objective algorithm in a laptop is not an easy task. It's both time and RAM consuming.  The execution takes from 5 to 23 hours to finish with a budget of 1000. The timing experiment  is intrinsically associated with the size of the population and the dimension. 
-For that reason, we tried only one configuration for 40 dimensions that took almost 48h  with a moderate budget of 300.  
-In order to try several parameterizations of the algorithm we  were obliged to make non stopping running of the algorithm on different machine with different parameter in order to evaluate how  the algorithm performs under different parameterizations. We conclude from this empirical study that a high variance and low variance impacts negatively the performance of the algorithm. The trick is to find a trade-off between the size of population, variance and the recombination values.
+Population-related data (i.e decision vectors, objective and fitness values) is stored in a hash table for timely access. 
+All numerical computation is done with NumPy. 
+The optimizer is an object which incurs some overhead in Python. Except for the recombination and mutation operators which were implemented in separate functions to achieve modularity during testing, the optimizer is essentially a single inlined function.
 
 \subsection{Recombination}
 
-The operator we used were intermediate weighting, discrete recombination  and finally, the Simulated Binary Crossover \cite{deb1994simulated}. However, results using these operators were not encouraging. The reason for that may be a rather naive exploration of the search space.
+At first, the crossover operators we experimented with were intermediate weighting and discrete recombination. Then we implemented the Simulated Binary Crossover \cite{deb1994simulated}. The results reported here used SBX-5 for recombination.
 
-In this case, the Simulated Binary Operator was chosen for the recombination part.
 \subsection{Variation}
 
-For the mutation step, we simply added isotropic Gaussian noise with fixed variance to the produced offspring. However, it is well known that fixing variance does not speed up search optimally.
-a polynomial distribution was used for the mutation part.  
+For the mutation step, we began by simply adding isotropic Gaussian noise with fixed variance to the produced offspring. However, it is well known that fixed variance does not produce the fastest target values search.
+
+
+\subsection*{Budget pitfall} Before the intermediate report we used an extremely small budget, which had the effect of delaying  realistic benchmarking.
+
+\section{Experimental setup}
+Our idea was to evaluate the influence of hyper-parameters on the performance achieved for different function groups and in different number of dimensions. For a reasonably low budget ($10^3$) and $10^6$ to $10^9$ number of runs, we tried the following ranges for hyper-parameters (best values in bold):
+\begin{itemize}
+\item Population size $\in \{50, 80, \bm{100}, 150, 200\}$
+\item Number of offspring $\in \{20, 30, 35, 40, \bm{50}\}$
+\item Mutation probability: \textbf{low (0.1)}, high (>0.7)
+\item Crossover probability $\in {[0.5, 1.0]}$ (best was $\bm{0.7}$)
+\item Initial mutation step-size $\in \{1.0, 2.5, \bm{5.0}, 10, 15\}$
+\item Distribution index of the SBX operator: 2 and 5
+\end{itemize}
+
+Our focus was mostly on crossover and mutation probabilities, as well as population and offspring size. Naturally, the total runtime of an experiment depends on the size of the population, the dimension of the problem and the budget. Carrying out experiments with all their combinations would be time consuming. As such, we set for a grid search approach: we fixed all parameters except one to reasonable defaults and tuned the last one by picking values from a range of interest and comparing the output of the test suite.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{CPU Timing}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % note that the following text is just a proposal and can/should be changed to your needs:
-In order to evaluate the CPU timing of the algorithm, we have run the \algname with restarts on the entire bbob-biobj test suite \cite{biobj2016func} for $2 D$ function evaluations. The Python code was run on a Intel(R) Core(TM) i5-2400S CPU @ 2.50GHz with 4 processors and 8 cores. The time per function evaluation for dimensions 2, 3, 5, 10, 20 equals $1.7e{-3}$, $1.9e{-3}$, $2.0e{-3}$, $2.2e{-3}$, $2.4e{-3}$ seconds respectively.  
+In order to evaluate the CPU timing of the algorithm, we have run the \algname with restarts on the entire bbob-biobj test suite \cite{biobj2016func} for $10 D$ function evaluations. The Python code was run on a Intel(R) Core(TM) i7 CPU. For a population size of 100, the time per function evaluation ranges between $2.2ms$ and $6.5ms$ depending on whether we use isotropic mutation or not.  
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -187,115 +168,29 @@ In order to evaluate the CPU timing of the algorithm, we have run the \algname w
 
 Results of \algname\ from experiments according to \cite{hansen2016exp} and \cite{brockhoff2016biobjective} on the benchmark
 functions given in \cite{biobj2016func} are presented in
-Figures~\ref{fig:ECDFsingleOne}, \ref{fig:ECDFsingleTwo}. The experiments were performed with COCO \cite{hansen2016cocoplat}, version 15.4. We compared ECDFs on $2-D$ with two baseline algorithms: Random Search and NSGA-II. We also compared our best configuration with the corresponding C implementation of the Epsilon indicator, as well as the Python implementation of the Hypervolume indicator function. 
+Figures~\ref{fig:ECDFsingleOne}, \ref{fig:ECDFsingleTwo}. The experiments were performed with COCO \cite{hansen2016cocoplat}, version 15.4.
+
+Presented here are comparative ECDFs on $2 D$ with two baseline algorithms: Random Search and NSGA-II. Our best configuration is also compared with the implementation of IBEA-$\epsilon$ in the C language and the implementation of IBEA with Hypervolume indicator in Python.
+
+\subsection*{Remark}
+In the aRT tables, IBEA corresponds to the following order: IBEA-$\epsilon$ in C, IBEA-$\epsilon$ in Python and IBEA-HV in Python.
+
+\subsection{Observations}
+
+In low dimension, we notice that the instances in which our algorithm performs moderately well is the \textbf{separable}, \textbf{moderate} and \textbf{weakly-structured} case. It fails however in the face of mutimodal and ill-conditioned functions.
+
+Generally speaking, derandomized step-size adaptation performs better than isotropic mutation. Moreover, extreme values of variance for the isotropic mutation negatively impact the performance of the algorithm.
+
+In higher dimensions, the trends are the same. Clearly the supplementary degrees of freedom decrease the number of targets reached.
+
 \subsection{Comparison of isotropic and derandomized mutation operators}
-Derandomized mutation performs better on the following functions: (initial variance is 5, mutation prob is 0.8, crossover is  SBX-5 and Pr(0.8))
-\begin{itemize}
-\item Rosenbrock function 28.
-\item Function 23
-\item Much better on functions 26 \& 34
-\item Function 2
-\end{itemize}
-By using $\alpha = 80$ and offsprings 30, better results were obtained for the following functions:
-\begin{itemize}
-\item function 13 (as well as function 12)
-\item function 16
-\item function 19
-\item 2-moderate 4-multi-modal:  no good results in function group overall except for a slight improvement with this configuration on function 25
-\end{itemize}
 
-Function 15: Isotropic : Variance of 5 better than variance of 10, 
-			 Derandomized: Smaller population as good as isotropic with small variance
-			 
-\subsubsection*{1-separable 2-moderate (3d)}: 
-low mutation (0.1) is better for functions 12 and 13 and/or high recombination probability (>=0.8) is bad (why?)
+With no surprise that our algorithm has a runtime of $1e{-3}$ iff the variance is adapted. gets to 10-3 on f12
 
-smaller initial variance (3) is better for f13
-
-\subsubsection*{1-separable 4-multi-modal} : high variance (10) is bad
-
-\subsubsection*{1-separable 5-weakly-structured}
-function 18: High recombination probability (0.7-0.9)
-			  High mutation probability (around 0.7-0.8)  (along with isotropic pop 100)
-			  High variance is bad
-
-\subsubsection*{2-moderate 2-moderate}
-Variance is a critical factor. 
-Mutation with probability 1 without adaptation of the variance gives worse results.
-Function 20 gives good results with mut0.3 in 5d - best mut0.3 recomb0.7 
-28-2d as good for pop100 offs20 mut0.1 recomb0.7 var5.0 as for pop100 offs20 mut0.8 recomb0.6
-
-\subsubsection*{2-moderate 5-weakly-structured}
-Better results with low mutation probability (0.1-0.3)
-Function 33: good results with relatively higher variance. Improved for a smaller population and moderate variance
-26, 33: best with mut0.8 recomb0.6
-
-\subsubsection*{3-ill-conditioned 3-ill-conditioned} 
-variance is not the determinating factor. Isotropic a little worse.
-
-Function 42: Derandomized and/or Higher population are better than pop=60
-
-\subsubsection*{3-ill-conditioned 5-weakly-structured} 
-High variance doesn't hurt w.r.t a smaller one. - 
-Can't say much though because the problems are unstructured and hard)
-f44-5d: mut0.8 recomb0.7 var5.0derandomized sbx2
-
-\subsubsection*{4-multi-modal 4-multi-modal} 
-Derandomized improves a tiny bit on isotropic.
-\subsubsection*{4-multi-modal 5-weakly-structured}
- Function 48: high variance does not perform worse, on other functions of  derandomized is better
-								    
-Functions 54, 55: Can't say much. Derandomized/Smaller variance better.
-
-Cases in which low mutation probability works:
-2-moderate 5-weakly-structured: best is 0.3
-3-ill-conditioned 5-weakly-structured: function 44 has good results
-
-For 5-d space:
-Function 53 performs very well with pop80, mut0.8, recombination1.0, derandomized
-On the other hand it performs well with low mutation probability (0.1-0.3) on 3d
-Find solutions really quick with var 3.
-
-\subsection{aRT}
-We observe with no surprise that our algorithm has a runtime of $1e{-3}$ iff the variance is adapted. gets to 10-3 on f12
-
+\subsection{Related Work}
+To an extent the comparison  as well as results of groups studing IBEA-HV is quite revealing . 
+We can safely say that the $\epsilon$ indicator may be overly simplistic for the wide range of optimization functions benchmarked
 We also observe that using a better indicator tends to find targets much faster.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Results}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Results from experiments according to \cite{hansen2016exp},
-\cite{hansen2016perfass} and \cite{biobj2016perfass} on the benchmark
-functions given in \cite{biobj2016func} are presented in
-Figures~\ref{fig:ECDFsingleOne}, \ref{fig:ECDFsingleTwo}, \ref{fig:ECDFsGroupsFive} and
-\ref{fig:ECDFsGroupsTwenty} and in Tables~\ref{tab:aRTs5} and~\ref{tab:aRTs20}.
-The experiments were performed with COCO \cite{hansen2016cocoplat}, version
-\change{1.0.1}, the plots were produced with version \change{1.1.1}.
-
-The \textbf{average runtime (aRT)}, used in the %figures and
-tables,
-depends on a given quality indicator value, $\Itarget=\hvref+\DI$, and is
-computed over all relevant trials as the number of function
-evaluations executed during each trial while the best indicator value
-did not reach \Itarget, summed over all trials and divided by the
-number of trials that actually reached \Itarget\
-\cite{hansen2016exp,price1997dev}.  \textbf{Statistical significance}
-is tested with the rank-sum test for a given target $\Itarget$
-using, for each trial,
-either the number of needed function evaluations to reach
-$\Itarget$ (inverted and multiplied by $-1$), or, if the target	
-was not reached, the best $\DI$-value achieved, measured only up to
-the smallest number of overall function evaluations for any
-unsuccessful trial under consideration.
-
-
-\section{Related Work}
-Comparison with results stemming from the same approach was performed, and to an extent is it quite revealing. 
-For lack of time, no comparison was done with the state-of-the-art. 
-However, using the tools provided by COCO as well as the datasets shared by other groups, 
-and after comparison with the implementation of IBEA-$\epsilon$ in the C language as well as results of groups studing IBEA-HV. 
-We can safely say that the $\epsilon$ indicator may be overly simplistic for the wide range of optimization functions benchmarked.
 
 \section*{Conclusion}
 Going forward, we may think that a more advanced step-size adaptation scheme such as CMA, and also importantly a different indicator function may function well for different problems.
