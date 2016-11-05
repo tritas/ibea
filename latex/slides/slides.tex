@@ -24,7 +24,7 @@
 \newcommand{\ig}{\includegraphics}
 
 \title{Indicator-based evolutionary Algorithm}
-\author{Karim Kouki \and Ahmed Mazari \and Daro Ozad \and Mihaela Sorostinean \and Aris Tritas}
+\author{Karim Kouki \and Ahmed Mazari \and Daro Ozad \\ \and Mihaela Sorostinean \and Aris Tritas}
 
 \institute{
 	M.Sc. Machine Learning, Information and Content - 
@@ -42,13 +42,24 @@
   \begin{frame}
     \frametitle{Outline}
     \bi
-    \item Multi-objective optimization
-    \item IBEA
+    \item Black-box Multi-objective optimization motivation
+    \item IBEA setting and presentation
     \item Implementation \& Tests
-    \item Conclusion
+    \item Discussion
     \ei
     
   \end{frame}
+  
+    \begin{frame}
+    \frametitle{Indicators}
+    General definition of domination relation.
+    
+    Choice of indicator (and impact).
+    
+    Fitness function.
+    
+  \end{frame}
+  
   
     \begin{frame}
     \frametitle{Recombination}
@@ -58,30 +69,48 @@
     Choosing a recombination probability.
     
   \end{frame}
-  
-    \begin{frame}
-    \frametitle{Mutation}
-    Adapting the step-size is essential to find an optimal domain on each dimension.
-    
-    Fixing the mutation probability
-  \end{frame}
 
   \begin{frame}
     \frametitle{Simulated Binary Crossover}
-    \textbf{Idea:} control the domain of space in which offspring is generated.
+    \textbf{Goal:} control the domain in which offspring is generated.
     
-    \textbf{Definition:} Approximate distribution to a high-probability stationary `spread` distribution with contracting and expanding distributions
-    $$ c(\beta) = 0.5(n_c +1)\beta^{n_c}, \beta \leq 1$$
-        $$ e(\beta) = 0.5(n_c +1)\frac{1}{\beta^{n_c+2}}, \beta > 1$$
+    \textbf{Definition:} Approximate a high-probability stationary `spread` distribution with two ``proxy'' distributions
+    
+    Contracting $ c(\beta) = 0.5(n_c +1)\beta^{n_c}, \beta \leq 1$
+    
+	Expanding $ e(\beta) = 0.5(n_c +1)\frac{1}{\beta^{n_c+2}}, \beta > 1$
         
-    $\implies$ Tuning the distribution index.
+    Distribution index: $n_c \in \mathbb{N} \implies$ find optimal value?
+  \end{frame}
+    
+    \begin{frame}
+    \frametitle{Variation operators}
+    Adaptating the step-size: essential to find targets \textbf{fast}.
+    
+    Low mutation probability
+  \end{frame}
+  
+      \begin{frame}
+    \frametitle{Results}
+    Show where the algorithm is good (comparatively to other approaches).
+    
+    Explain where we fail.
+  \end{frame}
+  
+      \begin{frame}
+    \frametitle{Discussion}
+    Online parameter tuning.
+    
+    Hyper-parameters tuning.
+    
+    Choice of the indicator function.
   \end{frame}
   
   \begin{frame}
   \centering{
-  Thank you!
+  Thank you for your attention!
   
-  Questions?
+  Questions \& Answers
   }
   \end{frame}
   

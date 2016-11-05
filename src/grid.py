@@ -3,18 +3,21 @@
 # Author: Aris Tritas <aris.tritas@u-psud.fr>
 #         COCO contributed `experiment.py`
 # Licence: BSD 3 clause
-from multiprocessing import Pool
 import time
-import cocoex
-from cocoex import Suite, Observer, log_level
-from ibea import IBEA
-from experiment import batch_loop, ascetime
+from multiprocessing import Pool
+
+from cocoex import Suite, Observer
 from numpy import arange
+
+from experiment import batch_loop, ascetime
+from ibea import IBEA
+
 verbose = 1
-budget = 1000 # maxfevals = budget x dimension
+budget = 1000  # maxfevals = budget x dimension
 max_runs = 1e6  # number of (almost) independent trials per problem instance
 number_of_batches = 1  # allows to run everything in several batches
-current_batch = 1      # 1..number_of_batches
+current_batch = 1  # 1..number_of_batches
+
 
 def run(solver_object, budget=budget,
         max_runs=max_runs,
@@ -30,10 +33,10 @@ def run(solver_object, budget=budget,
     suite_options = "dimensions: 2,3,5"  # "dimensions: 2,3,5,10,20 "  # if 40 is not desired
     observer_name = suite_name
     observer_options = (
-    ' result_folder: %s_on_%s_budget%04dxD '
-                 % (str(solver_object), suite_name, budget) +
-    ' algorithm_name: %s ' % solver.__name__ +
-    ' algorithm_info: "Indicator-based Evolutionary Algorithm (epsilon)" ')
+        ' result_folder: %s_on_%s_budget%04dxD '
+        % (str(solver_object), suite_name, budget) +
+        ' algorithm_name: %s ' % solver.__name__ +
+        ' algorithm_info: "Indicator-based Evolutionary Algorithm (epsilon)" ')
     observer = Observer(observer_name, observer_options)
     suite = Suite(suite_name, suite_instance, suite_options)
     print("Benchmarking solver '%s' with budget=%d*dimension on %s suite, %s"
@@ -47,17 +50,19 @@ def run(solver_object, budget=budget,
                current_batch, number_of_batches)
     print(", %s (%s total elapsed time)." % (time.asctime(), ascetime(time.clock() - t0)))
 
+
 def exclude(lst, elt):
-    new_lst =  lst.round(2).tolist()
+    new_lst = lst.round(2).tolist()
     new_lst.remove(elt)
     return new_lst
 
+
 if __name__ == '__main__':
     grid = []
-    
+
     fix_mutation = 0.1
     fix_crossover = 0.7
-    
+
     pr_mutation = exclude(arange(0.1, 1.0, 0.2), fix_mutation)
     pr_crossover = exclude(arange(0.5, 1.0, 0.1), fix_crossover)
     variance = arange(3, 9, 2)
@@ -79,7 +84,7 @@ if __name__ == '__main__':
     print("Total configurations to test: {}".format(len(grid)))
 
     # Run grid search with pool
-    #with Pool() as pool:
+    # with Pool() as pool:
     pool = Pool()
     try:
         results = pool.map(run, grid)

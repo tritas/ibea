@@ -12,7 +12,7 @@ of 3 * dimension f-evaluations.
 
 Usage from a python shell::
 
-    >>> import example_experiment as ee
+    >>> import experiment as ee
     >>> ee.main(3, 1, 1)  # doctest: +ELLIPSIS
     Benchmarking solver...
 
