@@ -23,7 +23,7 @@
 \newcommand{\ei}{\end{itemize}}
 \newcommand{\ig}{\includegraphics}
 
-\title{Indicator-based evolutionary Algorithm}
+\title{Indicator-based Evolutionary Algorithm}
 \author{Karim Kouki \and Ahmed Mazari \and Daro Ozad \\ \and Mihaela Sorostinean \and Aris Tritas}
 
 \institute{
@@ -53,26 +53,34 @@
   
     \begin{frame}
     \frametitle{Goals}
-    Explore state-of-the-art approaches in multi-objective optimization.
+    \textbf{Explore} seminal approaches for evolutionary algorithms
     
-	Benchmark and compare an algorithm implementation using the COCO platform.
+	\textbf{Benchmark and compare} algorithms using the COCO platform.
     
   \end{frame}
     
     \begin{frame}
     \frametitle{Setting}
-	Find non-dominated set of solution vectors: Pareto optimal approximation set. \note{
+    
+	Black-box multi-objective optimization: learn $f$    $$f: \mathbb{R}^n \rightarrow \mathbb{R}^k$$
+    
+    \textbf{Pareto optimal approximation set} \newline
+	Non-dominated set of solution vectors. \note{
     definition of domination relation.}
 	
-	Subjective (a priori) preference information: integrated in the indicator function.
+	\textbf{Indicator function:} \newline
+	Subjective (\textit{a priori}) preference information. 
   \end{frame}
   
     \begin{frame}
     \frametitle{Indicators}
-    Choice of indicator? Impact on search. Epsilon indicator the simplest 
+    Which choice of indicator? Impact on optimization?
+    \bi 
+    \item Epsilon indicator  \note{simplest possible}
+    \item Hyper-volume indicator \note{theoretical analysis}
+    \ei
     
-    Theoretical analysis of Hyper-volume indicator
-    
+   
     Fitness function: scalarize an individual's utility
     
   \end{frame}
@@ -102,9 +110,9 @@
     
     \begin{frame}
     \frametitle{Variation operators}
+    \subtitle{Low mutation probability}
     Adaptating the step-size: essential to find targets \textbf{fast}.
     
-    Low mutation probability
   \end{frame}
   
       \begin{frame}

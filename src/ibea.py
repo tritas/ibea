@@ -13,7 +13,7 @@ from __future__ import division
 
 from collections import deque
 
-from numpy import array, full, minimum, maximum, clip
+from numpy import array, full, min, minimum, maximum, clip
 from numpy import sqrt, exp, infty, seterr
 from numpy.random import rand, seed, choice, binomial, randn
 
@@ -76,11 +76,10 @@ class IBEA(object):
 
     def __str__(self):
         # return 'Indicator-based Evolutionary Algorithm with Epsilon indicator'
-        desc = 'ibea_pop{}_offs{}_{}_mut{}_recomb{}_var{}{}_sbx{}_max_gen{}' \
+        desc = 'ibea_pop{}_offs{}_{}_mut{}_recomb{}_var{}_sbx{}_max_gen{}' \
             .format(self.alpha, self.n_offspring, self.mutation_op_str,
                     self.pr_mutation, self.pr_crossover,
-                    self.sigma_init, self.mutation_operator,
-                    self.n_sbx, self.max_generations)
+                    self.sigma_init, self.n_sbx, self.max_generations)
         return desc
 
     def ibea(self, fun, lbounds, ubounds, remaining_budget):
@@ -257,18 +256,14 @@ class IBEA(object):
         self._max = maximum(self._max, objective)
         # Rescale vector
         for dim in range(objective.shape[0]):
-            objective[dim] = (objective[dim] - self._min[dim]) \
-                             / (self._max[dim] - self._min[dim])
+            objective[dim] = (objective[dim] - self._min[dim]) / (self._max[dim] - self._min[dim])
         return objective
 
 
 def compute_epsilon(obj1, obj2):
     """ Smallest epsilon such that f(x1) - \eps * f(x2) < 0"""
-    diff = obj1 - obj2
-    eps = diff.min()
-
+    eps = min(obj1-obj2)
     assert -1 <= eps <= 1, 'Bounds not respected: O1 = {}, O2 = {}, eps = {}'.format(obj1, obj2, eps)
-
     return eps
 
 
