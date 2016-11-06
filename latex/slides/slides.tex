@@ -42,21 +42,38 @@
   \begin{frame}
     \frametitle{Outline}
     \bi
-    \item Black-box Multi-objective optimization motivation
-    \item IBEA setting and presentation
+    \item Motivation
+    \item IBEA setting
     \item Implementation \& Tests
+    \item Results
     \item Discussion
     \ei
     
   \end{frame}
   
     \begin{frame}
+    \frametitle{Goals}
+    Explore state-of-the-art approaches in multi-objective optimization.
+    
+	Benchmark and compare an algorithm implementation using the COCO platform.
+    
+  \end{frame}
+    
+    \begin{frame}
+    \frametitle{Setting}
+	Find non-dominated set of solution vectors: Pareto optimal approximation set. \note{
+    definition of domination relation.}
+	
+	Subjective (a priori) preference information: integrated in the indicator function.
+  \end{frame}
+  
+    \begin{frame}
     \frametitle{Indicators}
-    General definition of domination relation.
+    Choice of indicator? Impact on search. Epsilon indicator the simplest 
     
-    Choice of indicator (and impact).
+    Theoretical analysis of Hyper-volume indicator
     
-    Fitness function.
+    Fitness function: scalarize an individual's utility
     
   \end{frame}
   
@@ -91,10 +108,19 @@
   \end{frame}
   
       \begin{frame}
-    \frametitle{Results}
+    \frametitle{Results - few objectives}
     Show where the algorithm is good (comparatively to other approaches).
     
     Explain where we fail.
+  \end{frame}
+  
+        \begin{frame}
+    \frametitle{Results - many objectives}
+    Intrisically more difficult problem.
+    
+    Performance w.r.t random search?
+    
+    Is the impact of multi-modality and ill-conditioning even greater?
   \end{frame}
   
       \begin{frame}
@@ -117,7 +143,7 @@
     
   
 \begin{frame}[allowframebreaks]
-  \frametitle<presentation>{Further Reading}    
+  \frametitle<presentation>{References}    
 \begin{thebibliography}{}
 \beamertemplatearticlebibitems
 \bibitem[Zitzler and Künzli]{ibea} Eckart Zitzler and Simon Künzli, “Indicator-Based Selection in Multiobjective Search”. In Parallel Problem Solving from Nature (PPSN 2004), pp. 832-842, 2004.

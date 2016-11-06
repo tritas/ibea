@@ -24,29 +24,34 @@ seterr(all='raise')
 
 
 class IBEA(object):
-    def __init__(self,
-                 kappa=0.05,
-                 alpha=100,
-                 n_offspring=25,
-                 seedit=42,
-                 pr_x=0.7,
-                 pr_mut=0.1,
-                 var=5.0,  # TODO: Find sensible default
-                 max_generations=200,
-                 n_sbx=5,  # Can be [2, 20], typically {2, 5}
-                 mutation_operator='derandomized'):
-        # --- Algorithm parameters
-        self.kappa = kappa  # Fitness scaling ratio
-        self.alpha = alpha  # Population size
-        self.pr_crossover = pr_x  # Crossover probability
-        self.pr_mutation = pr_mut  # Mutation probability
-        self.sigma_init = var  # Noise level for mutation
-        self.n_offspring = n_offspring  # Number of offspring individuals
+    def __init__(self, kappa=0.05, alpha=100, n_offspring=25, seedit=42,
+                 pr_x=0.7, pr_mut=0.1, var=5.0, max_generations=200,
+                 n_sbx=5, mutation_operator='derandomized'):
+        """
+        Algorithm parameters
+
+        :param kappa: Fitness scaling ratio
+        :param alpha: Population size
+        :param n_offspring: Number of offspring individuals
+        :param seedit:
+        :param pr_x: Crossover probability
+        :param pr_mut: Mutation probability
+        :param var: Noise level for mutation
+        :param max_generations:
+        :param n_sbx: Simulated Binary Crossover distribution index - Can be [2, 20], typically {2, 5}
+        :param mutation_operator:
+        """
+        self.kappa = kappa
+        self.alpha = alpha
+        self.pr_crossover = pr_x
+        self.pr_mutation = pr_mut
+        self.sigma_init = var
+        self.n_offspring = n_offspring
         self._min = None  # Objective function minima
         self._max = None  # Objective function maxima
         self.indicator_max = None  # Indicator function maximum
         self.max_generations = max_generations
-        self.n_sbx = n_sbx  # Simulated Binary Crossover distribution index
+        self.n_sbx = n_sbx
 
         # Choose mutation operator function 
         if mutation_operator == 'derandomized':
@@ -57,6 +62,7 @@ class IBEA(object):
             self.mutation_operation = search_path_mutation
         else:
             raise ValueError  # Something something is not implemented (CMA is it you?)
+        self.mutation_op_str = mutation_operator
 
         # --- Data structure containing: population vectors, fitness and objective values
         self.pop_data = dict()
@@ -70,8 +76,8 @@ class IBEA(object):
 
     def __str__(self):
         # return 'Indicator-based Evolutionary Algorithm with Epsilon indicator'
-        desc = 'ibea_pop{}_offs{}_mut{}_recomb{}_var{}{}_sbx{}_max_gen{}' \
-            .format(self.alpha, self.n_offspring,
+        desc = 'ibea_pop{}_offs{}_{}_mut{}_recomb{}_var{}{}_sbx{}_max_gen{}' \
+            .format(self.alpha, self.n_offspring, self.mutation_op_str,
                     self.pr_mutation, self.pr_crossover,
                     self.sigma_init, self.mutation_operator,
                     self.n_sbx, self.max_generations)
@@ -87,6 +93,7 @@ class IBEA(object):
         # 1. Initial population of size alpha
         # Sampled from the uniform distribution [lbounds, ubounds]
         particles = rand(self.alpha, dim) * (ubounds - lbounds) + lbounds
+        particles = randn(self.alpha, dim) * self.sigma_init
         # Rescaling objective values to [0,1]
         objective_values = array([fun(x) for x in particles])
         objective_values = self.rescale(objective_values)
@@ -165,11 +172,11 @@ class IBEA(object):
 
                 if binomial(1, self.pr_mutation):
                     # assert all(sigma > 0), 'Dirac detected, Variance = {})'.format(sigma)
-                    child1, sigma = derandomized_mutation(child1, sigma, dim)
-                    child2, sigma = derandomized_mutation(child2, sigma, dim)
+                    # child1, sigma = derandomized_mutation(child1, sigma, dim)
+                    # child2, sigma = derandomized_mutation(child2, sigma, dim)
                     # (Isotropic) mutation
-                    # child1 += randn(dim) * self.sigma_init
-                    # child2 += randn(dim) * self.sigma_init
+                    child1 += randn(dim) * self.sigma_init
+                    child2 += randn(dim) * self.sigma_init
 
                 # Make sure vectors are still bounded
                 child1 = clip(child1, lbounds, ubounds)
@@ -183,22 +190,6 @@ class IBEA(object):
                 # Costs `alpha` but is necessary
                 self.update_max_indicator(obj_c1)
                 self.update_max_indicator(obj_c2)
-
-                '''
-                try:
-                    fitness_c1 = self.compute_fitness(obj_c1)
-                    fitness_c2 = self.compute_fitness(obj_c2)
-
-                    self.sigma = one_fifth_success(self.sigma,
-                                                            max(parent1['fitness'], parent2['fitness']),
-                                                            max(fitness_c1, fitness_c2),
-                                                            1/dim_sqrt)
-                except FloatingPointError, RuntimeWarning:
-                    print(format_exc())
-                    print("F1 : {}, F2: {}, I: {}, coef: {}, sigma:{}"\
-                          .format(fitness_c1, fitness_c2, indicator, mult, self.sigma))
-                    exit(42)
-                '''
 
                 self.add_offspring(child1, obj_c1)
                 self.add_offspring(child2, obj_c2)
