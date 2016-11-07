@@ -1,4 +1,4 @@
-\documentclass[12pt]{beamer}
+\documentclass[10pt]{beamer}
 \usepackage{framed}
 \usepackage{amsmath} 
 \usepackage{amssymb}
@@ -23,8 +23,8 @@
 \newcommand{\ei}{\end{itemize}}
 \newcommand{\ig}{\includegraphics}
 
-\title{Indicator-based Evolutionary Algorithm}
-\author{Karim Kouki \and Ahmed Mazari \and Daro Ozad \\ \and Mihaela Sorostinean \and Aris Tritas}
+\title{Benchmarking of the \\ Indicator-based Evolutionary Algorithm}
+\author{Karim Kouki \and Ahmed Mazari \and Daro Heng \\ \and Mihaela Sorostinean \and Aris Tritas}
 
 \institute{
 	M.Sc. Machine Learning, Information and Content - 
@@ -37,6 +37,9 @@
 
   \begin{frame}
   	\titlepage
+  	\note{
+  	Study and Implementation of IBEA = Indicator Based Evolutionary Algorithm
+Additive Epsilon-Indicator}
   \end{frame}
   
   \begin{frame}
@@ -52,46 +55,112 @@
   \end{frame}
   
     \begin{frame}
-    \frametitle{Goals}
+    \frametitle{Motivation}
     \textbf{Explore} seminal approaches for evolutionary algorithms
     
 	\textbf{Benchmark and compare} algorithms using the COCO platform.
-    
+    Measure performance in terms of: 
+	\bi
+    \item Average Runtime 
+    \item Convergence speed
+	\item ECDF
+	\ei
   \end{frame}
     
     \begin{frame}
     \frametitle{Setting}
-    
-	Black-box multi-objective optimization: learn $f$    $$f: \mathbb{R}^n \rightarrow \mathbb{R}^k$$
-    
+      \begin{columns}[t]
+    \begin{column}{.5\textwidth}
+     \begin{block}{
+	Multi-objective optimization}
+	
+    \vspace{10pt}
+	\small{
+	Given unknown $f: \mathbb{R}^n \rightarrow \mathbb{R}^k$, find
+	
+	$x^* = \min(f_1(x), f_2(x), ..., f_k(x))$ \newline
+	s.t $x \in X$
+	}
+	
+	
+    \vspace{10pt}
     \textbf{Pareto optimal approximation set} \newline
-	Non-dominated set of solution vectors. \note{
+	 \note{
     definition of domination relation.}
 	
 	\textbf{Indicator function:} \newline
-	Subjective (\textit{a priori}) preference information. 
+	Subjective (\textit{a priori}) preference information.
+    \end{block}
+    \end{column}
+    \begin{column}{.5\textwidth}
+    \begin{block}{Non-dominated set of solution vectors.}
+    \ig[width=\textwidth]{pareto_front.png}
+    \end{block}
+    \end{column}
+  \end{columns}
   \end{frame}
   
-    \begin{frame}
-    \frametitle{Indicators}
-    Which choice of indicator? Impact on optimization?
-    \bi 
-    \item Epsilon indicator  \note{simplest possible}
-    \item Hyper-volume indicator \note{theoretical analysis}
-    \ei
-    
-   
-    Fitness function: scalarize an individual's utility
-    
+ \begin{frame}
+ \frametitle{IBEA Design}
+    \bi
+    \item MOEA Design: historically based on false assumptions
+	The user has implicit contradictory preferences: maximize {diversity,convergence}
+		$\rightarrow$ not even compliant with the Pareto dominance relation
+		
+	\item Choice of INDICATOR: implements user's preferences
+	 $\rightarrow$ actually compliant with the Pareto dominance relation
+	\item Fitness assignment phase: uses indicator that specifies the user's preference through fitness function
+	\ei
+
+	\textbf{Examples of Indicators:}
+	\bi
+		\item $I_{\epsilon +}$: implemented, low computation time, conservativity
+		
+		\item $I_{HD}$: implement by another group, it has more of an average population behavior
+	\ei
+ 
+  \end{frame}  
+  
+%    \begin{frame}
+%    \frametitle{Indicators}
+%    How to take into account user's preference
+%    Which choice of indicator? Impact on optimization?
+%    \bi 
+%    \item Epsilon indicator  \note{simplest possible} \newline
+%     Min. distance to improve on the Pareto Set Approximation 
+%
+%    \item Hyper-volume indicator \note{theoretical analysis}
+%    \ei
+%    
+%   
+%    Fitness function: scalarize an individual's utility	
+%    
+%  \end{frame}
+  
+     \begin{frame}
+    \frametitle{Implementation}
+    \textbf{Input:} population size, max generations, budget, fitness scaling factor 
+\textbf{Output:} approximation of the Pareto-Set \newline
+\textbf{Steps:} 
+		\begin{enumerate}
+		\item Initialization
+        \item Fitness Assignment
+        \item Environmental Selection
+        \item  Termination Criteria
+        \item  Mating Selection
+        \item  Variation  (recombination \& mutation)
+        \end{enumerate}
   \end{frame}
-  
-  
     \begin{frame}
     \frametitle{Recombination}
     
     Different recombination operators.
-    
-    Choosing a recombination probability.
+    \bi
+    \item One point crossover
+    \item Intermediate weighting
+    \item SBX
+    \ei
+    \note{Choosing a recombination probability.}
     
   \end{frame}
 
@@ -107,21 +176,22 @@
         
     Distribution index: $n_c \in \mathbb{N} \implies$ find optimal value?
   \end{frame}
+  
+   \begin{frame}
+    \frametitle{Simulated Binary Crossover \footnote{Kalyanmoy Deb, S Karthik, Tatsuya Okabe, GECCO 2007}}
+    \ig[width=\textwidth]{sbx.png}
+  \end{frame}
     
     \begin{frame}
-    \frametitle{Variation operators}
-    \subtitle{Low mutation probability}
+    \frametitle{Variation operator}
+    \note{Low mutation probability}
     Adaptating the step-size: essential to find targets \textbf{fast}.
     
   \end{frame}
-  
-    \begin{frame}
-    \frametitle{Implementation}
-	Python \& NumPy    
-  \end{frame}
+ 
   
       \begin{frame}
-    \frametitle{Results - few objectives}
+    \frametitle{Results}
     Success (comparatively to other approaches)
     \bi
     \item Separable
@@ -134,29 +204,43 @@
 	\item multi-modality
 	\item ill-conditioning
 	\ei
-	
+	Dimensionality of search space.	
   \end{frame}
   
-        \begin{frame}
-    \frametitle{Results - many objectives}
-    Intrisically more difficult problem.
+%        \begin{frame}
+%    \frametitle{Results - high dimensional problems}
+%    Intrisically more difficult problem.
+%    
+%    Performance w.r.t random search?
+%    
+%    Explain difference between author results on comparison to NSGA-II (better) and our own (worse). Possible causes: budget, implementation of the mutation operator.
+%     
+%    Higher impact of multi-modality and ill-conditioning?
+%  \end{frame}
+    \begin{frame}[b]
+  \vspace{10pt}
+  \frametitle{Discussion - variance step-size}
+  Why does isotropic gaussian works better for some ill-conditioned and multimodal functions than derandomized ?
+  \centering{\ig[width=0.7\textwidth]{Rastrigin.png}}
+    \end{frame}
     
-    Performance w.r.t random search?
-    
-    Explain difference between author results on comparison to NSGA-II (better) and our own (worse). Possible causes: budget, implementation of the mutation operator.
-     
-    Higher impact of multi-modality and ill-conditioning?
-  \end{frame}
-
       \begin{frame}
-    \frametitle{Discussion}
-    Online parameter tuning.
-    
-    Hyper-parameters tuning.
-    
-    Choice of the indicator function.
+  \frametitle{Discussion - indicator function}
+\textbf{	Tradeoffs to consider}
+  	\bi
+  	
+  	\item problem-specific preference information vs. generality of the indicator \\
+  	\item precision vs. computational complexity
+  	\note{
+	
+	\item Adapt derandomized for mutlimodals and ill-conditioned functions ?
+\item Think about a different way to tune  the scaling factor the  C in the fitness
+\item Online parameters tuning according to the learned hyper parameter
+}
+\ei
   \end{frame}
-  
+ 
+
   \begin{frame}
   \centering{
   Thank you for your attention!
