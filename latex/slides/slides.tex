@@ -99,7 +99,7 @@
     \frametitle{Simulated Binary Crossover}
     \textbf{Goal:} control the domain in which offspring is generated.
     
-    \textbf{Definition:} Approximate a high-probability stationary `spread` distribution with two ``proxy'' distributions
+    \textbf{`Spread` distribution } approximated by ``proxy'' distributions
     
     Contracting $ c(\beta) = 0.5(n_c +1)\beta^{n_c}, \beta \leq 1$
     
@@ -115,11 +115,26 @@
     
   \end{frame}
   
+    \begin{frame}
+    \frametitle{Implementation}
+	Python \& NumPy    
+  \end{frame}
+  
       \begin{frame}
     \frametitle{Results - few objectives}
-    Show where the algorithm is good (comparatively to other approaches).
+    Success (comparatively to other approaches)
+    \bi
+    \item Separable
+    \item moderate
+    \item weakly-structured    
+    \ei
     
-    Explain where we fail.
+	Fails in:
+	\bi 
+	\item multi-modality
+	\item ill-conditioning
+	\ei
+	
   \end{frame}
   
         \begin{frame}
@@ -128,9 +143,11 @@
     
     Performance w.r.t random search?
     
-    Is the impact of multi-modality and ill-conditioning even greater?
+    Explain difference between author results on comparison to NSGA-II (better) and our own (worse). Possible causes: budget, implementation of the mutation operator.
+     
+    Higher impact of multi-modality and ill-conditioning?
   \end{frame}
-  
+
       \begin{frame}
     \frametitle{Discussion}
     Online parameter tuning.

@@ -4,7 +4,9 @@
     <list default="true" id="591b2248-af52-4044-b8ec-a04fbbe1af8b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex/slides/slides.pdf" afterPath="$PROJECT_DIR$/latex/slides/slides.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex/slides/slides.synctex.gz" afterPath="$PROJECT_DIR$/latex/slides/slides.synctex.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex/slides/slides.log" afterPath="$PROJECT_DIR$/latex/slides/slides.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex/slides/slides.nav" afterPath="$PROJECT_DIR$/latex/slides/slides.nav" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex/slides/slides.tex" afterPath="$PROJECT_DIR$/latex/slides/slides.tex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ibea.py" afterPath="$PROJECT_DIR$/src/ibea.py" />
     </list>
@@ -35,8 +37,8 @@
           <file leaf-file-name="ibea.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/ibea.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="870">
-                  <caret line="81" column="37" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="37" />
+                <state relative-caret-position="712">
+                  <caret line="187" column="69" selection-start-line="187" selection-start-column="69" selection-end-line="187" selection-end-column="69" />
                   <folding>
                     <element signature="e#560#591#0" expanded="true" />
                   </folding>
@@ -47,7 +49,7 @@
           <file leaf-file-name="mutation.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/mutation.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1015">
+                <state relative-caret-position="525">
                   <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
                   <folding>
                     <element signature="e#220#251#0" expanded="true" />
@@ -63,7 +65,7 @@
           <file leaf-file-name="mutation.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/mutation.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="783">
+                <state relative-caret-position="405">
                   <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
                   <folding>
                     <element signature="e#220#251#0" expanded="true" />
@@ -75,8 +77,8 @@
           <file leaf-file-name="experiment.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/experiment.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1381">
-                  <caret line="308" column="44" selection-start-line="308" selection-start-column="44" selection-end-line="308" selection-end-column="44" />
+                <state relative-caret-position="247">
+                  <caret line="254" column="20" selection-start-line="254" selection-start-column="20" selection-end-line="254" selection-end-column="20" />
                   <folding />
                 </state>
               </provider>
@@ -85,7 +87,7 @@
           <file leaf-file-name="crossover.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/crossover.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="319">
+                <state relative-caret-position="165">
                   <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
                   <folding>
                     <element signature="e#225#272#0" expanded="true" />
@@ -97,7 +99,7 @@
           <file leaf-file-name="grid.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/grid.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="986">
+                <state relative-caret-position="510">
                   <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
                   <folding>
                     <element signature="e#160#171#0" expanded="true" />
@@ -124,8 +126,8 @@
         <option value="$PROJECT_DIR$/src/mutation.py" />
         <option value="$PROJECT_DIR$/src/grid.py" />
         <option value="$PROJECT_DIR$/src/crossover.py" />
-        <option value="$PROJECT_DIR$/src/experiment.py" />
         <option value="$PROJECT_DIR$/src/ibea.py" />
+        <option value="$PROJECT_DIR$/src/experiment.py" />
       </list>
     </option>
   </component>
@@ -136,9 +138,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="35" />
-    <option name="width" value="3840" />
-    <option name="height" value="2125" />
+    <option name="x" value="1920" />
+    <option name="width" value="2560" />
+    <option name="height" value="1440" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -506,10 +508,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="35" width="3840" height="2125" extended-state="6" />
+    <frame x="1920" y="0" width="2560" height="1440" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25787506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25995222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5015625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -553,6 +555,54 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ibea.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="81" column="37" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="37" />
+          <folding>
+            <element signature="e#560#591#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mutation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding>
+            <element signature="e#220#251#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/experiment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/crossover.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <element signature="e#225#272#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <folding>
+            <element signature="e#160#171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ibea.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7743">
@@ -706,7 +756,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mutation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1015">
+        <state relative-caret-position="525">
           <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
           <folding>
             <element signature="e#220#251#0" expanded="true" />
@@ -716,7 +766,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
+        <state relative-caret-position="510">
           <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
           <folding>
             <element signature="e#160#171#0" expanded="true" />
@@ -733,7 +783,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/crossover.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
+        <state relative-caret-position="165">
           <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding>
             <element signature="e#225#272#0" expanded="true" />
@@ -743,16 +793,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/experiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1381">
-          <caret line="308" column="44" selection-start-line="308" selection-start-column="44" selection-end-line="308" selection-end-column="44" />
+        <state relative-caret-position="247">
+          <caret line="254" column="20" selection-start-line="254" selection-start-column="20" selection-end-line="254" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ibea.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="81" column="37" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="37" />
+        <state relative-caret-position="712">
+          <caret line="187" column="69" selection-start-line="187" selection-start-column="69" selection-end-line="187" selection-end-column="69" />
           <folding>
             <element signature="e#560#591#0" expanded="true" />
           </folding>

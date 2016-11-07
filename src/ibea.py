@@ -171,11 +171,11 @@ class IBEA(object):
 
                 if binomial(1, self.pr_mutation):
                     # assert all(sigma > 0), 'Dirac detected, Variance = {})'.format(sigma)
-                    # child1, sigma = derandomized_mutation(child1, sigma, dim)
-                    # child2, sigma = derandomized_mutation(child2, sigma, dim)
+                    child1, sigma = derandomized_mutation(child1, sigma, dim)
+                    child2, sigma = derandomized_mutation(child2, sigma, dim)
                     # (Isotropic) mutation
-                    child1 += randn(dim) * self.sigma_init
-                    child2 += randn(dim) * self.sigma_init
+                    #child1 += randn(dim) * self.sigma_init
+                    #child2 += randn(dim) * self.sigma_init
 
                 # Make sure vectors are still bounded
                 child1 = clip(child1, lbounds, ubounds)
