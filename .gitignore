@@ -3,9 +3,13 @@
 \#*\#
 __pycache__/
 *.py[cod]
+doc/
+latex/
 contrib/
 exdata/
 ppdata/
+doc/
+log/
 *.aux
 *.gz
 *.dvi
